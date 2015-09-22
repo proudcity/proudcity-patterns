@@ -1,0 +1,28 @@
+{
+  "name": "proudcity-patterns",
+  "description": "Provides the necessary SCSS-based stylesheets to build a custom (Bootstrap)[http://getbootstrap.com]-based website with the (ProudCity Pattern Library)[http://patternlibrary.getproudcity.com].",
+  "keywords": ["bootstrap", "proudcity", "pattern", "pattern library"],
+  "authors": [
+    "Betty Beta",
+    "Betty Beta <bbeta@example.com>",
+    "Jeff Lyon <jeff@getproudcity.com> (http://www.getproudcity.com)",
+    "Alex Schmoe <alex@getproudcity.com> (http://www.getproudcity.com)"
+  ],
+  "homepage": "http://patternlibrary.getproudcity.com",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/proudcity/proudcity-patterns.git"
+  },
+  "license": "GPL-3.0",
+  "main": "./dist/scss/proud-patterns.scss",
+  "dependencies": {
+    "bootstrap-sass-official": "~3.3.1",
+    "font-awesome": "~4.2.0",
+    "bourbon": "v3.2.3",
+  },
+  "ignore":[
+    
+  ],
+  "devDependencies": {
+  }
+}

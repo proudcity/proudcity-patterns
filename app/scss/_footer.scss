@@ -1,0 +1,17 @@
+footer {
+  background-color: $gray-lighter;
+  
+  .navbar {
+    .navbar-left,
+    .navbar-right {
+      &.dropdown,
+      & > .social {
+        padding: $padding-base-vertical $padding-base-horizontal $padding-base-vertical 0;
+      }
+    }
+  }
+
+  .footer-logo {
+    margin: $padding-base-vertical;
+  }
+}

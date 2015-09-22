@@ -1,0 +1,15 @@
+@import "mixins/border-radius";
+@import "mixins/hover";
+@import "mixins/form";
+@import "mixins/nav";
+
+%normal-link {
+  color: $link-color;
+
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+}
+
+

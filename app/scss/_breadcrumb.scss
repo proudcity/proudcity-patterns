@@ -1,0 +1,9 @@
+.breadcrumb-wrapper {
+  background-color: $gray-lightest;
+  //margin-bottom: $line-height-computed;
+
+  ul.breadcrumb {
+    margin-bottom: 0;
+    padding-left: 0;
+  }
+}

@@ -1,0 +1,57 @@
+
+@include respond($sm-and-down) {
+  .full > div:first-child {
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+}
+
+@include respond($sm-up) {
+  .full-container {
+
+    .spacing-sm {
+      padding-top: 1em;
+      padding-bottom: 1em;
+
+      &.full {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+
+  }
+}
+
+@include respond($md-up) {
+  .full-container {
+    height: 80%;
+
+    .spacing-md {
+      padding-top: 1em;
+      padding-bottom: 1em;
+
+      &.full {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+
+    & > .full {
+      min-height: 100%!important;
+      padding-top: 0!important;
+      display: table;
+      width: 100%;
+
+      & > * {
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      .row-container {
+        max-width: $container-lg;
+        margin: 0 auto;
+        display: block;
+      }
+    }
+  }
+}

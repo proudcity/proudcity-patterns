@@ -1,0 +1,61 @@
+.action-box {
+  .nav-contain {
+    li {
+      a {
+        background: lighten($gray, 5%);
+      }
+    }
+  }
+
+  .nav-contain .nav-pills {
+    li {
+      float: left;
+      width: 25%;
+      padding-right: 1px;
+      text-align: center;
+      margin-top: 0!important;
+
+      & ~ li {
+        padding-left: 1px;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+
+      a {
+        &, &:hover, &:focus {
+          color: $white;
+        }
+      }
+
+      &:not(.active) {
+        a {
+          &:hover, &:focus {
+            background: darken($gray, 5%);
+          }
+        }
+      }
+
+      &.active a {
+        
+        &, &:hover, &:focus {
+          color: $white;
+          background: $brand-primary;
+        }
+      }
+
+      i {
+        margin-right: 0.25em;
+      }
+    }
+  }
+}
+
+
+
+@include respond($sm-up) {
+  .action-box > div {
+    border: 1px solid $gray-lighter;
+  }
+}
