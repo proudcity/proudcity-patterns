@@ -287,17 +287,44 @@
 
 
 //
-// Card
+// Card columns
 //
+.card-columns {
+  @include column-gap(1.25rem);
+}
+
+// Makes columns work for mobile
+@include respond($xs-only) {
+  .card-columns-xs-1 .card {
+    display: block;
+  }
+
+  .card-columns-xs-2 {
+    @include column-count(2);
+    
+  }
+}
 
 @include respond($sm-up) {
-  .card-columns {
-    column-count: 3;
-    column-gap: 1.25rem;
+  // Normal 3 column
+  .card-columns, .card-columns-sm-3 {
+    @include column-count(3);
 
     .card {
       display: inline-block;
       width: 100%; // Don't let them exceed the column width
     }
+  }
+  
+  // 4 column
+  .card-columns-sm-4 {
+    @include column-count(4);
+  }
+}
+
+// go to 4 column on med
+@include respond($md-up) {
+  .card-columns-md-4 {
+    @include column-count(4);
   }
 }
