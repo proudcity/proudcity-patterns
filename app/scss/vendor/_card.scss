@@ -1,5 +1,5 @@
 .card {
-  max-width: 20rem;
+  max-width: $card-max-width;
 
   &.card-full {
     max-width: 100%;
@@ -180,6 +180,9 @@
   padding: 1.25rem;
 }
 
+.card-img, .card-img-top, .card-img-bottom {
+  min-width: 100%;
+}
 
 
 // Card image caps
@@ -321,6 +324,11 @@
   }
   
   // 4 column
+  .card-columns-sm-2 {
+    @include column-count(2);
+  }
+  
+  // 4 column
   .card-columns-sm-4 {
     @include column-count(4);
   }
@@ -329,6 +337,13 @@
 // go to 4 column on med
 @include respond($md-up) {
   .card-columns-md-4 {
+    @include column-count(4);
+  }
+}
+
+// go to 4 column on lg
+@include respond($lg-up) {
+  .card-columns-lg-4 {
     @include column-count(4);
   }
 }
