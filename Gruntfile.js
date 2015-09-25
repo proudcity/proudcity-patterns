@@ -1,12 +1,5 @@
 'use strict';
 
-// Deal with local HTML5 Mode
-var modRewrite = require('connect-modrewrite');
-var mountFolder = function (connect, dir) {
-  return connect.static(require('path').resolve(dir));
-};
-var filesRedirect = '!\\.html|\\.js|\\.svg|\\.woff|\\.ttf|\\.eot|\\.otf|\\.css|\\.png|\\.jpg$ /index.html [L]';
-
 module.exports = function(grunt) {
 
   require('load-grunt-tasks')(grunt);
@@ -20,8 +13,8 @@ module.exports = function(grunt) {
 		sass: {
 			options: {
 				includePaths: [
-				  '<%= app %>/bower_components/bootstrap-sass-official/assets/stylesheets',
-          '<%= app %>/bower_components/bourbon/dist'
+				  'bower_components/bootstrap-sass-official/assets/stylesheets',
+          'bower_components/bourbon/dist'
 				]
 			},
 			dist: {
@@ -29,73 +22,8 @@ module.exports = function(grunt) {
 					outputStyle: 'extended'
 				},
 				files: {
-					'<%= app %>/css/proudcity-patterns.css': '<%= app %>/scss/proudcity-patterns.scss'
+					'<%= app %>/css/proudcity-patterns.css': '<%= app %>/scss/patterns.scss'
 				}
-			}
-		},
-
-		jshint: {
-			options: {
-				jshintrc: '.jshintrc'
-			},
-			all: [
-				'Gruntfile.js',
-				'<%= app %>/js/**/*.js'
-			]
-		},
-
-		clean: {
-			dist: {
-				src: ['<%= dist %>/*']
-			},
-		},
-		copy: {
-			dist: {
-				files: [{
-					expand: true,
-					cwd:'<%= app %>/',
-					src: ['CNAME', '.htaccess', 'favicon.ico', 'fonts/**', 'vendor/**', '**/*.html', '!**/*.scss', '!bower_components/**', 'images/**', 'vendor/**/*'],
-					dest: '<%= dist %>/'
-				} , {
-					expand: true,
-					flatten: true,
-					src: ['<%= app %>/bower_components/font-awesome/fonts/**'],
-					dest: '<%= dist %>/fonts/',
-					filter: 'isFile'
-				} ]
-			},
-		},
-
-		//imagemin: {
-		//	target: {
-		//		files: [{
-		//			expand: true,
-		//			cwd: '<%= app %>/images/',
-		//			src: ['**/*.{jpg,gif,svg,jpeg,png}'],
-		//			dest: '<%= dist %>/images/'
-		//		}]
-		//	}
-		//},
-
-		uglify: {
-			options: {
-				preserveComments: 'some',
-				mangle: false
-			}
-		},
-
-		useminPrepare: {
-			html: ['<%= app %>/index.html'],
-			options: {
-				dest: '<%= dist %>'
-			}
-		},
-
-		usemin: {
-			html: ['<%= dist %>/**/*.html', '!<%= app %>/bower_components/**'],
-			css: ['<%= dist %>/css/**/*.css'],
-			options: {
-				dirs: ['<%= dist %>']
 			}
 		},
 
@@ -109,81 +37,16 @@ module.exports = function(grunt) {
 				tasks: ['sass']
 			},
 			livereload: {
-				files: ['<%= app %>/**/*.html', '!<%= app %>/bower_components/**', '<%= app %>/js/**/*.js', '<%= app %>/css/**/*.css', '<%= app %>/images/**/*.{jpg,gif,svg,jpeg,png}'],
+				files: ['<%= app %>/js/**/*.js', '<%= app %>/css/**/*.css'],
 				options: {
-					livereload: 35727
+					livereload: true
 				}
-			}
-		},
-
-		connect: {
-			app: {
-				options: {
-					port: 9000,
-					base: '<%= app %>/',
-					open: true,
-					livereload: 35727,
-					hostname: 'localhost',
-					middleware:  function (connect) {
-            return [
-              modRewrite ([filesRedirect]),
-              mountFolder(connect, 'app')
-            ];        
-	        }
-				}
-			},
-			dist: {
-				options: {
-					port: 9001,
-					base: '<%= dist %>/',
-					open: true,
-					keepalive: true,
-					livereload: false,
-					hostname: 'localhost',
-					middleware:  function (connect) {
-            return [
-              modRewrite ([filesRedirect]),
-              mountFolder(connect, 'dist')
-            ];        
-	        }
-				}
-			}
-		},
-
-		ngtemplates:  {
-		  app:        {
-		    cwd:      '<%= dist %>',
-		    src:      'views/**/*.html',
-		    dest:     '<%= dist %>/views/app.templates.js',
-		    options:    {
-		      htmlmin:  { collapseWhitespace: true, collapseBooleanAttributes: true }
-		    }
-		  }
-		},
-
-		wiredep: {
-			target: {
-				src: [
-					'<%= app %>/**/*.html'
-				],
-				exclude: [
-					'font-awesome',
-					'bootstrap-sass-official'
-				]
 			}
 		}
-
 	});
 
 	
 	grunt.registerTask('compile-sass', ['sass']);
-	grunt.registerTask('bower-install', ['wiredep']);
 	
-	grunt.registerTask('default', ['compile-sass', 'bower-install', 'connect:app', 'watch']);
-	grunt.registerTask('validate-js', ['jshint']);
-	//grunt.registerTask('validate-js', ['jshint', 'ngtemplates', 'concat']);
-	grunt.registerTask('server-dist', ['connect:dist']);
-	
-	grunt.registerTask('publish', ['compile-sass', 'clean:dist', 'useminPrepare', 'copy:dist',  'concat', 'cssmin', 'ngtemplates','uglify', 'usemin']);
-//'newer:imagemin',
+	grunt.registerTask('default', ['compile-sass', 'watch']);
 };
