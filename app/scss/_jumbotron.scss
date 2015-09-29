@@ -51,6 +51,13 @@
     background-color: $gray-lighter;
   }
 
+  .jumbotron-inverse & {
+    &:before {
+      opacity: 1;
+      background-color: rgba(0,0,0,0.6)
+    }
+  }
+
   // Blue back
   &.blue-back {
     &:before {
