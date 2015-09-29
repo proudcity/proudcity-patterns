@@ -4,6 +4,21 @@
   &.card-full {
     max-width: 100%;
   }
+
+  &.card-primary {
+    small,
+    h4 {
+      a {
+        color: #fff;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    
+  }
+  
 }
 
 // From https://github.com/twbs/bootstrap/blob/v4-dev/scss/_card.scss
