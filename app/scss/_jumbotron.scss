@@ -18,6 +18,15 @@
   }
 }
 
+  
+.full-container {
+  
+  .jumbotron { 
+    padding-left:  ($jumbotron-padding);
+    padding-right: ($jumbotron-padding);
+  }
+}
+
 // Blue jumbotron 
 .jumbotron-bg {
   z-index: 1;
@@ -60,5 +69,14 @@
 @include respond($sm-up) {
   .jumbotron-bg {
     padding: 50px;
+  }
+
+  
+  .full-container {
+    
+    .jumbotron { 
+      padding-left:  ($jumbotron-padding * 2);
+      padding-right: ($jumbotron-padding * 2);
+    }
   }
 }
