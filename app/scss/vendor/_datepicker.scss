@@ -32,7 +32,7 @@
 .ui-datepicker .ui-datepicker-prev,
 .ui-datepicker .ui-datepicker-next {
     cursor: default;
-    font-family: 'Glyphicons Halflings';
+    font-family: 'FontAwesome';
     -webkit-font-smoothing: antialiased;
     font-style: normal;
     font-weight: normal;
@@ -50,10 +50,10 @@
     text-align: right;
 }
 .ui-datepicker .ui-datepicker-prev:before {
-    content: "\e079";
+    content: "\f0d9";
 }
 .ui-datepicker .ui-datepicker-next:before {
-    content: "\e080";
+    content: "\f0da";
 }
 .ui-datepicker .ui-icon {
     display: none;
