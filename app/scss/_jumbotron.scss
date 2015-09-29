@@ -1,0 +1,64 @@
+
+.jumbotron {
+  background-size: cover;
+  background-position: center 30%;
+
+  h1,
+  h2 {
+    font-size: $font-size-h1;
+  }
+
+  &.jumbotron-inverse {
+    background-color: $jumbotron-inverse-bg;
+    color: $jumbotron-inverse-color;
+
+    h1 {
+      color: $jumbotron-inverse-heading-color;
+    }
+  }
+}
+
+// Blue jumbotron 
+.jumbotron-bg {
+  z-index: 1;
+  padding: 15px;
+  position: relative;
+
+  & > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  &:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.9;
+    border-radius: $border-radius-base;
+    background-color: $gray-lighter;
+  }
+
+  // Blue back
+  &.blue-back {
+    &:before {
+      background-color: $brand-primary;
+    }
+  }
+
+  // Backs that need white text
+  &.blue-back {
+    & > * {
+      color: white;
+    }
+  }
+}
+
+@include respond($sm-up) {
+  .jumbotron-bg {
+    padding: 50px;
+  }
+}

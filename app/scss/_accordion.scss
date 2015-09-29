@@ -1,0 +1,25 @@
+// Add carets to accordion
+// From http://stackoverflow.com/questions/18325779/bootstrap-3-collapse-show-state-with-chevron-icon
+.accordion .panel-heading {
+  padding: 10px 15px;  
+
+  a {
+    display: block;
+
+    &:hover,
+    &:active {
+      text-decoration: none;
+    }
+  }
+
+  a:after {
+    font-family: 'FontAwesome';
+    content: "\f0d7";
+    float: right;
+    color: grey;
+  }
+
+  a.collapsed:after {
+    content: "\f0da";
+  }
+}
