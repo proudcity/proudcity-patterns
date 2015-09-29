@@ -3,10 +3,10 @@
   ul.dropdown-menu li {
     padding: $nav-link-padding;
     min-width: 240px;
-
-    select {
-      @include form-control();
-    }
+  }
+  
+  select {
+    @include form-control();
   }
 
   &.translate-stacked {

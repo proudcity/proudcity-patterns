@@ -3,6 +3,11 @@
   background-size: cover;
   background-position: center 30%;
 
+  h1,
+  h2 {
+    font-size: $font-size-h1;
+  }
+
   &.jumbotron-inverse {
     background-color: $jumbotron-inverse-bg;
     color: $jumbotron-inverse-color;
