@@ -31,9 +31,16 @@
 .card {
   position: relative;
   margin-bottom: $card-spacer-y;
-  background-color: #fff;
+  background-color: $white;
   border: $card-border-width solid $card-border-color;
   @include border-radius($card-border-radius);
+  @include transition(box-shadow 0.1s linear);
+  box-shadow: 0 0 10px $white inset;
+
+
+  @include hover-focus {
+    box-shadow: 0 0 8px 4px darken($white, 3%) inset;;
+  }
 }
 
 .card-block {
@@ -116,30 +123,59 @@
 //
 // Background variations
 //
-
 .card-primary {
   background-color: $brand-primary;
   border-color: $brand-primary;
+  box-shadow: 0 0 10px $brand-primary inset;
+
+  @include hover-focus {
+    box-shadow: 0 0 10px darken($brand-primary, 10%) inset;
+  }
 }
 .card-success {
   background-color: $brand-success;
   border-color: $brand-success;
+  box-shadow: 0 0 10px $brand-success inset;
+
+  @include hover-focus {
+    box-shadow: 0 0 10px darken($brand-success, 10%) inset;
+  }
 }
 .card-info {
   background-color: $brand-info;
   border-color: $brand-info;
+  box-shadow: 0 0 10px $brand-info inset;
+
+  @include hover-focus {
+    box-shadow: 0 0 10px darken($brand-info, 10%) inset;
+  }
 }
 .card-warning {
   background-color: $brand-warning;
   border-color: $brand-warning;
+  box-shadow: 0 0 10px $brand-warning inset;
+
+  @include hover-focus {
+    box-shadow: 0 0 10px darken($brand-warning, 10%) inset;
+  }
 }
 .card-danger {
   background-color: $brand-danger;
   border-color: $brand-danger;
+  box-shadow: 0 0 10px $brand-danger inset;
+
+  @include hover-focus {
+    box-shadow: 0 0 10px darken($brand-danger, 10%) inset;
+  }
 }
 .card-dark {
   background-color: $gray-dark;
   border-color: $gray-dark;
+  box-shadow: 0 0 10px $gray-dark inset;
+
+  @include hover-focus {
+    box-shadow: 0 0 10px darken($gray-dark, 10%) inset;
+  }
 }
 
 
@@ -177,6 +213,10 @@
 .card-btn {
   padding-top: $card-spacer-x * 1.5;
   padding-bottom: $card-spacer-x * 1.5; 
+  
+  &:hover {
+    text-decoration: none;
+  }
 
   & > * {
     margin-top: $card-spacer-x;
@@ -187,7 +227,6 @@
     margin-top: 0;
   }
 }
-
 
 //
 // Blockquote
