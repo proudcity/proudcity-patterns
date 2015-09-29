@@ -40,6 +40,10 @@
 @media #{$sm-only} and (orientation: landscape) {
   .full-container {
     @include full-padding-margin(50%); 
+
+    .container & {
+      @include full-padding-margin(70%);
+    }
   }
 }
 
@@ -56,6 +60,10 @@
 @media #{$md-up} and (orientation: landscape) {
   .full-container {
     @include full-padding-margin(40%);
+
+    .container & {
+      @include full-padding-margin(70%);
+    }
   }
 }
 
