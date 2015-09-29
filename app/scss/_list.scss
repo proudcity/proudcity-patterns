@@ -1,11 +1,3 @@
-ul.list-style-none {
-  padding: 0;
-
-  & > li {
-    list-style: none;
-  }
-}
-
 ul.title-list {
   li {
     padding: $padding-small-vertical 0;
