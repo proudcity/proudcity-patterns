@@ -21,11 +21,8 @@
   }
 }
 
-// @todo
 .datepicker {
   &::-webkit-input-placeholder::before { 
-    content: "\f073";
-    font-family: FontAwesome;
-    padding-right: $padding-small-horizontal;
+    @include datepicker;
   }
 }

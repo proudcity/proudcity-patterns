@@ -39,3 +39,18 @@
 
   // [converter] extracted textarea& to textarea.form-control
 }
+
+@mixin datepicker {
+  content: "\f073";
+  font-family: FontAwesome;
+  padding-right: $padding-small-horizontal;
+}
+
+@mixin text-search {
+  &::before {
+    float: right;
+    content: "\f002";
+    font-family: FontAwesome;
+    padding-left: $padding-small-horizontal;
+  }
+}

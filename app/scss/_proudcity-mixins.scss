@@ -1,9 +1,11 @@
 @import "mixins/media-queries";
 @import "mixins/animate";
+@import "mixins/type";
 @import "mixins/border-radius";
 @import "mixins/hover";
 @import "mixins/form";
 @import "mixins/nav";
+@import "mixins/card";
 
 %normal-link {
   color: $link-color;

@@ -1,0 +1,20 @@
+// Gets Drupal markup up to snuff with the ProudCity style guide
+
+input.date-clear {
+  &::before {
+    @include datepicker;
+  }
+}
+
+.views-exposed-form {
+  @include card;
+}
+
+.views-widget .form-item-title .form-text {
+  @include text-search;
+}
+
+.views-exposed-form label {
+  font-weight: normal;
+}
+
