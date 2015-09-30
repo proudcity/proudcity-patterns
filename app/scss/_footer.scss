@@ -1,8 +1,19 @@
 .footer-actions {
   background: transparent;
-  border-top: 1px solid $gray-lighter;
+  background-color: $gray-lighter;
   padding: $padding-base-vertical 0;
-  margin-top: $padding-base-vertical;
+  margin-top: $line-height-computed*2;
+
+  .nav > li > a {
+    color: $text-color;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background: transparent;
+      color: $link-color;
+    }
+  }
 
   .navbar-left,
   .navbar-right {
@@ -15,9 +26,14 @@
 
 
 footer.page-footer {
-  background-color: $gray-lighter;
-
   .footer-logo {
     margin: $padding-base-vertical;
+  }
+
+  &,
+  a,
+  h2,
+  h3 {
+    color: $gray;
   }
 }
