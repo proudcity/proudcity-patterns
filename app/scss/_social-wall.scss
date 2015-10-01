@@ -1,0 +1,56 @@
+
+.isotope {
+  @include transition-property(height, width);
+}
+
+.isotope-item {
+  @include transition-property(transform, opacity);
+}
+
+.isotope, .isotope-item {
+  @include transition-duration(0.8s);
+}
+
+//social
+.social-wall {
+  min-height: 500px;
+  margin-left: 0;
+  padding-left: 0;
+  margin-top: 20px;
+  
+  li {
+    list-style: none;
+    width: 98%;
+    float: left;
+    margin: 0 1%;
+    overflow: hidden;
+    background: $white;
+    min-height: 110px;
+
+    img {
+      margin-bottom: 5px;
+    }
+
+    .text-gray {
+      color: $gray-light;
+      padding-top: 10px;
+    }
+  }
+}
+
+@include respond($sm-up) {
+  .social-wall {
+  
+    li {
+      width: 46%;
+    }
+  }
+}
+
+@include respond($md-up) {
+  .social-wall {
+    li {
+      width: 31%;
+    }
+  }
+}

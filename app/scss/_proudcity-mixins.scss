@@ -6,12 +6,3 @@
 @import "mixins/form";
 @import "mixins/nav";
 @import "mixins/card";
-
-%normal-link {
-  color: $link-color;
-
-  &:hover {
-    color: $link-hover-color;
-    text-decoration: $link-hover-decoration;
-  }
-}
