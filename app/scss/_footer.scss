@@ -5,7 +5,7 @@
   margin-top: $line-height-computed*2;
 
   .nav > li > a {
-    color: $text-color;
+    color: $gray;
 
     &:hover,
     &:active,
@@ -26,14 +26,43 @@
 
 
 footer.page-footer {
-  .footer-logo {
-    margin: $padding-base-vertical;
-  }
+  font-size: $font-size-small;
 
   &,
   a,
   h2,
-  h3 {
-    color: $gray;
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $gray-light;
   }
+
+  h5 {
+    margin-bottom: $padding-base-vertical;
+  }
+
+  .footer-logo-wrapper {
+    
+    h4 {
+      margin: 0;
+      line-height: 1.1em;
+      font-size: 30px; // @todo: variable
+
+      small {
+        font-weight: bold;
+        color: lighten($gray-light, 20%);
+      }
+    }
+
+    .footer-logo {
+      margin-top: $line-height-computed;
+      margin-bottom: $padding-base-vertical;
+    }
+    
+  }
+
+  
+
+
 }
