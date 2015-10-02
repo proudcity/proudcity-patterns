@@ -38,6 +38,8 @@
   }
 }
 
+// Small up
+// -------------------------
 @include respond($sm-up) {
   .social-wall {
   
@@ -47,6 +49,8 @@
   }
 }
 
+// Medium up
+// -------------------------
 @include respond($md-up) {
   .social-wall {
     li {

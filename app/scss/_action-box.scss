@@ -216,6 +216,9 @@ $icon-dim: 40px;
 // *
 // ******************************************************
 
+
+// Mobile only
+// -------------------------
 @include respond($xs-only) {
 
   .action-box {
@@ -253,6 +256,8 @@ $icon-dim: 40px;
   }
 }
 
+// Small up
+// -------------------------
 @include respond($sm-up) {
 
   .action-box {
@@ -339,6 +344,8 @@ $icon-dim: 40px;
   }
 }
 
+// Small only
+// -------------------------
 @include respond($sm-only) {
 
   // Menu 
@@ -366,6 +373,8 @@ $icon-dim: 40px;
   }
 }
 
+// Medium up
+// -------------------------
 @include respond($md-up) {
 
   // Menu 
