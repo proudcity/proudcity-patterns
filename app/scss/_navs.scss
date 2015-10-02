@@ -1,0 +1,13 @@
+// Submenus
+
+.nav {
+  [data-toggle] {
+    i.pull-right {
+      line-height: 1.5em;
+    }
+
+    &.collapsed .fa-angle-down::before {
+      content: "\f105";
+    }
+  }
+}
