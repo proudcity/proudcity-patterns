@@ -82,28 +82,28 @@ $width-mod: 20px;
       margin-bottom: 0;
       clear: both;
       width: $item-width;
+      padding-right: $icon-dim + $width-mod;
+      padding-left: 0;
+      float: left;
+      margin-left: (50% - $item-width);
 
-      &:nth-child(2n) {
-        padding-right: $icon-dim + $width-mod;
-        padding-left: 0;
-        float: left;
-        margin-left: (50% - $item-width);
-
-        .feed-icon {
-          float: right;
-          margin-left: 0;
-          margin-right: -($icon-dim + $width-mod + $icon-dim/2);
-        }
-      }
-
-      &:nth-child(2n+1) {
+      .feed-icon {
         float: right;
-        margin-right: (50% - $item-width);
-        padding-left: $icon-dim + $width-mod;
+        margin-left: 0;
+        margin-right: -($icon-dim + $width-mod + $icon-dim/2);
+      }
+      
+    }
 
-        .feed-icon {
-          margin-left: -($icon-dim + $width-mod + $icon-dim/2);
-        }
+    &.item-right > *:nth-child(2n + 1),
+    &.item-left > *:nth-child(2n) {
+      float: right;
+      margin-right: (50% - $item-width);
+      padding-left: $icon-dim + $width-mod;
+
+      .feed-icon {
+        float: left;
+        margin-left: -($icon-dim + $width-mod + $icon-dim/2);
       }
     }
   } 
@@ -114,15 +114,13 @@ $item-width: 46%;
 @include respond($md-up) {
   .now-feed  {
     & > * {
-     width: $item-width;
+      width: $item-width;
+      margin-left: (50% - $item-width);
+    }
 
-      &:nth-child(2n) {
-        margin-left: (50% - $item-width);
-      }
-
-      &:nth-child(2n+1) {
-        margin-right: (50% - $item-width);
-      }
+    &.item-right > *:nth-child(2n + 1),
+    &.item-left > *:nth-child(2n) {
+      margin-right: (50% - $item-width);
     }
   }
 }
@@ -133,15 +131,13 @@ $item-width: 40%;
 @include respond($lg-up) {
   .now-feed  {
     & > * {
-     width: $item-width;
+      width: $item-width;
+      margin-left: (50% - $item-width);
+    }
 
-      &:nth-child(2n) {
-        margin-left: (50% - $item-width);
-      }
-
-      &:nth-child(2n+1) {
-        margin-right: (50% - $item-width);
-      }
+    &.item-right > *:nth-child(2n + 1),
+    &.item-left > *:nth-child(2n) {
+      margin-right: (50% - $item-width);
     }
   }
 }
