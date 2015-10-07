@@ -576,9 +576,10 @@ $jumbotron-bg:                   $gray-lighter !default;
 $jumbotron-heading-color:        inherit !default;
 $jumbotron-font-size:            ceil(($font-size-base * 1.5)) !default;
 
-$jumbotron-inverse-color:                $white !default;
-$jumbotron-inverse-bg:                   darken(saturate($brand-primary, 50%), 30%);
-$jumbotron-inverse-heading-color:        inherit !default;
+$jumbotron-inverse-color:                $gray-lightest !default;
+$jumbotron-inverse-bg:                   darken(desaturate($brand-primary, 50%), 20%) !default;
+$jumbotron-inverse-heading-color:        $white !default;
+$jumbotron-inverse-btn-primary-color:    lighten(desaturate($brand-primary, 50%), 35%) !default;
 
 
 //== Page headers
