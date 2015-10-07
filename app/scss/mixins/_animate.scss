@@ -1,3 +1,35 @@
+/* Have to set height explicity on ui-view 
+to prevent collapsing during animation*/
+
+.animation-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+[ui-view] {
+  z-index: 2;
+  min-height: 200px;
+}
+
+.transform, .slidedown {
+  &.ng-enter, &.ng-enter-active, &.ng-leave, &.ng-leave-active {
+    overflow: hidden;
+  }
+
+  // &.ng-enter,
+  // &.ng-leave {
+  //   background: white;
+  // }
+
+  &.ng-enter {
+    z-index: 2;
+  }
+
+  &.ng-leave {
+    z-index: 1;
+  }
+}
+
 
 // *
 // * Media Queries
