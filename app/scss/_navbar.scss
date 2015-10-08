@@ -175,9 +175,11 @@ $button-height: $button-d;
   }
 }
 
-// Medium and down
+// Medium and down @TODO move this if
+// we decide buttons always
 // -------------------------
-@include respond($md-and-down) {
+// @include respond($md-and-down) {
+@media all {
   .navbar-external {
     .navbar-btn {
       padding-left: 0;

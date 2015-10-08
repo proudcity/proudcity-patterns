@@ -25,13 +25,12 @@
 // -------------------------
 @include respond($sm-up) {
   .navbar-header-region {
-      .navbar-header {
-        float: none;
-      }
+    .navbar-header {
+      float: none;
+    }
 
-      h2, h3 {
-        margin: 18px 0; 
-      }
+    h2, h3 {
+      margin: 18px 0; 
     }
 
     .menu-button {
@@ -45,7 +44,6 @@
 @include respond($md-up) {
 
   .navbar-header-region {
-      display: none;  
-    }
+    display: none;  
   }
 }
