@@ -1,0 +1,73 @@
+// Helper margin classes
+@mixin margin-helper-classes($mod: '') {
+  &.margin#{$mod}-none {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  &.margin#{$mod}-top-none {
+    margin-top: 0;
+  }
+  &.margin#{$mod}-top-large {
+    margin-top: $line-height-computed * 1.5;
+  }
+  &.margin#{$mod}-top-larger {
+    margin-top: $line-height-computed * 2;
+  }
+  &.margin#{$mod}-top-huge {
+    margin-top: $line-height-computed * 3;
+  }
+  &.margin#{$mod}-bottom-none {
+    margin-bottom: 0;
+  }
+  &.margin#{$mod}-bottom-large {
+    margin-bottom: $line-height-computed * 1.5;
+  }
+  &.margin#{$mod}-bottom-larger {
+    margin-bottom: $line-height-computed * 2;
+  }
+  &.margin#{$mod}-bottom-huge {
+    margin-bottom: $line-height-computed * 3;
+  }
+}
+
+// Helper margin classes
+* {
+  @include margin-helper-classes();
+}
+
+@include respond($xs-only) {
+ // Helper margin classes
+  * {
+    @include margin-helper-classes('-xs');
+  }
+}
+
+@include respond($sm-up) {
+  .show-sm-block {
+    display: block !important;
+  }
+
+  .show-sm-inline-block {
+    display: inline-block !important;
+  }
+}
+
+@include respond($md-up) {
+  .show-md-block {
+    display: block !important;
+  }
+
+  .show-md-inline-block {
+    display: inline-block !important;
+  }
+}
+
+@include respond($lg-up) {
+  .show-lg-block {
+    display: block !important;
+  }
+
+  .show-lg-inline-block {
+    display: inline-block !important;
+  }
+}
