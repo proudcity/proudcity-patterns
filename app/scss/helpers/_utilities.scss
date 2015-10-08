@@ -4,28 +4,28 @@
     margin-bottom: 0;
     margin-top: 0;
   }
-  &.margin#{$mod}-top-none {
+  &.margin-top#{$mod}-none {
     margin-top: 0;
   }
-  &.margin#{$mod}-top-large {
+  &.margin-top#{$mod}-large {
     margin-top: $line-height-computed * 1.5;
   }
-  &.margin#{$mod}-top-larger {
+  &.margin-top#{$mod}-larger {
     margin-top: $line-height-computed * 2;
   }
-  &.margin#{$mod}-top-huge {
+  &.margin-top#{$mod}-huge {
     margin-top: $line-height-computed * 3;
   }
-  &.margin#{$mod}-bottom-none {
+  &.margin-bottom#{$mod}-none {
     margin-bottom: 0;
   }
-  &.margin#{$mod}-bottom-large {
+  &.margin-bottom#{$mod}-large {
     margin-bottom: $line-height-computed * 1.5;
   }
-  &.margin#{$mod}-bottom-larger {
+  &.margin-bottom#{$mod}-larger {
     margin-bottom: $line-height-computed * 2;
   }
-  &.margin#{$mod}-bottom-huge {
+  &.margin-bottom#{$mod}-huge {
     margin-bottom: $line-height-computed * 3;
   }
 }
