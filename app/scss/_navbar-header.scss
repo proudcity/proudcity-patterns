@@ -1,0 +1,51 @@
+.navbar-header-region {
+  // text-align: center;
+
+  h2, h3 {
+    margin: 12px 0; 
+
+    &, a {
+      color:  $navbar-default-link-color;
+    }
+
+    i {
+      margin-right: 0.25em;
+    }
+  }
+
+  // img {
+  //   display: inline-block;
+  //   max-width: 300px;
+  //   max-height: 
+  //   height: auto;
+  // }
+}
+
+// Small up
+// -------------------------
+@include respond($sm-up) {
+  .navbar-header-region {
+      .navbar-header {
+        float: none;
+      }
+
+      h2, h3 {
+        margin: 18px 0; 
+      }
+    }
+
+    .menu-button {
+      display: none;
+    }
+  }
+}
+
+// Meduim up
+// -------------------------
+@include respond($md-up) {
+
+  .navbar-header-region {
+      display: none;  
+    }
+  }
+}
