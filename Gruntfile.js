@@ -22,7 +22,7 @@ module.exports = function(grunt) {
 					outputStyle: 'extended'
 				},
 				files: {
-					'<%= app %>/css/proudcity-patterns.css': '<%= app %>/scss/patterns.scss'
+					'<%= app %>/css/proudcity-patterns.css': '<%= app %>/pattern-scss/patterns.scss'
 				}
 			}
 		},
@@ -33,7 +33,7 @@ module.exports = function(grunt) {
 				tasks: ['sass']
 			},
 			sass: {
-				files: '<%= app %>/scss/**/*.scss',
+				files: '<%= app %>/pattern-scss/**/*.scss',
 				tasks: ['sass']
 			},
 			livereload: {
