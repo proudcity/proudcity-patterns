@@ -18,3 +18,8 @@ input.date-clear {
   font-weight: normal;
 }
 
+
+// Modify panels
+.panels-ipe-moved ~ #panels-ipe-control-container {
+  display: none!important;
+}
