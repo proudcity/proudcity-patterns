@@ -33,10 +33,16 @@ body.proud-navbar-active {
   z-index: 0;
   left: 0;
 
+  // Admin toolbvar
+  #admin-menu, #admin-menu .dropdown {
+    z-index: $nav-user-overlay-z + 1;
+  }
+
   // IPE 
   div#panels-ipe-control-container {
     z-index: $nav-user-overlay-z - 2;
   }
+  
 
 }
 
