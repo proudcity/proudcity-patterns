@@ -279,8 +279,12 @@ $button-height: $button-d;
 
   // Admin menu active, compensate
   body.proud-toolbar-active.proud-navbar-active {
-
     padding-top: $two-bars-height * 2;
+
+    // Toolbar
+    .navbar-proud {
+      z-index: $nav-user-overlay-z + 2;
+    }
 
     // Switch to top header
     .navbar-external {
