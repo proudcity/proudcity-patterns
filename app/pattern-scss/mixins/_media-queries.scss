@@ -1,4 +1,9 @@
-@mixin respond($media) {
+@mixin respond($media, $modList: ()) {
+  @if(length($modList)) {
+    @each $mod in $modList {
+      $media: "#{$media} and (#{$modList})"; 
+    }
+  }
   @media #{$media} {
     @content;
   }

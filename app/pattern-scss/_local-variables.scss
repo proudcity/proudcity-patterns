@@ -7,18 +7,18 @@ $bootstrap-sass-asset-helper: (twbs-font-path("") != unquote('twbs-font-path("")
 //
 // Variables
 // --------------------------------------------------
-$light-weight:      300;
-$regular-weight:    400;
-$medium-weight:     500;
-$bold-weight:       700;
+$light-weight:      300!default;
+$regular-weight:    400!default;
+$medium-weight:     500!default;
+$bold-weight:       700!default;
 
 //== Colors
 //
 //## Gray and brand colors for use across Bootstrap.
 
-$white: #FFF;
+$white: #FFF!default;
 
-$black: #000000;
+$black: #000000!default;
 
 $gray-base:              #000 !default;
 $gray-darker:            lighten($gray-base, 13.5%) !default; // #222
@@ -26,39 +26,39 @@ $gray-dark:              lighten($gray-base, 20%) !default;   // #333
 $gray:                   lighten($gray-base, 33.5%) !default; // #555
 $gray-light:             lighten($gray-base, 46.7%) !default; // #777
 $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
-$gray-lightest:           #FAFAFA;
+$gray-lightest:           #FAFAFA!default;
 
-$brand-primary:             #2196F3; //#D83530; //#0071BC
-$brand-primary-alt:         #006699;
-$brand-primary-highlight:   #E3F2FD;
+$brand-primary:             #2196F3!default; //#D83530; //#0071BC
+$brand-primary-alt:         #006699!default;
+$brand-primary-highlight:   #E3F2FD!default;
 
-$brand-secondary:       #FFC107;
-$brand-secondary-alt:     #FFD54F;
-$brand-secondary-highlight:   #FFECB3;
+$brand-secondary:       #FFC107!default;
+$brand-secondary-alt:     #FFD54F!default;
+$brand-secondary-highlight:   #FFECB3!default;
 
 $brand-success:         #26BF7D !default;
-$brand-success-alt:     darken($brand-success, 6.5%);
+$brand-success-alt:     darken($brand-success, 6.5%)!default;
 $brand-info:            #5bc0de !default;
-$brand-info-alt:      darken($brand-info, 6.5%);
+$brand-info-alt:      darken($brand-info, 6.5%)!default;
 $brand-warning:         #f0ad4e !default;
-$brand-warning-alt:     darken($brand-warning, 6.5%);
+$brand-warning-alt:     darken($brand-warning, 6.5%)!default;
 $brand-danger:          #d9534f !default;
-$brand-danger-alt:      darken($brand-danger, 6.5%);
+$brand-danger-alt:      darken($brand-danger, 6.5%)!default;
 
 
 // Social
-$gray-social: #b6b6b8;
-$blue-facebook: #3460a1;
-$blue-twitter: #28aae1;
-$red-googleplus: #de5543;
-$blue-linkedin: #136d9d;
-$pink-flickr: #ed2a90;
-$red-youtube: #ee3138;
-$red-pinterest: #cc2127;
-$orange-rss: #f58020;
-$pink-dribbble: #ef548f;
-$blue-vimeo: #16bbed;
-$blue-wordpress: #22769B;
+$gray-social: #b6b6b8!default;
+$blue-facebook: #3460a1!default;
+$blue-twitter: #28aae1!default;
+$red-googleplus: #de5543!default;
+$blue-linkedin: #136d9d!default;
+$pink-flickr: #ed2a90!default;
+$red-youtube: #ee3138!default;
+$red-pinterest: #cc2127!default;
+$orange-rss: #f58020!default;
+$pink-dribbble: #ef548f!default;
+$blue-vimeo: #16bbed!default;
+$blue-wordpress: #22769B!default;
 
 
 //== Bootstrap 4
@@ -116,33 +116,33 @@ $font-size-base:          18px !default;
 $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
 
-$font-size-h1:            60px; 
-$font-size-h2:            48px; 
-$font-size-h3:            36px; 
-$font-size-h4:            24px; 
-$font-size-h5:            20px;
-$font-size-h6:            18px; 
+$font-size-h1:            60px!default; 
+$font-size-h2:            48px!default; 
+$font-size-h3:            36px!default; 
+$font-size-h4:            24px!default; 
+$font-size-h5:            20px!default;
+$font-size-h6:            18px!default; 
 
-$font-color-h1:            $black; 
-$font-color-h2:            $black; 
-$font-color-h3:            $black; 
-$font-color-h4:            $black; 
-$font-color-h5:            $black;
-$font-color-h6:            $black; 
+$font-color-h1:            $black!default; 
+$font-color-h2:            $black!default; 
+$font-color-h3:            $black!default; 
+$font-color-h4:            $black!default; 
+$font-color-h5:            $black!default;
+$font-color-h6:            $black!default; 
 
-$font-weight-h1:            600;
-$font-weight-h2:            600;
-$font-weight-h3:            600;
-$font-weight-h4:            600; 
-$font-weight-h5:            600;
-$font-weight-h6:            600;
+$font-weight-h1:            600!default;
+$font-weight-h2:            600!default;
+$font-weight-h3:            600!default;
+$font-weight-h4:            600!default; 
+$font-weight-h5:            600!default;
+$font-weight-h6:            600!default;
 
-$font-line-height-h1:            1.1; 
-$font-line-height-h2:            1.2; 
-$font-line-height-h3:            1.4; 
-$font-line-height-h4:            1.5; 
-$font-line-height-h5:            1.4;
-$font-line-height-h6:            1.4;
+$font-line-height-h1:            1.1!default; 
+$font-line-height-h2:            1.2!default; 
+$font-line-height-h3:            1.4!default; 
+$font-line-height-h4:            1.5!default; 
+$font-line-height-h5:            1.4!default;
+$font-line-height-h6:            1.4!default;
 
 
 //** Unit-less `line-height` for use in components like buttons.
@@ -154,7 +154,7 @@ $line-height-computed:    floor(($font-size-base * $line-height-base)) !default;
 $headings-font-family:    $font-family-sans-serif !default;
 $headings-font-weight:    900 !default;
 $headings-line-height:    1.1 !default;
-$headings-color:          $black;
+$headings-color:          $black!default;
 
 
 //== Iconography
@@ -165,7 +165,7 @@ $headings-color:          $black;
 
 // [converter] Asset helpers such as Sprockets and Node.js Mincer do not resolve relative paths
 //$icon-font-path: if($bootstrap-sass-asset-helper, "bootstrap/", "../fonts/bootstrap/") !default;
-$icon-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.2.0/fonts"; // for referencing Bootstrap CDN font files directly
+$icon-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.2.0/fonts"!default; // for referencing Bootstrap CDN font files directly
 
 //** File name for all font files.
 $icon-font-name:          "glyphicons-halflings-regular" !default;
@@ -194,9 +194,9 @@ $padding-xs-horizontal:     5px !default;
 $line-height-large:         1.33 !default;
 $line-height-small:         1.5 !default;
 
-$border-radius-base:        2px;//4px !default;
-$border-radius-large:       2px;//6px !default;
-$border-radius-small:       2px;//3px !default;
+$border-radius-base:        2px!default;//4px !default!default;
+$border-radius-large:       2px!default;//6px !default!default;
+$border-radius-small:       2px!default;//3px !default;
 
 //** Global color for active items (e.g., navs or dropdowns).
 $component-active-color:    #fff !default;
@@ -358,7 +358,7 @@ $zindex-popover:           1060 !default;
 $zindex-tooltip:           1070 !default;
 $zindex-navbar-fixed:      1030 !default;
 $zindex-modal:             1040 !default;
-$foverlay-z-index: 3000;
+$foverlay-z-index: 3000!default;
 
 
 //== Media queries breakpoints
@@ -440,8 +440,8 @@ $container-lg:                 1200px;
 
 // Basics of a navbar
 $navbar-height:                    50px !default;
-$navbar-margin-bottom:             0;
-$navbar-border-radius:             0;
+$navbar-margin-bottom:             0!default;
+$navbar-border-radius:             0!default;
 $navbar-padding-horizontal:        floor(($grid-gutter-width / 2)) !default;
 $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2) !default;
 $navbar-collapse-max-height:       340px !default;
@@ -452,53 +452,53 @@ $navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
 
 // Inverted navbar
 // Reset inverted navbar basics
-$navbar-default-color:                      lighten($gray-light, 15%);
-$navbar-default-bg:                         $black;
-$navbar-default-border:                     $black;
+$navbar-default-color:                      lighten($gray-light, 15%)!default;
+$navbar-default-bg:                         $black!default;
+$navbar-default-border:                     $black!default;
 
 // Inverted navbar links
-$navbar-default-link-color:                 lighten($gray-light, 15%);
-$navbar-default-link-hover-color:           #fff;
-$navbar-default-link-hover-bg:              transparent;
-$navbar-default-link-active-color:          $navbar-default-link-hover-color;
-$navbar-default-link-active-bg:             darken($navbar-default-bg, 10%);
-$navbar-default-link-disabled-color:        #444;
-$navbar-default-link-disabled-bg:           transparent;
+$navbar-default-link-color:                 lighten($gray-light, 15%)!default;
+$navbar-default-link-hover-color:           #fff!default;
+$navbar-default-link-hover-bg:              transparent!default;
+$navbar-default-link-active-color:          $navbar-default-link-hover-color!default;
+$navbar-default-link-active-bg:             darken($navbar-default-bg, 10%)!default;
+$navbar-default-link-disabled-color:        #444!default;
+$navbar-default-link-disabled-bg:           transparent!default;
 
 // Inverted navbar brand label
-$navbar-default-brand-color:                $navbar-default-link-color;
-$navbar-default-brand-hover-color:          #fff;
-$navbar-default-brand-hover-bg:             transparent;
+$navbar-default-brand-color:                $navbar-default-link-color!default;
+$navbar-default-brand-hover-color:          #fff!default;
+$navbar-default-brand-hover-bg:             transparent!default;
 
 // Inverted navbar toggle
-$navbar-default-toggle-hover-bg:            #333;
-$navbar-default-toggle-icon-bar-bg:         #fff;
-$navbar-default-toggle-border-color:        #333;
+$navbar-default-toggle-hover-bg:            #333!default;
+$navbar-default-toggle-icon-bar-bg:         #fff!default;
+$navbar-default-toggle-border-color:        #333!default;
 
 
 
-$navbar-inverse-color:             #777;
-$navbar-inverse-bg:                #EEEEEE;
-$navbar-inverse-border:            darken($navbar-inverse-bg, 6.5%);
+$navbar-inverse-color:             #777!default;
+$navbar-inverse-bg:                #EEEEEE!default;
+$navbar-inverse-border:            darken($navbar-inverse-bg, 6.5%)!default;
 
 // Navbar links
-$navbar-inverse-link-color:                #777;
-$navbar-inverse-link-hover-color:          #333;
-$navbar-inverse-link-hover-bg:             transparent;
-$navbar-inverse-link-active-color:         #555;
-$navbar-inverse-link-active-bg:            darken($navbar-inverse-bg, 6.5%);
-$navbar-inverse-link-disabled-color:       #ccc;
-$navbar-inverse-link-disabled-bg:          transparent;
+$navbar-inverse-link-color:                #777!default;
+$navbar-inverse-link-hover-color:          #333!default;
+$navbar-inverse-link-hover-bg:             transparent!default;
+$navbar-inverse-link-active-color:         #555!default;
+$navbar-inverse-link-active-bg:            darken($navbar-inverse-bg, 6.5%)!default;
+$navbar-inverse-link-disabled-color:       #ccc!default;
+$navbar-inverse-link-disabled-bg:          transparent!default;
 
 // Navbar brand label
-$navbar-inverse-brand-color:               $navbar-inverse-link-color;
-$navbar-inverse-brand-hover-color:         darken($navbar-inverse-brand-color, 10%);
-$navbar-inverse-brand-hover-bg:            transparent;
+$navbar-inverse-brand-color:               $navbar-inverse-link-color!default;
+$navbar-inverse-brand-hover-color:         darken($navbar-inverse-brand-color, 10%)!default;
+$navbar-inverse-brand-hover-bg:            transparent!default;
 
 // Navbar toggle
-$navbar-inverse-toggle-hover-bg:           #ddd;
-$navbar-inverse-toggle-icon-bar-bg:        #888;
-$navbar-inverse-toggle-border-color:       #ddd;
+$navbar-inverse-toggle-hover-bg:           #ddd!default;
+$navbar-inverse-toggle-icon-bar-bg:        #888!default;
+$navbar-inverse-toggle-border-color:       #ddd!default;
 
 //== Navs
 //
@@ -506,7 +506,7 @@ $navbar-inverse-toggle-border-color:       #ddd;
 
 //=== Shared nav styles
 $nav-link-padding:                          10px 15px !default;
-$nav-link-hover-bg:                         $brand-primary-highlight;
+$nav-link-hover-bg:                         $brand-primary-highlight!default;
 
 $nav-disabled-link-color:                   $gray-light !default;
 $nav-disabled-link-hover-color:             $gray-light !default;
@@ -524,9 +524,9 @@ $nav-tabs-justified-link-border-color:            #ddd !default;
 $nav-tabs-justified-active-link-border-color:     $body-bg !default;
 
 //== Pills
-$nav-pills-border-radius:                   $border-radius-base;
-$nav-pills-active-link-hover-bg:            $gray-lighter;
-$nav-pills-active-link-hover-color:         darken($nav-pills-active-link-hover-bg, 60%);
+$nav-pills-border-radius:                   $border-radius-base!default;
+$nav-pills-active-link-hover-bg:            $gray-lighter!default;
+$nav-pills-active-link-hover-color:         darken($nav-pills-active-link-hover-bg, 60%)!default;
 
 
 //== Pagination
