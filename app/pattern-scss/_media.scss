@@ -4,3 +4,61 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.svg-wrapper {
+  position: relative;
+  text-align: center;
+  
+  img, svg {
+    margin-bottom: 30px;
+    height: auto;
+    width: 100%;
+  }
+
+  .svg-stack {
+    position: absolute;
+    top: 0;
+  }
+
+  $numbers: (50, 60, 70, 80, 90);
+  
+  @each $number in $numbers {
+    &.svg-#{$number} {
+      padding-left: (100 - $number)/2 * 1%;
+      padding-right: (100 - $number)/2 * 1%;
+      
+      .svg-stack {
+        left: (100 - $number)/2 * 1%;
+        right: (100 - $number)/2 * 1%;
+      }
+    }
+  }
+}
+
+// colors
+
+path, polygon, rect {
+  .svg-brand-success  & {
+    fill: $brand-success;
+  }
+  
+  .svg-brand-primary & {
+    fill: $brand-primary;
+  }
+  
+  .svg-white & {
+    fill: $white;
+  }
+
+  .svg-black & {
+    fill: $gray-dark;
+  }
+  
+  .svg-gray & {
+    fill: $gray;
+  }
+
+  .svg-gray-dark & {
+    fill: $gray-dark;
+  }
+}

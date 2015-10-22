@@ -16,34 +16,61 @@ $bold-weight:       700!default;
 //
 //## Gray and brand colors for use across Bootstrap.
 
-$white: #FFF!default;
+$white:                       #FFF!default;
 
-$black: #000000!default;
+$black:                       #000!default;
 
-$gray-base:              #000 !default;
-$gray-darker:            lighten($gray-base, 13.5%) !default; // #222
-$gray-dark:              lighten($gray-base, 20%) !default;   // #333
-$gray:                   lighten($gray-base, 33.5%) !default; // #555
-$gray-light:             lighten($gray-base, 46.7%) !default; // #777
-$gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
-$gray-lightest:           #FAFAFA!default;
+// Primary (default blue)
+$brand-primary:               #0071bc!default;
+$brand-primary-darker:        #205493!default;
+$brand-primary-darkest:       #112e51!default;
 
-$brand-primary:             #2196F3!default; //#D83530; //#0071BC
-$brand-primary-alt:         #006699!default;
-$brand-primary-highlight:   #E3F2FD!default;
+// Info, AKA "primary alt" (default lighter blue)
+$brand-info:                  #5bc0de!default;
+$brand-primary-alt:           $brand-info!default;
+$brand-primary-alt-dark:      #00a6d2!default;
+$brand-primary-alt-darkest:   #046b99!default;
+$brand-primary-alt-light:     #9bdaf1!default;
+$brand-primary-alt-lightest:  #e1f3f8!default;
 
-$brand-secondary:       #FFC107!default;
-$brand-secondary-alt:     #FFD54F!default;
-$brand-secondary-highlight:   #FFECB3!default;
+// danger AKA "secondary (default red)
+$brand-danger:                #e31c3d!default;
+$brand-secondary:             $brand-danger!default;
+$brand-secondary-dark:        #cd2026!default;
+$brand-secondary-darkest:     #981b1e!default;
+$brand-secondary-light:       #e59393!default;
+$brand-secondary-lightest:    #f9dede!default;
 
-$brand-success:         #26BF7D !default;
-$brand-success-alt:     darken($brand-success, 6.5%)!default;
-$brand-info:            #5bc0de !default;
-$brand-info-alt:      darken($brand-info, 6.5%)!default;
-$brand-warning:         #f0ad4e !default;
-$brand-warning-alt:     darken($brand-warning, 6.5%)!default;
-$brand-danger:          #d9534f !default;
-$brand-danger-alt:      darken($brand-danger, 6.5%)!default;
+// Brand success (default green)
+$brand-success:               #26BF7D !default;
+$brand-success:               #2e8540 !default; 
+$brand-success-light:         #4aa564!default;
+$brand-success-lighter:       #94bfa2!default;
+$brand-success-lightest:      #e7f4e4!default;
+
+// Brand warning (default yellow)
+$brand-warning:               #f0ad4e !default;
+$brand-warning-light:         #f9c642!default;
+$brand-warning-lighter:       #fad980!default;
+$brand-warning-lightest:      #fff1d2!default;
+
+// Grays
+$gray-base:                   #212121 !default;
+$gray-darker:                 lighten($gray-base, 13.5%) !default;
+$gray-dark:                   #323a45!default;
+$gray:                        #5b616b!default;
+$gray-light:                  #aeb0b5!default;
+$gray-lighter:                #d6d7d9!default;
+$gray-lightest:               #f1f1f1!default;
+
+$gray-warm-dark:              #494440!default;
+$gray-warm-light:             #e4e2e0!default;
+$gray-cool-light:             #dce4ef!default;
+
+// Extras
+
+$color-focus: #3e94cf!default;
+$color-visited: #4c2c92!default;
 
 
 // Social
@@ -123,12 +150,12 @@ $font-size-h4:            24px!default;
 $font-size-h5:            20px!default;
 $font-size-h6:            18px!default; 
 
-$font-color-h1:            $black!default; 
-$font-color-h2:            $black!default; 
-$font-color-h3:            $black!default; 
-$font-color-h4:            $black!default; 
-$font-color-h5:            $black!default;
-$font-color-h6:            $black!default; 
+$font-color-h1:            $gray-base!default; 
+$font-color-h2:            $gray-base!default; 
+$font-color-h3:            $gray-base!default; 
+$font-color-h4:            $gray-base!default; 
+$font-color-h5:            $gray-base!default;
+$font-color-h6:            $gray-base!default; 
 
 $font-weight-h1:            600!default;
 $font-weight-h2:            600!default;
@@ -154,7 +181,7 @@ $line-height-computed:    floor(($font-size-base * $line-height-base)) !default;
 $headings-font-family:    $font-family-sans-serif !default;
 $headings-font-weight:    900 !default;
 $headings-line-height:    1.1 !default;
-$headings-color:          $black!default;
+$headings-color:          $gray-base!default;
 
 
 //== Iconography

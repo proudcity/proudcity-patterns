@@ -11,6 +11,11 @@ to prevent collapsing during animation*/
   min-height: 200px;
 }
 
+// For wrapping ui-views, should be 100% height
+.animate-height-fake {
+  min-height: 90%;
+}
+
 .transform, .slidedown {
   &.ng-enter, &.ng-enter-active, &.ng-leave, &.ng-leave-active {
     overflow: hidden;
