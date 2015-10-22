@@ -42,7 +42,7 @@ $box-color-mod: 30%!default;
     }
 
     .form-control {
-      border-color: lighten($color, $color-mod);
+      border-color: lighten($color, $color-mod*.75);
     }
 
     .icon-list li:before {
@@ -58,7 +58,7 @@ $box-color-mod: 30%!default;
     }
 
     .form-control {
-      border-color: darken($color, $color-mod);
+      border-color: darken($color, $color-mod*.75);
     }
 
     .icon-list li:before {
@@ -77,7 +77,7 @@ $box-color-mod: 30%!default;
       }
 
       .form-control {
-        border-color: darken($color-faded, $color-mod);
+        border-color: darken($color-faded, $color-mod*.75);
       }
 
       .icon-list li:before {
