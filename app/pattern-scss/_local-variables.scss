@@ -473,10 +473,6 @@ $navbar-padding-horizontal:        floor(($grid-gutter-width / 2)) !default;
 $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2) !default;
 $navbar-collapse-max-height:       340px !default;
 
-$navbar-default-color:             #777 !default;
-$navbar-default-bg:                #EEEEEE !default;
-$navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
-
 // Inverted navbar
 // Reset inverted navbar basics
 $navbar-default-color:                      $white!default;
