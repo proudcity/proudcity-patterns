@@ -1,3 +1,4 @@
+$type-mod: .75;
 
 .jumbotron {
   background-size: cover;
@@ -5,7 +6,7 @@
 
   h1,
   h2 {
-    font-size: $font-size-h1;
+    font-size: $font-size-h1 * $type-mod;
   }
 
   &.jumbotron-inverse {
@@ -64,10 +65,18 @@
 
 
 @include respond($sm-up) {
+  
+  .jumbotron {
+
+    h1,
+    h2 {
+      font-size: $font-size-h1;
+    }
+  }
+
   .jumbotron-bg {
     padding: 50px;
   }
-
   
   .full-container {
     
