@@ -13,6 +13,16 @@ $box-color-mod: 30%!default;
   *:not(.btn):not(input) {
     color: $color;
   }
+  @if (lightness($color) < 40) {
+    .form-control {
+      border-color: lighten($color, 50%);
+    }
+  }
+  @else {
+   .form-control {
+      border-color: darken($color, 50%);
+    }
+  }
 }
 
 %box-white-color {
@@ -41,10 +51,6 @@ $box-color-mod: 30%!default;
       @extend %box-white-color;
     }
 
-    .form-control {
-      border-color: lighten($color, $color-mod*.75);
-    }
-
     .icon-list li:before {
       color: lighten($color, $color-mod);
     }
@@ -55,10 +61,6 @@ $box-color-mod: 30%!default;
     }
     @else {
       @extend %box-dark-color;
-    }
-
-    .form-control {
-      border-color: darken($color, $color-mod*.75);
     }
 
     .icon-list li:before {
@@ -74,10 +76,6 @@ $box-color-mod: 30%!default;
       }
       @else {
         @extend %box-dark-color;
-      }
-
-      .form-control {
-        border-color: darken($color-faded, $color-mod*.75);
       }
 
       .icon-list li:before {

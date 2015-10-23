@@ -33,23 +33,3 @@ $fa-font-path:        "//netdna.bootstrapcdn.com/font-awesome/4.4.0/fonts"; // f
     @extend %fa-icon;
   }
 }
-
-ul.icon-list {
-  list-style: none;
-  
-  li {
-    display: inline-block;
-    @extend %fa-icon-before;
-    position: relative;
-
-    &:before {
-      @extend %fa-icon;
-      content: $fa-var-circle;
-      font-size: 0.6em;
-      left: -($font-size-base);
-      line-height: ($font-size-base*$line-height-base);
-      position: absolute;
-      top: 0;
-    }
-  }
-}
