@@ -4,6 +4,12 @@ $nav-height-tall: 740px;
 $nav-user-overlay-z: 1050;
 
 
+// Keep navabr styles consistent
+
+.navbar, .navbar-nav {
+  font-size: 16px;
+}
+
 // Apply some global styles if applicable
 .menu-option-footer {
   max-width: 100%;
@@ -218,12 +224,12 @@ $button-height: $button-d;
       .navbar-header-region {
         padding-top: $two-bars-height;
       }
+    }
 
-      // Admin menu instead
-      &.admin-menu {
-        .navbar-header-region {
-          padding-top: 0;
-        }
+    // Admin menu instead
+    &.admin-menu {
+      .navbar-header-region {
+        padding-top: 0;
       }
     }
 
@@ -278,7 +284,7 @@ $button-height: $button-d;
   $two-bars-height: ($nav-height-short - 3);
 
   // Admin menu active, compensate
-  body.proud-toolbar-active.proud-navbar-active {
+  body.proud-navbar-active {
     padding-top: $two-bars-height * 2;
 
     // Toolbar
