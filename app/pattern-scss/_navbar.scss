@@ -284,7 +284,7 @@ $button-height: $button-d;
   $two-bars-height: ($nav-height-short - 3);
 
   // Admin menu active, compensate
-  body.proud-navbar-active {
+  body.proud-navbar-active.proud-toolbar-active {
     padding-top: $two-bars-height * 2;
 
     // Toolbar
@@ -297,7 +297,10 @@ $button-height: $button-d;
       bottom: auto;
       top: $two-bars-height;
     }
+  }
 
+  // Admin menu active, compensate
+  body.proud-navbar-active {
     // Admin menu instead
     &.admin-menu {
       padding-top: $nav-height-short + 21px;

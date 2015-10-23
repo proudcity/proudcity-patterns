@@ -13,14 +13,23 @@ $box-color-mod: 30%!default;
   *:not(.btn):not(input) {
     color: $color;
   }
+
   @if (lightness($color) < 40) {
     .form-control {
       border-color: lighten($color, 50%);
+    }
+
+    a {
+      color: $brand-primary-darker;
     }
   }
   @else {
    .form-control {
       border-color: darken($color, 50%);
+    }
+
+    a {
+      color: $brand-primary-alt-lightest;
     }
   }
 }
