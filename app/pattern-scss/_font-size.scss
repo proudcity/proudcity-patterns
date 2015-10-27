@@ -1,17 +1,17 @@
 .font-size {
+  & {
+    .dropdown-menu {
+      min-width: 198px;
+      padding: $padding-base-vertical/2 $padding-base-horizontal/2;
 
-  .dropdown-menu {
-    min-width: 198px;
-    padding: $padding-base-vertical/2 $padding-base-horizontal/2;
+      &.nav-pills > li > a {
+        padding: $padding-base-vertical $padding-base-horizontal;
+        font-family: $font-family-serif;
 
-    &.nav-pills > li > a {
-      padding: $padding-base-vertical $padding-base-horizontal;
-      font-family: $font-family-serif;
-
-      sup {
-        font-weight: bold;
+        sup {
+          font-weight: bold;
+        }
       }
     }
   }
-  
 }
