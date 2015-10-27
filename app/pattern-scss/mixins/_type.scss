@@ -50,3 +50,9 @@
   color: $font-color-h6;
   line-height: $font-line-height-h6;
 }
+
+$xs-header-mod: .75!default;
+
+@mixin xs-header-size($header-size) {
+  font-size: $xs-header-mod * $header-size;
+}
