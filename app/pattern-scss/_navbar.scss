@@ -62,14 +62,20 @@ $button-height: $button-d;
   // Hide logo area mobile
   #logo-menu {
     display: none;
-  
-    .nav-logo i {
+  }
+
+  .nav-logo {
+    i {
       font-size: 1.6em;
     }
 
-    .nav-text a {
-      padding-left: 0;
+    a {
+      padding: 6px;
     }
+  }
+
+  .nav-text a {
+    padding-left: 0;
   }
 
   // Action buttons
