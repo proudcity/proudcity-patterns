@@ -125,24 +125,6 @@
 // Background variations
 //
 
-@mixin card-color($color, $hover-amount: 10%) {
-  background-color: $color;
-  border-color: $color;
-  box-shadow: 0 0 10px $color inset;
-
-  @if (lightness($color) < 40) {
-     box-shadow: 0 0 10px lighten($color, 10%) inset;
-
-     * {
-      color: $white;
-     }
-  }
-  @else {
-    box-shadow: 0 0 10px darken($color, 10%) inset;
-  }
-}
-
-
 .card-primary {
   @include card-color($brand-primary);
 }
