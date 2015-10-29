@@ -124,59 +124,51 @@
 //
 // Background variations
 //
+
+@mixin card-color($color, $hover-amount: 10%) {
+  background-color: $color;
+  border-color: $color;
+  box-shadow: 0 0 10px $color inset;
+
+  @if (lightness($color) < 40) {
+     box-shadow: 0 0 10px lighten($color, 10%) inset;
+
+     * {
+      color: $white;
+     }
+  }
+  @else {
+    box-shadow: 0 0 10px darken($color, 10%) inset;
+  }
+}
+
+
 .card-primary {
-  background-color: $brand-primary;
-  border-color: $brand-primary;
-  box-shadow: 0 0 10px $brand-primary inset;
-
-  @include hover-focus {
-    box-shadow: 0 0 10px darken($brand-primary, 10%) inset;
-  }
+  @include card-color($brand-primary);
 }
+
 .card-success {
-  background-color: $brand-success;
-  border-color: $brand-success;
-  box-shadow: 0 0 10px $brand-success inset;
-
-  @include hover-focus {
-    box-shadow: 0 0 10px darken($brand-success, 10%) inset;
-  }
+  @include card-color($brand-success);
 }
+
 .card-info {
-  background-color: $brand-info;
-  border-color: $brand-info;
-  box-shadow: 0 0 10px $brand-info inset;
-
-  @include hover-focus {
-    box-shadow: 0 0 10px darken($brand-info, 10%) inset;
-  }
+  @include card-color($brand-info);
 }
+
 .card-warning {
-  background-color: $brand-warning;
-  border-color: $brand-warning;
-  box-shadow: 0 0 10px $brand-warning inset;
-
-  @include hover-focus {
-    box-shadow: 0 0 10px darken($brand-warning, 10%) inset;
-  }
+  @include card-color($brand-warning);
 }
+
 .card-danger {
-  background-color: $brand-danger;
-  border-color: $brand-danger;
-  box-shadow: 0 0 10px $brand-danger inset;
-
-  @include hover-focus {
-    box-shadow: 0 0 10px darken($brand-danger, 10%) inset;
-  }
+  @include card-color($brand-danger);
 }
-.card-dark {
-  background-color: $gray-dark;
-  border-color: $gray-dark;
-  box-shadow: 0 0 10px $gray-dark inset;
 
-  @include hover-focus {
-    box-shadow: 0 0 10px darken($gray-dark, 10%) inset;
-  }
+.card-gray-light {
+  @include card-color($gray-light);
+}
+
+.card-dark {
+  @include card-color($gray-dark);
 }
 
 

@@ -57,9 +57,12 @@ $type-mod: .75;
 
   
 .full-container {
+  margin-bottom: 30px;
+
   .jumbotron { 
     padding-left:  ($jumbotron-padding);
     padding-right: ($jumbotron-padding);
+    margin-bottom: 0;
   }
 }
 

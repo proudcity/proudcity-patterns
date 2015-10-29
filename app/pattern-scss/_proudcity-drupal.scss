@@ -24,6 +24,23 @@ input.date-clear {
   // display: none!important;
 }
 
+// Styles cards
+.form-item-style {
+  label {
+    padding-left: $grid-gutter-width/4;
+    padding-right: $grid-gutter-width/4;
+  }
+
+  input[type="radio"] {
+    position: absolute;
+    visibility: hidden;
+
+    &:checked ~ .card {
+     @include card-color($gray-lighter);
+    }
+  }
+}
+
 // Ckeditor
 .cke_editable {
 
