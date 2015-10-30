@@ -60,7 +60,7 @@ $throb-dim: 25px;
   background: rgba($white, 0.3);
 
   .throbber {
-    position: absolute;
+    position: absolute!important;
     background: none;
     width: $throb-dim;
     height: $throb-dim;
