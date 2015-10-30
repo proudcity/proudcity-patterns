@@ -27,8 +27,8 @@ $fa-font-path:        "//netdna.bootstrapcdn.com/font-awesome/4.4.0/fonts"; // f
 // @include fa-icon-force($fa-var-chevron-right)
 //
 // $icon: the fontawesome variable name 
-@mixin fa-icon-force($icon) {
-  &:before {
+@mixin fa-icon-force($icon, $selector: '&:before') {
+  #{$selector} {
     content: $icon;
     @extend %fa-icon;
   }
