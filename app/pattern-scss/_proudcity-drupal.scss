@@ -98,6 +98,10 @@ $throb-dim: 25px;
   float: none
 }
 
+.panels-ipe-editing .panels-ipe-portlet-content {
+  overflow: visible;
+}
+
 // Styles cards
 #edit-style {
   @include clearfix();
