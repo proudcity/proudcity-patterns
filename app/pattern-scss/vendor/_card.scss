@@ -349,6 +349,16 @@
 //
 .card-columns {
   @include column-gap(1.25rem);
+  vertical-align: top;
+
+  & > * {
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid-column;
+    display: table;
+    vertical-align: top;
+    width: 100%;
+  }
 }
 
 // Makes columns work for mobile
@@ -364,19 +374,20 @@
 }
 
 @include respond($sm-up) {
+  
+  // 4 column
+  .card-columns-sm-2 {
+    @include column-count(2);
+  }
+
   // Normal 3 column
-  .card-columns, .card-columns-sm-3 {
+  .card-columns-sm-3 {
     @include column-count(3);
 
     .card {
       display: inline-block;
       width: 100%; // Don't let them exceed the column width
     }
-  }
-  
-  // 4 column
-  .card-columns-sm-2 {
-    @include column-count(2);
   }
   
   // 4 column
@@ -387,6 +398,10 @@
 
 // go to 4 column on med
 @include respond($md-up) {
+  .card-columns-md-3 {
+    @include column-count(3);
+  }
+
   .card-columns-md-4 {
     @include column-count(4);
   }
@@ -394,6 +409,10 @@
 
 // go to 4 column on lg
 @include respond($lg-up) {
+  .card-columns-lg-3 {
+    @include column-count(3);
+  }
+
   .card-columns-lg-4 {
     @include column-count(4);
   }
