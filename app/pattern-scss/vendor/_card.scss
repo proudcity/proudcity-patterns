@@ -350,6 +350,7 @@
 .card-columns {
   @include column-gap(1.25rem);
   vertical-align: top;
+  margin-bottom: 30px;
 
   & > * {
     -webkit-column-break-inside: avoid;
@@ -384,10 +385,10 @@
   .card-columns-sm-3 {
     @include column-count(3);
 
-    .card {
-      display: inline-block;
-      width: 100%; // Don't let them exceed the column width
-    }
+    // .card {
+    //   display: inline-block;
+    //   width: 100%; // Don't let them exceed the column width
+    // }
   }
   
   // 4 column
