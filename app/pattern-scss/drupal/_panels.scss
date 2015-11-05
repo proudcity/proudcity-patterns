@@ -10,6 +10,8 @@
   }
 }
 
+
+// Panels in modal
 #modalContent {
   .panels-add-content-modal > * {
     padding-top: 10px;
@@ -50,12 +52,17 @@
 }
 
 // Styles cards
+
 #edit-style {
   @include clearfix();
 
   .form-item-style {
     margin-top: 0;
     margin-bottom: 0;
+  }
+
+  .form-type-radio {
+    float: left;
   }
 }
 
@@ -73,4 +80,22 @@
      @include card-color($gray-lighter);
     }
   }
+}
+
+
+// Other styles
+
+img.style-option-thumbnail {
+  height: 110px;
+  width: auto;
+  margin: 0 auto;
+}
+
+#panels-choose-layout .form-type-select,
+#panels-layout-category-Proud > .panels-layouts-category {
+  display: none;
+}
+
+#panels-edit-style-type-form #edit-submit {
+  clear: both;
 }
