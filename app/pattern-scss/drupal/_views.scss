@@ -1,0 +1,13 @@
+
+
+.views-exposed-form {
+  @include card;
+}
+
+.views-widget .form-item-title .form-text {
+  @include text-search;
+}
+
+.views-exposed-form label {
+  font-weight: normal;
+}

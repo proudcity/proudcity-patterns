@@ -1,0 +1,8 @@
+// Gets Drupal markup up to snuff with the ProudCity style guide
+
+input.date-clear {
+  &::before {
+    @include datepicker;
+  }
+}
+

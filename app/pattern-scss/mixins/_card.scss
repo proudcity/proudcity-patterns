@@ -8,8 +8,10 @@
   box-shadow: 0 0 10px $white inset;
 
 
-  @include hover-focus {
-    box-shadow: 0 0 8px 4px darken($white, 3%) inset;
+  &.card-btn, .card-btn {
+    @include hover-focus {
+      box-shadow: 0 0 8px 4px darken($white, 3%) inset;
+    }
   }
 
   // @todo: variable to disable
@@ -26,13 +28,25 @@
   box-shadow: 0 0 10px $color inset;
 
   @if (lightness($color) < 40) {
-     box-shadow: 0 0 10px lighten($color, 10%) inset;
+     // box-shadow: 0 0 10px lighten($color, 10%) inset;
 
      * {
       color: $white;
      }
+
+     &.card-btn, .card-btn {
+        @include hover-focus {
+          box-shadow: 0 0 8px 4px lighten($color, 5%) inset;
+        }
+      }
   }
   @else {
-    box-shadow: 0 0 10px darken($color, 10%) inset;
+    // box-shadow: 0 0 10px darken($color, 10%) inset;
+
+    &.card-btn, .card-btn {
+      @include hover-focus {
+        box-shadow: 0 0 8px 4px darken($color, 5%) inset;
+      }
+    }
   }
 }
