@@ -28,11 +28,16 @@
 // Base styles
 //
 
+.card-wrap {
+  position: relative;
+}
+
 .card {
   @include card();
 }
 
 .card-block {
+  display: block;
   padding: $card-spacer-x;
 }
 
@@ -182,12 +187,12 @@
     text-decoration: none;
   }
 
-  & > * {
+  & > *, & > .card-block > * {
     margin-top: $card-spacer-x;
     margin-bottom: 0; 
   }
 
-  & > *:first-child {
+  & > *:first-child, & > .card-block > *:first-child {
     margin-top: 0;
   }
 

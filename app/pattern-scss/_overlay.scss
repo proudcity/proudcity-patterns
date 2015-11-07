@@ -2,14 +2,6 @@
 
 // The search / answers overlay demo
 
-.proud-overlay-left {
-  left: 110%;
-}
-
-.proud-overlay-right {
-  left: -110%;
-}
-
 $top-pad: 50px;
 
 .proud-overlay {
@@ -20,10 +12,13 @@ $top-pad: 50px;
   width: 100%;
   height: 100%;
   background-color: rgba(#FFF, 1);
-  opacity: 1;
-  z-index: 1050;
+  // opacity: 1;
+  // z-index: 1050;
   box-shadow: 0px 2px 5px 5px rgba(0,0,0, 0.1);  
-  @include transition(left 0.3s ease-in 0s);
+  // @include transition(left 0.3s ease-in 0s);
+  opacity: 0;
+  z-index: -1;
+  @include transition(opacity 0.3s ease-in-out, z-index 0.2s linear);
   padding-top: $top-pad;
 }
 
@@ -36,7 +31,22 @@ $top-pad: 50px;
 }
 
 .search-active {
+  .panel-banner {
+    * {
+      position: static!important;
+    }
+  }
+
+  #wrapper-search {
+    position: fixed!important;
+    z-index: $nav-user-overlay-z + 1;
+    top: 70px;
+    left:  30px + 15;
+    right: 30px + 15;
+  }
+
   #overlay-search {
+    z-index: $nav-user-overlay-z;
     opacity: 1;
     left: 0;
     top: 0;
@@ -45,6 +55,7 @@ $top-pad: 50px;
 
 .active-311 {
   #overlay-311 {
+    z-index: $nav-user-overlay-z;
     opacity: 1;
     left: 0;
     top: 0;
@@ -62,6 +73,32 @@ $top-pad: 50px;
       }
     }
   }
+
+
+  // .proud-overlay-left {
+  //   left: 110%;
+  // }
+
+  // .proud-overlay-right {
+  //   left: -110%;
+  // }
+
+
+  // .search-active {
+  //   #overlay-search {
+  //     opacity: 1;
+  //     left: 0;
+  //     top: 0;
+  //   }
+  // }
+
+  // .active-311 {
+  //   #overlay-311 {
+  //     opacity: 1;
+  //     left: 0;
+  //     top: 0;
+  //   }
+  // }
 }
 
 @include respond($sm-up) {
@@ -71,28 +108,20 @@ $top-pad: 50px;
   .proud-overlay {
     padding-top: $top-pad;
     left: 0;
-    opacity: 0;
-    z-index: -1;
-    @include transition(opacity 0.3s ease-in-out, z-index 0.2s linear);
   }
 
-  .proud-overlay-close {
+  .close-311 {
     top: $top-pad - 50;
   }
 
-  .search-active {
-    #overlay-search {
-      z-index: $nav-user-overlay-z;
-      opacity: 1;
-      left: 0;
-    }
+  .close-search {
+    top: 0;
   }
 
-  .active-311 {
-    #overlay-311 {
-      z-index: $nav-user-overlay-z;
-      opacity: 1;
-      left: 0;
+  .search-active {
+    #wrapper-search {
+      left:  60px + 15 + $grid-gutter-width/2;
+      right: 60px + 15 + $grid-gutter-width/2;
     }
   }
 }
@@ -105,8 +134,12 @@ $top-pad: 50px;
     padding-top: $top-pad;
   }
 
-  .proud-overlay-close {
+  .close-311 {
     top: $top-pad - 50;
+  }
+
+  .close-search {
+    top: 90px;
   }
 }
 
@@ -117,7 +150,7 @@ $top-pad: 50px;
     padding-top: $top-pad;
   }
 
-  .proud-overlay-close {
+  .close-311 {
     top: $top-pad - 50;
   }
 }
