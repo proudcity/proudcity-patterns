@@ -98,8 +98,21 @@ $toolbar-active-bg: darken($toolbar-bg, 5%);
         color: $white;
       }
     }
+  }
+}
 
-    @media (max-width: $grid-float-breakpoint-max) {
+// Mobile only
+// -------------------------
+@media (max-width: $grid-float-breakpoint-max) {
+
+  // Default navbar
+  .navbar-proud {
+    .navbar-header {
+      margin-right: 0px;
+    }
+
+    // Dropdown menu items
+    .navbar-nav {
       // Dropdowns get custom display when collapsed
       .open .dropdown-menu {
         > li > a {

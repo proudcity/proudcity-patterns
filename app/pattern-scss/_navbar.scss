@@ -48,8 +48,15 @@ body.proud-navbar-active {
   div#panels-ipe-control-container {
     z-index: $nav-user-overlay-z - 2;
   }
-  
+}
 
+// Admin menu active, compensate
+body.proud-navbar-active.proud-toolbar-active {
+
+  // Toolbar
+  .navbar-proud {
+    z-index: $nav-user-overlay-z + 2;
+  }
 }
 
 
@@ -152,6 +159,10 @@ $button-height: $button-d;
       margin-left: 0;
       margin-right: 0;
       padding-top: 5%;
+
+      .proud-toolbar-active & {
+        padding-top: 20%;
+      }
     }
 
     .menu-nav-open & {
@@ -194,6 +205,14 @@ $button-height: $button-d;
 
     .menu-button {
       display: none;
+    }
+
+    .navbar-nav {
+      margin: 0;
+
+      & > li {
+        float: left;
+      }
     }
   }
 }
@@ -241,7 +260,7 @@ $button-height: $button-d;
 
     // IPE 
     div#panels-ipe-control-container {
-      bottom: $two-bars-height;
+      bottom: $two-bars-height - 1;
     }
   }
 }
@@ -293,10 +312,6 @@ $button-height: $button-d;
   body.proud-navbar-active.proud-toolbar-active {
     padding-top: $two-bars-height * 2;
 
-    // Toolbar
-    .navbar-proud {
-      z-index: $nav-user-overlay-z + 2;
-    }
 
     // Switch to top header
     .navbar-external {

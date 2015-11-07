@@ -20,6 +20,10 @@ $top-pad: 50px;
   z-index: -1;
   @include transition(opacity 0.3s ease-in-out, z-index 0.2s linear);
   padding-top: $top-pad;
+
+  .proud-toolbar-active & {
+    padding-top: $top-pad + 50;
+  }
 }
 
 .proud-overlay-close {
@@ -28,6 +32,10 @@ $top-pad: 50px;
   position: absolute;
   right: 0;
   top: $top-pad - 50;
+
+  .proud-toolbar-active & {
+    top: $top-pad - 50 + 50;
+  }
 }
 
 .search-active {
@@ -43,6 +51,12 @@ $top-pad: 50px;
     top: 70px;
     left:  30px + 15;
     right: 30px + 15;
+  }
+
+  &.proud-toolbar-active {
+    #wrapper-search {
+      top: 70px + 50;
+    }
   }
 
   #overlay-search {
@@ -118,6 +132,20 @@ $top-pad: 50px;
     top: 0;
   }
 
+  .proud-toolbar-active {
+    .proud-overlay {
+      padding-top: $top-pad + 50;
+    }
+
+    .close-311 {
+      top: $top-pad - 50 + 50;
+    }
+
+    .close-search {
+      top: 0 + 50;
+    }
+  }
+
   .search-active {
     #wrapper-search {
       left:  60px + 15 + $grid-gutter-width/2;
@@ -128,7 +156,7 @@ $top-pad: 50px;
 
 @include respond($md-up) {
 
-  $top-pad: 200px;
+  $top-pad: 150px;
 
   .proud-overlay {
     padding-top: $top-pad;
@@ -141,16 +169,30 @@ $top-pad: 50px;
   .close-search {
     top: 90px;
   }
+
+  .proud-toolbar-active {
+    .proud-overlay {
+      padding-top: $top-pad + 50;
+    }
+
+    .close-311 {
+      top: $top-pad - 50 + 50;
+    }
+
+    .close-search {
+      top: 90px + 50;
+    }
+  }
 }
 
 @include respond($lg-up) {
-  $top-pad: 150px;
+  // $top-pad: 150px;
 
-  .proud-overlay {
-    padding-top: $top-pad;
-  }
+  // .proud-overlay {
+  //   padding-top: $top-pad;
+  // }
 
-  .close-311 {
-    top: $top-pad - 50;
-  }
+  // .close-311 {
+  //   top: $top-pad - 50;
+  // }
 }
