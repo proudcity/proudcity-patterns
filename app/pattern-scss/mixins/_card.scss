@@ -1,4 +1,7 @@
-@mixin card {
+
+// Pad select is a css selector to apply padding to
+@mixin card($pad-select: false) {
+  font-size: $font-size-small;
   position: relative;
   margin-bottom: $card-spacer-y;
   background-color: $white;
@@ -14,8 +17,11 @@
     }
   }
 
-  // @todo: variable to disable
-  padding: $card-spacer-x;
+  @if($pad-select) {
+    #{$pad-select} {
+      padding: $card-spacer-x;
+    }
+  }
 }
 
 //

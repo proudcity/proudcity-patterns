@@ -53,6 +53,6 @@
 
 $xs-header-mod: .75!default;
 
-@mixin xs-header-size($header-size) {
-  font-size: $xs-header-mod * $header-size;
+@mixin xs-header-size($header-size, $mod: $xs-header-mod) {
+  font-size: $mod * $header-size;
 }

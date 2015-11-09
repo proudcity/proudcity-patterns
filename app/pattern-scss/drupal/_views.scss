@@ -1,13 +1,28 @@
 
 
 .views-exposed-form {
-  @include card;
+  @include card('&');
 }
 
 .views-widget .form-item-title .form-text {
   @include text-search;
 }
 
-.views-exposed-form label {
-  font-weight: normal;
+.views-exposed-form {
+  label {
+    font-weight: normal;
+  }
+
+  .views-exposed-widget {
+    padding-top: $form-group-margin-bottom;
+
+    .form-submit {
+      margin-top: 0;
+    }
+  }
+}
+
+.views-exposed-widget[class*="views-widget-filter-"] {
+  float: none;
+  padding-right: 0;
 }

@@ -1,37 +1,37 @@
 @import url("http://fonts.googleapis.com/css?family=Lato:400,900,700,300");
 
-h1 {
+h1, .h1 {
   @include h1;
 }
-h2 {
+h2, .h2 {
   @include h2;
 }
-h3 {
+h3, .h3 {
   @include h3;
 }
-h4 {
+h4, .h4 {
   @include h4;
 }
-h5 {
+h5, .h5 {
   @include h5;
 }
-h6 {
+h6, .h6 {
   @include h6;
 }
 
 // Decrease fonts for mobile
 @include respond($xs-only) {
 
-  h1 {
+  h1, .h1 {
     @include xs-header-size($font-size-h1);
   }
-  h2 {
+  h2, .h2 {
     @include xs-header-size($font-size-h2);
   }
-  h3 {
+  h3, .h3 {
     @include xs-header-size($font-size-h3);
   }
-  h4 {
+  h4, h5, h6, .h4, .h5, .h6 {
     @include xs-header-size($font-size-h4);
   }
 }
