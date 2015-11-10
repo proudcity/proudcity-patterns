@@ -20,6 +20,14 @@
       margin-top: 0;
     }
   }
+
+  .views-submit-button, .views-reset-button {
+    padding-right: 0;
+
+    ~ .views-submit-button, ~ .views-reset-button {
+      padding-left: $grid-gutter-width/2;
+    }
+  }
 }
 
 .views-exposed-widget[class*="views-widget-filter-"] {

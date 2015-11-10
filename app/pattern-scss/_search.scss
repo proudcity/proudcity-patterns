@@ -1,0 +1,35 @@
+
+ul.search-autosuggest {
+  padding: 10px 0 0 0;
+  display: none;
+
+  li {
+    list-style: none;
+
+    a {
+      display: block;
+      padding: 10px 0;
+      text-decoration: none;
+      min-height: 2em;
+      color: $gray-base;
+      line-height: 1.5em;
+
+      &:hover {
+        color: $brand-primary;
+      }
+    }
+
+    i {
+      font-size: 1.5em;
+      display: block;
+      float: left;
+      text-align: center;
+      width: 2em;
+    }
+  }
+
+  .search-active & {
+    display: block;
+  } 
+  
+}
