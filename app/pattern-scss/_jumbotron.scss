@@ -75,12 +75,13 @@ $type-mod: .75;
     h2 {
       font-size: $font-size-h1;
     }
+    
+    .jumbotron-bg {
+      padding: 50px;
+    }
+    
   }
 
-  .jumbotron-bg {
-    padding: 50px;
-  }
-  
   .full-container {
     
     .jumbotron { 

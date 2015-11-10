@@ -148,8 +148,8 @@ $top-pad: 50px;
 
   .search-active {
     #wrapper-search {
-      left:  60px + 15 + $grid-gutter-width/2;
-      right: 60px + 15 + $grid-gutter-width/2;
+      left:  60 + 50 + $grid-gutter-width/2;
+      right: 60 + 50 + $grid-gutter-width/2;
     }
   }
 }
