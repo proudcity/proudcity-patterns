@@ -7,6 +7,7 @@ $type-mod: .75;
   h1,
   h2 {
     font-size: $font-size-h1 * $type-mod;
+    margin-top: 0;
   }
 
   &.jumbotron-inverse {
@@ -31,6 +32,11 @@ $type-mod: .75;
     & > * {
       position: relative;
       z-index: 1;
+      margin-bottom: 0;
+
+      &:first-child {
+        margin-top: 0;
+      }
     }
 
     &:before {
@@ -60,12 +66,11 @@ $type-mod: .75;
   margin-bottom: 30px;
 
   .jumbotron { 
-    padding-left:  ($jumbotron-padding);
-    padding-right: ($jumbotron-padding);
+    padding-left:  ($jumbotron-padding/2);
+    padding-right: ($jumbotron-padding/2);
     margin-bottom: 0;
   }
 }
-
 
 @include respond($sm-up) {
   
@@ -87,6 +92,11 @@ $type-mod: .75;
     .jumbotron { 
       padding-left:  ($jumbotron-padding * 2);
       padding-right: ($jumbotron-padding * 2);
+
+      .container & {
+        padding-left: 0;
+        padding-right: 0;
+      }
     }
   }
 }

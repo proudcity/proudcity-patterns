@@ -1,4 +1,4 @@
-$nav-height-short: 54px;
+$nav-height-short: 52px;
 $nav-height-mod: 2px;
 $nav-height-tall: 740px;
 $nav-user-overlay-z: 1050;
@@ -65,6 +65,7 @@ $button-width: 47px;
 $button-height: $button-d;
 
 .navbar-external {
+  min-height: $nav-height-short;
 
   // Hide logo area mobile
   #logo-menu {
@@ -159,16 +160,18 @@ $button-height: $button-d;
       margin-left: 0;
       margin-right: 0;
       padding-top: 5%;
-
-      .proud-toolbar-active & {
-        padding-top: 20%;
-      }
     }
 
     .menu-nav-open & {
       #main-menu {
         height: 101%;
         margin-bottom: 0;
+      }
+    }
+    
+    .proud-toolbar-active & {
+       #main-menu {
+        padding-top: 20%;
       }
     }
 

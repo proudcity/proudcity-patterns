@@ -49,8 +49,11 @@ $top-pad: 50px;
     position: fixed!important;
     z-index: $nav-user-overlay-z + 1;
     top: 70px;
-    left:  30px + 15;
-    right: 30px + 15;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding-left: $grid-gutter-width/2 + 15px + 15;
+    padding-right: $grid-gutter-width/2 + 15px + 15;
   }
 
   &.proud-toolbar-active {
@@ -148,8 +151,9 @@ $top-pad: 50px;
 
   .search-active {
     #wrapper-search {
-      left:  60 + 50 + $grid-gutter-width/2;
-      right: 60 + 50 + $grid-gutter-width/2;
+      padding-left: $grid-gutter-width/2 + 50px + 15 - 3;
+      padding-right: $grid-gutter-width/2 + 50px + 15;
+      width: $container-sm;
     }
   }
 }
@@ -168,6 +172,20 @@ $top-pad: 50px;
 
   .close-search {
     top: 90px;
+  }
+
+  .search-active {
+
+    #wrapper-search {
+      width: $container-md;
+      top: 70px + 100;
+    }
+
+    &.proud-toolbar-active {
+      #wrapper-search {
+        top: 70px + 100 + 50;
+      }
+    }
   }
 
   .proud-toolbar-active {
@@ -195,4 +213,10 @@ $top-pad: 50px;
   // .close-311 {
   //   top: $top-pad - 50;
   // }
+
+  .search-active {
+    #wrapper-search {
+      width: $container-lg;
+    }
+  }
 }
