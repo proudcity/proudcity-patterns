@@ -30,7 +30,17 @@
   }
 }
 
-.views-exposed-widget[class*="views-widget-filter-"] {
-  float: none;
-  padding-right: 0;
+// Sidebar widgets
+.sidebar {
+  .views-exposed-widget[class*="views-widget-filter-"] {
+    float: none;
+    padding-right: 0;
+  }
+}
+
+@include respond($xs-only) {
+  .views-exposed-widget[class*="views-widget-filter-"] {
+    float: none;
+    padding-right: 0;
+  }
 }

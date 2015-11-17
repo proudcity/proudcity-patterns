@@ -36,6 +36,14 @@
       padding-top: 10px;
     }
   }
+
+ .more-text {
+    display: none;
+
+    &.show {
+        display: inline!important;
+    }
+  }
 }
 
 // Small up
