@@ -255,7 +255,7 @@ $button-height: $button-d;
     }
 
     // Admin menu instead
-    &.admin-menu {
+    &.admin-menu, &.admin-bar {
       .navbar-header-region {
         padding-top: 0;
       }
@@ -326,11 +326,11 @@ $button-height: $button-d;
   // Admin menu active, compensate
   body.proud-navbar-active {
     // Admin menu instead
-    &.admin-menu {
-      padding-top: $nav-height-short + 21px;
+    &.admin-menu, &.admin-bar {
+      padding-top: $nav-height-short;
 
       .navbar-external {
-        top: 21px;
+        top: 32px;
       }
     }
   }
