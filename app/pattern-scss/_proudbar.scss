@@ -1,0 +1,54 @@
+.proudbar {
+  background: $brand-primary;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 32px;
+  line-height: 22px;
+  padding: 5px;
+  position: fixed;
+  z-index: 10000;
+
+  a, div {
+    float: left;
+    color: $white;
+    margin: 0 5px;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  .proudbar-title {
+    font-weight: 100;
+    text-transform: uppercase;
+  }
+
+  .proudbar-btn {
+    background: $white;
+    border-radius: 5px;
+    color: $brand-primary;
+    padding: 0 5px;
+    font-size: .9em;
+  }
+
+  .proudbar-btn-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    margin-top: 1px;
+    line-height: 20px;
+    text-align: center;
+    padding: 0;
+  }
+
+  .proudbar-logo {
+    float: right;
+    background: url(//my.proudcity.com/images/FullLogoWhite.png) 0 0 no-repeat;
+    background-size: 114px 22px;
+    width: 114px;
+    height: 22px;
+    text-indent: -1000em;
+  }
+
+}
