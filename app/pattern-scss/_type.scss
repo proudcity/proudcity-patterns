@@ -33,3 +33,7 @@ h6, .h6 {
     @include xs-header-size($font-size-h4);
   }
 }
+
+p {
+  margin-bottom: $padding-base-vertical;
+}
