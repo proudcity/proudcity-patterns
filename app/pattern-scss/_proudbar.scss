@@ -1,6 +1,7 @@
 $proudbar-height: 40px;
 $proudbar-padding: 7px;
 $proudbar-line-height: $proudbar-height - $proudbar-padding*2;
+$proudbar-logo-height: $proudbar-line-height - 6px;
 
 .proudbar {
   background: $brand-primary;
@@ -26,6 +27,7 @@ $proudbar-line-height: $proudbar-height - $proudbar-padding*2;
   .proudbar-title {
     font-weight: 100;
     text-transform: uppercase;
+    margin: 0;
   }
 
   .proudbar-btn {
@@ -36,7 +38,7 @@ $proudbar-line-height: $proudbar-height - $proudbar-padding*2;
     font-size: .9em;
 
     &:hover {
-      background-color: $gray-light;
+      background-color: $gray-lighter;
     }
   }
 
@@ -51,11 +53,13 @@ $proudbar-line-height: $proudbar-height - $proudbar-padding*2;
   }
 
   .proudbar-logo {
-    float: right;
+    float: left;
     background: url(//my.proudcity.com/images/FullLogoWhite.png) 0 0 no-repeat;
-    background-size: 114px/22px*$proudbar-line-height $proudbar-line-height;
-    width: 114px/22px*$proudbar-line-height;
-    height: $proudbar-line-height;
+    background-size: 114px/22px*$proudbar-logo-height $proudbar-logo-height;
+    width: 114px/22px*$proudbar-logo-height;
+    height: $proudbar-logo-height;
+    margin-top: ($proudbar-line-height - $proudbar-logo-height) / 2;
+    margin-right: 0;
     text-indent: -1000em;
   }
 
@@ -65,10 +69,14 @@ $proudbar-line-height: $proudbar-height - $proudbar-padding*2;
 // Responsive
 @media screen and (max-width: 782px) {
   .proudbar {
+    bottom: $nav-height-short + $nav-height-mod - 2px;
+
     .proudbar-logo {
       background: url(//my.proudcity.com/images/IconWhite.png) 0 0 no-repeat;
       background-size: $proudbar-line-height $proudbar-line-height;
       width: $proudbar-line-height;
+      margin-top: 0;
+      height: $proudbar-line-height;
     }
   }
 }
