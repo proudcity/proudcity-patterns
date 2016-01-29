@@ -18,6 +18,18 @@ ul.title-list {
   }
 }
 
+ul.list-inline-middot {
+  li + li {
+    padding-left: 0;
+
+    &:before {
+      content: '\b7\a0'; // \b7 is a middot, \a0 is a space
+      padding-right: 5px;
+      color: $gray-light;
+    }
+  }
+}
+
 @if variable-exists($fa-var-circle) {
   ul.icon-list {
     list-style: none;

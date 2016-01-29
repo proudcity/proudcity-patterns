@@ -37,3 +37,23 @@ h6, .h6 {
 p {
   margin-bottom: $padding-base-vertical;
 }
+
+.header-margin {
+  margin-top: $line-height-computed;
+}
+
+.text-small {
+  font-size: .8em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  .label {
+    font-size: 1.2rem;
+    vertical-align: middle;
+  }
+}
