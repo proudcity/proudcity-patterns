@@ -72,6 +72,14 @@ $type-mod: .75;
   }
 }
 
+@include respond($xs-only) {
+  .jumbotron {
+    input.input-lg {
+      font-size: 18px;
+    }
+  }
+}
+
 @include respond($sm-up) {
   
   .jumbotron {
