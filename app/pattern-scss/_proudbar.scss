@@ -1,4 +1,4 @@
-$proudbar-height: 40px;
+$proudbar-height: 45px;
 $proudbar-padding: 7px;
 $proudbar-line-height: $proudbar-height - $proudbar-padding*2;
 $proudbar-logo-height: $proudbar-line-height - 6px;
@@ -13,9 +13,10 @@ $proudbar-logo-height: $proudbar-line-height - 6px;
   padding: $proudbar-padding;
   position: fixed;
   z-index: 10000;
+  text-align: center;
+  color: $white;
 
   a, div {
-    float: left;
     color: $white;
     margin: 0 $proudbar-padding;
   }
@@ -25,9 +26,10 @@ $proudbar-logo-height: $proudbar-line-height - 6px;
   }
 
   .proudbar-title {
-    font-weight: 100;
+    font-weight: 300;
     text-transform: uppercase;
     margin: 0;
+    font-size: 28px;
   }
 
   .proudbar-btn {
@@ -36,6 +38,7 @@ $proudbar-logo-height: $proudbar-line-height - 6px;
     color: $brand-primary;
     padding: 0 $proudbar-padding;
     font-size: .9em;
+    display: inline-block;
 
     &:hover {
       background-color: $gray-lighter;

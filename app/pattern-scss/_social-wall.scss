@@ -17,6 +17,7 @@
   margin-left: 0;
   padding-left: 0;
   margin-top: 20px;
+  font-size: .9em !important;
   
   li {
     list-style: none;
@@ -27,8 +28,34 @@
     background: $white;
     min-height: 110px;
 
+    .card {
+
+      .social-card-header {
+        background-color: $gray-lightest;
+        height: 25px;
+        line-height: 25px;
+        padding: 0 5px;
+
+        .fa {
+          font-size: 20px;
+        }
+      }
+
+      .card-img-top-wrapper {
+        display: block;
+        text-align: center;
+      }
+
+      .card-block {
+        padding: $padding-small-horizontal;
+      }
+    }
+
     img {
       margin-bottom: 5px;
+      max-height: 220px;
+      width: auto;
+      min-width: 20%;
     }
 
     .text-gray {

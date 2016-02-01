@@ -13,3 +13,23 @@
 label {
   font-weight: normal;
 }
+
+.form-group {
+  position: relative;
+
+  .form-control-search-icon {
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    color: $gray-light;   
+  }
+
+  .option-box-label {
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+
+  .checkbox {
+    margin: 5px 10px;
+  }
+}

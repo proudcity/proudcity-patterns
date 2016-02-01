@@ -2,6 +2,9 @@
 // Remove lines between trs
 .table {
   border: 1px solid $table-border-color;
+  td {
+    font-size: .9em !important;
+  }
   // Cells
   > thead,
   > tbody,
@@ -12,6 +15,10 @@
         border-top: 0;
       }
     }
+  }
+
+  tr:hover {
+    background-color: $gray-lightest !important;
   }
 }
 
