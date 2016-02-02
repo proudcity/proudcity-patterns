@@ -8,6 +8,11 @@ img {
 .full-image {
   background-size: cover;
   background-color: $gray-lightest;
+
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .svg-wrapper {

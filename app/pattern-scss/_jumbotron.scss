@@ -61,10 +61,15 @@ $type-mod: .75;
   }
 }
 
-  
-.full-container {
-  margin-bottom: 30px;
+.jumbo-header {
+  .jumbotron {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
 
+  
+.full-container, .jumbo-padding {
   .jumbotron { 
     padding-left:  ($jumbotron-padding/2);
     padding-right: ($jumbotron-padding/2);
@@ -95,7 +100,14 @@ $type-mod: .75;
     
   }
 
-  .full-container {
+  .jumbo-header {
+    .jumbotron {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+  }
+
+  .full-container, .jumbo-padding {
     
     .jumbotron { 
       padding-left:  ($jumbotron-padding * 2);
