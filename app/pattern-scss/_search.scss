@@ -1,35 +1,90 @@
 
+// 
+// Search form
+// ----------------------
+
 ul.search-autosuggest {
   padding: 10px 0 0 0;
   display: none;
 
   li {
     list-style: none;
+  }
 
-    a {
-      display: block;
-      padding: 10px 0;
-      text-decoration: none;
-      min-height: 2em;
-      color: $gray-base;
-      line-height: 1.5em;
+  a {
+    display: block;
+    padding: 10px 0;
+    text-decoration: none;
+    min-height: 2em;
+    color: $gray-base;
+    line-height: 1.5em;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 
-      &:hover {
-        color: $brand-primary;
-      }
+    &:hover {
+      color: $brand-primary;
     }
+  }
 
+  i {
+    font-size: 1.5em;
+    display: block;
+    float: left;
+    width: 1em;
+  }
+  
+
+  body.search-active &, body.search-active-lite & {
+    display: block;
+  } 
+  
+}
+
+// Search page form styles
+
+body.search-active-lite {
+  #wrapper-search {
+    position: relative;
+  }
+
+  ul.search-autosuggest {
+    background: $white;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+  }
+}
+
+
+// Small up
+// -------------------------
+@include respond($sm-up) {
+  ul.search-autosuggest {
     i {
-      font-size: 1.5em;
-      display: block;
-      float: left;
       text-align: center;
       width: 2em;
     }
   }
+}
 
-  .search-active & {
-    display: block;
-  } 
-  
+
+// 
+// Results
+// ----------------------
+
+.search-teaser {
+  .search-title {
+    position: relative;
+    padding-left: 40px;
+    padding-bottom: 10px;
+
+    i {
+      position: absolute;
+      left: 0;
+      top: -5px;
+    }
+  }
 }

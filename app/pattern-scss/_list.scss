@@ -1,7 +1,10 @@
 ul.title-list {
   li {
     padding: 15px 0;
-    border-top: 1px solid $gray-lighter;
+    
+    + li {
+      border-top: 1px solid $gray-lighter;
+    }
 
     h4,
     h5,
@@ -14,7 +17,9 @@ ul.title-list {
 .teaser-list {
   .row {
     padding: $padding-small-vertical 0 ($padding-small-vertical * 5) 0;
-    border-bottom: 1px solid $gray-lighter;
+  }
+  + .teaser-list { 
+    border-top: 1px solid $gray-lighter;
   }
 }
 

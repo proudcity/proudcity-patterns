@@ -95,6 +95,9 @@ $button-height: $button-d;
   .navbar-btn {
     padding-top: 0;
     padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 18px;
     border-radius: 10px;
     color: $navbar-default-link-color;
     margin-top: ($nav-height-short - $button-height) / 2;
@@ -103,6 +106,8 @@ $button-height: $button-d;
     @include transition(margin-top 0.2s ease-in-out, background-color 0.1s ease-in);
     
     &, i {
+      overflow: hidden;
+      width: $button-width;
       height: $button-height;
       vertical-align: middle;
       line-height: $button-height * 0.95;
@@ -232,14 +237,7 @@ $button-height: $button-d;
 @media all {
   .navbar-external {
     .navbar-btn {
-      padding-left: 0;
-      padding-right: 0;
-      font-size: 18px;
       
-      &, i {
-        overflow: hidden;
-        width: $button-width;
-      }
     }
   }
 }
