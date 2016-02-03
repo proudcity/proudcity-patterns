@@ -9,6 +9,10 @@ $nav-big-padding: 20px;
 
 .navbar, .navbar-nav {
   font-size: 16px;
+
+  .nav {
+    margin-bottom: 0;
+  }
 }
 
 // Apply some global styles if applicable
