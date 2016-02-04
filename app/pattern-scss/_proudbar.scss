@@ -82,8 +82,13 @@ $proudbar-logo-height: $proudbar-line-height - 6px;
 // Fixed to bottom
 // -------------------------
 @include respond($mq-nav-fixed-bottom) {
+
+  body.proud-navbar-active.proud-bar-active {
+    padding-bottom: $nav-height-short - $nav-height-mod - 2px + $proudbar-height;
+  }
+
   .proudbar {
-    bottom: $nav-height-short - $nav-height-mod;
+    bottom: $nav-height-short - $nav-height-mod - 2px;
 
     .proudbar-logo {
       background: url("//my.proudcity.com/images/IconWhite.png") 0 0 no-repeat;
@@ -92,5 +97,13 @@ $proudbar-logo-height: $proudbar-line-height - 6px;
       margin-top: 0;
       height: $proudbar-line-height;
     }
+  }
+}
+
+// Top menu
+// -------------------------
+@include respond($mq-nav-fixed-top) {
+  body.proud-navbar-active.proud-bar-active {
+    padding-bottom: $proudbar-height;
   }
 }
