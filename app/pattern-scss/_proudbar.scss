@@ -14,7 +14,7 @@ $proudbar-logo-height: $proudbar-line-height - 6px;
   line-height: $proudbar-line-height;
   padding: $proudbar-padding;
   position: fixed;
-  z-index: 10000;
+  z-index: $nav-user-overlay-z - 2;
   text-align: center;
   color: $white;
 

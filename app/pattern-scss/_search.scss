@@ -76,6 +76,9 @@ body.search-active-lite {
 // ----------------------
 
 .search-teaser {
+  // Seeing some bad results overflowing. @TODO fix text processing
+  overflow: hidden;
+
   .search-title {
     position: relative;
     padding-left: 40px;

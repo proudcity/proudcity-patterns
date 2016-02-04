@@ -15,8 +15,13 @@
   
 }
 
-.goog-te-gadget {
-  .footer-actions & {
-    color: $white;
+// Nav goes to mobile mode
+// -------------------------
+@media (max-width: $grid-float-breakpoint-max) {
+
+  .goog-te-gadget {
+    .footer-actions & {
+      color: $white;
+    }
   }
 }
