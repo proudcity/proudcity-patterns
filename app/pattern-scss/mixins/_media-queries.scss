@@ -33,10 +33,10 @@ $lg-up: "screen and (min-width: #{$screen-lg-min})";
 // ----------------
 
 // full mobile appearance
-$mq-nav-xs-mode: "screen and (max-width: 910px)";
+$mq-nav-xs-mode: "screen and (max-width: 910px)"!default;
 // Navbar fixed below
-$mq-nav-fixed-bottom: "screen and (max-width: 1200px)";
+$mq-nav-fixed-bottom: "screen and (max-width: 1200px)"!default;
 // No longer hiding menu 
-$mq-menu-visible: "screen and (min-width: 911px)";
+$mq-menu-visible: "screen and (min-width: 911px)"!default;
 // Full navigation at top
-$mq-nav-fixed-top: "screen and (min-width: 1201px)";
+$mq-nav-fixed-top: "screen and (min-width: 1201px)"!default;
