@@ -220,3 +220,25 @@ $top-pad: 50px;
     }
   }
 }
+
+
+// Top menu
+// -------------------------
+@include respond($mq-nav-fixed-top) {
+
+  // if admin, move
+  body.admin-menu, body.admin-bar {
+    $top-pad: 190px;
+
+    .proud-overlay {
+      padding-top: $top-pad;
+    }
+    .close-311 {
+      top: 135px;
+    }
+
+    .close-search {
+      top: 135px;
+    }
+  }
+}

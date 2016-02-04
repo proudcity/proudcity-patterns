@@ -39,9 +39,9 @@
   }
 }
 
-// Meduim up
+// Top menu
 // -------------------------
-@include respond($md-up) {
+@include respond($mq-nav-fixed-top) {
 
   .navbar-header-region {
     display: none;  

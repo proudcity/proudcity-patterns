@@ -9,6 +9,9 @@
   }
 }
 
+// Bootstrap
+// -----------------
+
 // Mobile
 $xs-only: "screen and (max-width: #{$screen-xs-max})";
 // Tablet + mobile
@@ -25,3 +28,15 @@ $md-only: "screen and (min-width: #{$screen-md-min}) and (max-width: #{$screen-m
 $md-up: "screen and (min-width: #{$screen-md-min})";
 // Large screen
 $lg-up: "screen and (min-width: #{$screen-lg-min})";
+
+// Navigational queries
+// ----------------
+
+// full mobile appearance
+$mq-nav-xs-mode: "screen and (max-width: 910px)";
+// Navbar fixed below
+$mq-nav-fixed-bottom: "screen and (max-width: 1200px)";
+// No longer hiding menu 
+$mq-menu-visible: "screen and (min-width: 911px)";
+// Full navigation at top
+$mq-nav-fixed-top: "screen and (min-width: 1201px)";
