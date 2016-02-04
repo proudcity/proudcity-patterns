@@ -8,10 +8,27 @@
       color:  $navbar-default-link-color;
     }
 
+    a {
+      float: left;
+      display: block;
+    }
+
     i {
       margin-right: 0.25em;
     }
   }
+
+  .nav-logo {
+    margin-top: -5px;
+    margin-bottom: -5px;
+    paddign: 10px;
+
+    img.logo {
+      max-width: 150px;
+      max-height: $nav-height-short;
+    }
+  }
+  
 
   // img {
   //   display: inline-block;
@@ -30,7 +47,7 @@
     }
 
     h2, h3 {
-      margin: 18px 0; 
+      margin: 12px 0; 
     }
 
     .menu-button {
