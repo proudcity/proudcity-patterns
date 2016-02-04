@@ -269,6 +269,9 @@ $button-height: $button-d;
 // -------------------------
 @include respond($mq-nav-fixed-top) {
 
+
+  $logo-container-width: 120px;
+
   // Switch to top header
   .navbar-external {
     bottom: auto;
@@ -280,10 +283,19 @@ $button-height: $button-d;
       display: block;
     }
 
+    .nav-logo {
+      margin-top: -20px;
+      margin-bottom: -20px;
+      margin-left: -($logo-container-width - $grid-gutter-width/2);
+      @include transition(margin-left 0.25s ease-out);
+      position: relative;
+      padding: 0 10px;
+      width: $logo-container-width!important;
+    }
+
     img.logo {
-      max-width: 0 !important;
+      max-width: 100% !important;
       max-height: $nav-height-short;
-      //@include transition(all 0.5s ease-out); 
     }
 
 
@@ -323,14 +335,12 @@ $button-height: $button-d;
         padding-bottom: $nav-big-padding;
 
         .nav-logo {
-          margin-top: -20px;
-          margin-bottom: -20px;
-          padding: 0 10px;
+          margin-left: 0;
+        }
 
-          img.logo {
-            max-height: $nav-height-short + $nav-big-padding*2 - 20px;
-            max-width: 150px !important;
-          }
+        img.logo {
+          max-height: $nav-height-short + $nav-big-padding*2 - 20px;
+          width: 100%;
         }
       }
     }
