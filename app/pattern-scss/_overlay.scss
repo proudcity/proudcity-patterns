@@ -52,8 +52,8 @@ $top-pad: 50px;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    padding-left: $grid-gutter-width/2 + 15px + 15;
-    padding-right: $grid-gutter-width/2 + 15px + 15;
+    padding-left: $jumbotron-padding;
+    padding-right: $jumbotron-padding;
   }
 
   &.proud-toolbar-active {
@@ -80,6 +80,22 @@ $top-pad: 50px;
 }
 
 @include respond($xs-only) {
+
+
+  .proud-overlay {
+    & > .container {
+      height: 100%;
+      overflow-y: scroll;
+      @include webkit-scrollbar($gray-dark, $white, 5px);
+      margin-left: $grid-gutter-width/4;
+      margin-right: $grid-gutter-width/4;
+
+      > * {
+        padding-left: $grid-gutter-width/4;
+        padding-right: $grid-gutter-width/4;
+      }
+    }
+  }
 
   #overlay-search {
 
@@ -151,8 +167,8 @@ $top-pad: 50px;
 
   .search-active {
     #wrapper-search {
-      padding-left: $grid-gutter-width/2 + 50px + 15 - 3;
-      padding-right: $grid-gutter-width/2 + 50px + 15;
+      padding-left: $jumbotron-padding * 2 + 2;
+      padding-right: $jumbotron-padding * 2 + 2;
       width: $container-sm;
     }
   }

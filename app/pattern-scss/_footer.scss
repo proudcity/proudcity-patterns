@@ -4,9 +4,8 @@
   padding: $padding-base-vertical 0;
   margin-top: $line-height-computed*2;
 
-  .nav > li > a,
-  .nav > li.open > a,
-  .nav > li a {
+  .navbar-nav > li > a,
+  .navbar-nav > li.open > a {
     color: $white;
     background: transparent;
 
@@ -24,6 +23,24 @@
     &.dropdown,
     & > .social {
       padding: $padding-base-vertical $padding-base-horizontal $padding-base-vertical 0;
+    }
+  }
+}
+
+// Nav goes to mobile mode
+// -------------------------
+@media (max-width: $grid-float-breakpoint-max) {
+
+  .footer-actions {
+    .nav > li a {
+      color: $white;
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: darken($white, 10%);
+        text-decoration: underline !important;
+      }
     }
   }
 }
