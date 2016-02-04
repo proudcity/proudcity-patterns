@@ -309,14 +309,12 @@ $button-height: $button-d;
 
 
   // Expanding/contracting topnav
-  body {
+  body.proud-navbar-active {
     @include transition(padding-top 0.35s ease-out);
 
-    &.proud-navbar-active {
-      padding-top: $nav-height-short;
-      padding-bottom: 0;
-    }
-    
+    padding-top: $nav-height-short;
+    padding-bottom: 0;
+  
     &:not(.scrolled) {
       padding-top: $nav-height-short + $nav-big-padding*2 - $nav-height-mod !important;
       
