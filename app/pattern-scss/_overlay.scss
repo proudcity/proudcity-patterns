@@ -38,6 +38,12 @@ $top-pad: 50px;
   }
 }
 
+body {
+  &.active-311, &.search-active {
+    overflow: hidden;
+  } 
+}
+
 .search-active {
   .panel-banner, .wr-element-jumbotronheader, .widget-proud-jumbotron-header  {
     * {

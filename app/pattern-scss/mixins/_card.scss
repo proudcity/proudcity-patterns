@@ -5,6 +5,7 @@
   position: relative;
   margin-bottom: $card-spacer-y;
   background-color: $white;
+  min-width: 0;
   border: $card-border-width solid $card-border-color;
   @include border-radius($card-border-radius);
   @include transition(box-shadow 0.1s linear);
