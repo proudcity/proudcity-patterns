@@ -62,7 +62,7 @@
     @include full-padding-margin(40%);
 
     .container & {
-      @include full-padding-margin(70%);
+      @include full-padding-margin(50%);
     }
   }
 }

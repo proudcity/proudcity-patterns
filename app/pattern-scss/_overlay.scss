@@ -21,7 +21,7 @@ $top-pad: 50px;
   @include transition(opacity 0.3s ease-in-out, z-index 0.2s linear);
   padding-top: $top-pad;
 
-  .proud-toolbar-active & {
+  .admin-bar & {
     padding-top: $top-pad + 50;
   }
 }
@@ -33,8 +33,8 @@ $top-pad: 50px;
   right: 0;
   top: $top-pad - 50;
 
-  .proud-toolbar-active & {
-    top: $top-pad - 50 + 50;
+  .admin-bar & {
+    top: $top-pad;
   }
 }
 
@@ -62,7 +62,7 @@ body {
     padding-right: $jumbotron-padding;
   }
 
-  &.proud-toolbar-active {
+  &.admin-bar {
     #wrapper-search {
       top: 70px + 50;
     }
@@ -157,19 +157,19 @@ body {
     top: 0;
   }
 
-  .proud-toolbar-active {
-    .proud-overlay {
-      padding-top: $top-pad + 50;
-    }
+  // .admin-bar {
+  //   .proud-overlay {
+  //     padding-top: $top-pad + 50;
+  //   }
 
-    .close-311 {
-      top: $top-pad - 50 + 50;
-    }
+  //   .close-311 {
+  //     top: $top-pad - 50 + 50;
+  //   }
 
-    .close-search {
-      top: 0 + 50;
-    }
-  }
+  //   .close-search {
+  //     top: 0 + 50;
+  //   }
+  // }
 
   .search-active {
     #wrapper-search {
@@ -203,26 +203,26 @@ body {
       top: 70px + 100;
     }
 
-    &.proud-toolbar-active {
-      #wrapper-search {
-        top: 70px + 100 + 50;
-      }
-    }
+    // &.admin-bar {
+    //   #wrapper-search {
+    //     top: 70px + 100 + 50;
+    //   }
+    // }
   }
 
-  .proud-toolbar-active {
-    .proud-overlay {
-      padding-top: $top-pad + 50;
-    }
+  // .admin-bar {
+  //   .proud-overlay {
+  //     padding-top: $top-pad + 50;
+  //   }
 
-    .close-311 {
-      top: $top-pad - 50 + 50;
-    }
+  //   .close-311 {
+  //     top: $top-pad - 50 + 50;
+  //   }
 
-    .close-search {
-      top: 90px + 50;
-    }
-  }
+  //   .close-search {
+  //     top: 90px + 50;
+  //   }
+  // }
 }
 
 @include respond($lg-up) {
