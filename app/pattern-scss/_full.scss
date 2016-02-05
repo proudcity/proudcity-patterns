@@ -62,7 +62,7 @@
     @include full-padding-margin(40%);
 
     .container & {
-      @include full-padding-margin(50%);
+      @include full-padding-margin(55%);
     }
   }
 }
@@ -72,5 +72,16 @@
 @media #{$md-up} and (orientation: portrait) {
   .full-container {
     @include full-padding-margin(80%);
+  }
+}
+
+
+// larger screens
+// -------------------------
+@media (min-width: 1600px) and (min-height: 950px) {
+  .full-container {
+    .container & {
+      @include full-padding-margin(60%);
+    }
   }
 }

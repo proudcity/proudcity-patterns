@@ -28,6 +28,12 @@ $top-pad: 50px;
   .admin-bar & {
     padding-top: $top-pad + 50;
   }
+
+  // Make container scrollable!
+  & > .container {
+    height: 100%;
+    overflow-y: scroll;
+  }
 }
 
 .proud-overlay-close {
@@ -94,11 +100,9 @@ body {
 
   .proud-overlay {
     & > .container {
-      height: 100%;
-      overflow-y: scroll;
-      @include webkit-scrollbar($gray-dark, $white, 5px);
       margin-left: $grid-gutter-width/4;
       margin-right: $grid-gutter-width/4;
+      @include webkit-scrollbar($gray-dark, $white, 5px);
 
       > * {
         padding-left: $grid-gutter-width/4;
@@ -151,6 +155,12 @@ body {
   .proud-overlay {
     padding-top: $top-pad;
     left: 0;
+
+    // Make container scrollable!
+    & > .container {
+      @include webkit-scrollbar($gray-dark, $white, 8px, 10px, 4px, 4px);
+    }
+    
   }
 
   .close-311 {
@@ -251,6 +261,12 @@ body {
 // Top menu
 // -------------------------
 @include respond($mq-nav-fixed-top) {
+
+  .search-active.admin-bar {
+    #wrapper-search {
+      top: 150px;
+    }
+  }
 
   // if admin, move
   body.admin-menu, body.admin-bar {
