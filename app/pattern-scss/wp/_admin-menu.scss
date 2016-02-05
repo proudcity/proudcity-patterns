@@ -167,3 +167,26 @@ body.proud-navbar-active.admin-bar {
     }
   }
 }
+
+
+@include respond($sm-up) {
+
+  // do map application for front end
+  body.admin-bar.proud-map-fullscreen {
+    .overflow .filter-button, .overflow .full-screen-button, .menu-ui {
+      top: 10px + $admin-bar-height;
+    }
+
+    .overflow .leaflet-top {
+      top: 35px + $admin-bar-height; 
+    }
+    
+    .overflow .details {
+      padding-top: 30px + $admin-bar-height;
+    }
+
+    .overflow #details-close {
+      top: 20px + $admin-bar-height;
+    }
+  }
+}
