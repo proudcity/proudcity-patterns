@@ -1,3 +1,8 @@
+// 
+// BETA bar on sites
+//
+
+
 $nav-height-short: 52px!default;
 $nav-height-mod: 2px!default;
 $proudbar-height: 45px;
@@ -86,7 +91,11 @@ $proudbar-logo-height: $proudbar-line-height - 6px;
 @include respond($mq-nav-fixed-bottom) {
 
   body.proud-navbar-active.proud-bar-active {
-    padding-bottom: $nav-height-short - $nav-height-mod - 2px + $proudbar-height;
+
+    // Bottom padding
+    .page-footer {
+      padding-bottom: $nav-height-short - $nav-height-mod - 2px + $proudbar-height + $footer-padding;
+    }
 
     .proudbar {
       bottom: $nav-height-short - $nav-height-mod - 2px;
@@ -106,6 +115,10 @@ $proudbar-logo-height: $proudbar-line-height - 6px;
 // -------------------------
 @include respond($mq-nav-fixed-top) {
   body.proud-navbar-active.proud-bar-active {
-    padding-bottom: $proudbar-height;
+
+    // Bottom padding
+    .page-footer {
+      padding-bottom: $proudbar-height + $footer-padding;
+    }
   }
 }

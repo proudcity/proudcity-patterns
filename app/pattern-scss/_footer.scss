@@ -1,3 +1,5 @@
+$footer-padding: 20px;
+
 .footer-actions {
   background: transparent;
   background-color: $gray-lighter;
@@ -48,7 +50,7 @@
 
 footer.page-footer {
   font-size: $font-size-small;
-  padding: 20px 0;
+  padding: $footer-padding 0;
 
   &,
   a,
