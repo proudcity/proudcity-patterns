@@ -19,10 +19,14 @@ body.proud-navbar-active.admin-bar {
 
   a.ab-item:hover,
   .hover a.ab-item {
-    border-top: 5px solid $brand-primary;
+    border-top: 5px solid $brand-primary !important;
     background: none !important;
     margin-top: 0 !important;
     color: $white !important;
+
+    .ab-label {
+      color: $white !important;
+    }
   }
 
   #wp-admin-bar-wp-logo {
@@ -62,7 +66,9 @@ body.proud-navbar-active.admin-bar {
 
   #wp-admin-bar-my-item,
   #wp-admin-bar-new-content,
-  #wp-admin-bar-menu-toggle {
+  #wp-admin-bar-menu-toggle,
+  #wp-admin-bar-edit,
+  #wp-admin-bar-view {
     a:before {
       margin-top: 4px;
       content: "\f0e4";
@@ -85,6 +91,12 @@ body.proud-navbar-active.admin-bar {
   }
   #wp-admin-bar-menu-toggle a:before {
     content: "\f0c9";
+  }
+  #wp-admin-bar-edit a:before {
+    content: "\f14b" !important;
+  }
+  #wp-admin-bar-view a:before {
+    content: "\f14c" !important;
   }
 
   .ab-item {
@@ -133,12 +145,16 @@ body.proud-navbar-active.admin-bar {
   #wpadminbar {
     .ab-item {
       margin-top: 0 !important; // @todo: var/math
-        
+
       &:before {
         font-size: $admin-bar-height - 20px !important;
         line-height: $admin-bar-height - 7px;
         margin-left: 10px;
         margin-right: 10px;
+      }
+
+      &:hover {
+        border-top-color: $admin-bar-bg !important;
       }
     }
 
