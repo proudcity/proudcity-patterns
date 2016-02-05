@@ -1,0 +1,27 @@
+.media {
+  position: relative;
+  text-align: center;
+  margin-bottom: 1em;
+  
+  .wp-post-image {
+    max-height: 400px;
+    width: auto;
+  }
+
+  .media-byline {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    span {
+      padding: 3px 10px;
+      background-color: rgba(0, 0, 0, 0.2);
+      color: $white; 
+    }
+
+    :hover & {
+      display: block;
+    }
+  }
+}
