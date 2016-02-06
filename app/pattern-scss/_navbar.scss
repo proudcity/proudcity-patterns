@@ -353,7 +353,7 @@ $button-height: $button-d;
 
         img.logo {
           max-height: $nav-height-short + $nav-big-padding*2 - 20px;
-          width: 100%;
+          width: auto;
         }
       }
     }
