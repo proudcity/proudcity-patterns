@@ -6,9 +6,12 @@
 
 .translate, .widget_proud_google_translate {
 
-  ul.dropdown-menu li {
-    padding: $nav-link-padding;
+  ul.dropdown-menu {
     min-width: 240px;
+    
+    li {
+      padding: $nav-link-padding;
+    }
   }
   
   select {
