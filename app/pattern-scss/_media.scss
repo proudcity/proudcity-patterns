@@ -10,6 +10,14 @@ img {
   height: auto;
 }
 
+@include respond($xs-only) {
+  // Images inside of content, force to block mode
+  // Since its impossible to tell how wide
+  p img {
+    display: block;
+  }
+}
+
 .full-image {
   background-size: cover;
   background-position: center center;

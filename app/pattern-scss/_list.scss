@@ -1,5 +1,5 @@
 ul.title-list {
-  li {
+  > li {
     padding: 15px 0;
     
     + li {
@@ -11,15 +11,6 @@ ul.title-list {
     p {
       margin: 0;
     }
-  }
-}
-
-.teaser-list {
-  .row {
-    padding: $padding-small-vertical 0 ($padding-small-vertical * 5) 0;
-  }
-  + .teaser-list { 
-    border-top: 1px solid $gray-lighter;
   }
 }
 
@@ -54,5 +45,29 @@ ul.list-inline-middot {
         top: 0;
       }
     }
+  }
+}
+
+
+// Lists of teasers
+
+.teaser-list {
+  .teaser {
+    > .row {
+      padding-bottom: ($padding-small-vertical * 5);
+    }
+  }
+
+  .teaser + .teaser { 
+    border-top: 1px solid $gray-lighter;
+
+    > .row {
+      padding-top: ($padding-small-vertical * 5);
+    }
+  }
+
+  // Spacing done with divs
+  .entry-title {
+    margin-top: 0;
   }
 }
