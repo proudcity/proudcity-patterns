@@ -1,10 +1,6 @@
 .media {
   position: relative;
   margin-bottom: 1em;
-
-  &.full-image {
-    margin-bottom: $page-section-spacing;
-  }
   
   .wp-post-image {
     max-height: 400px;
