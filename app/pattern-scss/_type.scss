@@ -1,3 +1,6 @@
+// Headers
+// -------------------------------------
+
 h1, .h1 {
   @include h1;
 }
@@ -34,6 +37,9 @@ h6, .h6 {
   }
 }
 
+// Paragraph
+// -------------------------------------
+
 p,
 .p {
   margin-bottom: 1em;
@@ -47,6 +53,9 @@ p,
   font-size: .8em;
 }
 
+// Label overrides
+// -------------------------------------
+
 h1,
 h2,
 h3,
@@ -57,4 +66,11 @@ h6 {
     font-size: 1.2rem;
     vertical-align: middle;
   }
+}
+
+// Icons
+// -------------------------------------
+
+.icon-even-width {
+  min-width: 1.5em;
 }
