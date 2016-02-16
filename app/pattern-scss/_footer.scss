@@ -61,6 +61,11 @@ footer.page-footer {
   h6 {
     color: $gray-light;
   }
+
+  a:hover, a:focus {
+    color: lighten($gray-light, 20%);
+  }
+
   h4 {
     color: $gray-light !important;
   }
