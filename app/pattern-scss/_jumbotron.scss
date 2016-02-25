@@ -61,6 +61,24 @@ $type-mod: .75;
   }
 }
 
+.jumbo-image-container {
+  position: absolute!important;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
+  img {
+    top: 50%;
+    left: 50%;
+    @include transform(translate( -50%, -50% ));
+    min-width: 102%;
+    min-height: 102%;
+    max-width: none;
+    position: absolute;
+  }
+}
+
 .jumbo-header {
   .jumbotron {
     padding-top: 50px;
