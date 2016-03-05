@@ -208,6 +208,7 @@ $button-height: $button-d;
 }
 
 
+
 // Show menu
 // -------------------------
 @include respond($mq-menu-visible) {
@@ -244,7 +245,12 @@ $button-height: $button-d;
       margin-top: ($nav-height-short - $nav-height-mod - $button-height) / 2;
     }
   }
+
+  .below {
+    border-top: 1px solid $gray-light;
+  }
 }
+
 
 // Fixed to bottom
 // -------------------------
@@ -281,6 +287,7 @@ $button-height: $button-d;
   }
 }
 
+
 // Top menu
 // -------------------------
 @include respond($mq-nav-fixed-top) {
@@ -314,6 +321,9 @@ $button-height: $button-d;
       max-height: $nav-height-short;
     }
 
+    .below {
+      border-top: 0;
+    }
 
     #main-menu {
       float: right;
