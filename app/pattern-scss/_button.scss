@@ -1,3 +1,14 @@
 .btn-block {
   display: block;
 }
+
+.light-background-main & {
+  .btn-primary {
+    color: $light-back-main-color;
+  }
+}
+
+// .light-background-highlight & {
+//   .btn
+//     color: $gray-dark;
+// }

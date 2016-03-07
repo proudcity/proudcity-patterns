@@ -20,6 +20,19 @@ $footer-padding: 20px;
     }
   }
 
+  .light-background-highlight & {
+    .navbar-nav > li > a,
+    .navbar-nav > li.open > a {
+      color: $light-back-highlight-color;
+      
+      &:hover,
+      &:active,
+      &:focus {
+        color: darken($light-back-highlight-color, 10%);
+      }
+    }
+  }
+
   .navbar-left,
   .navbar-right {
     &.dropdown,
@@ -72,6 +85,27 @@ footer.page-footer {
 
   h5 {
     margin-bottom: $padding-base-vertical;
+  }
+
+  .light-background-main & {
+
+    &,
+    a,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $light-back-main-color;
+    }
+
+    a:hover, a:focus {
+      color: lighten($light-back-main-color, 20%);
+    }
+
+    h4 {
+      color: $light-back-main-color !important;
+    }
   }
 
   .footer-logo-wrapper {

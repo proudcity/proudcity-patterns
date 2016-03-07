@@ -14,6 +14,13 @@
       color:  $navbar-default-link-color;
     }
 
+    // Light colore
+    .light-background-main & {
+      &, a {
+        color:  $light-back-main-color;
+      }
+    }
+
     a {
       float: left;
       display: block;

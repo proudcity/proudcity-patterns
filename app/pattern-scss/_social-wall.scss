@@ -70,6 +70,10 @@ $header-dim-width: $header-dim-height - 10;
         height: $header-dim-height;
         line-height: $header-dim-height + 5;
         width: $header-dim-width;
+
+        .light-background-main & {  
+          color: $light-back-main-color;
+        }
       }
 
     }

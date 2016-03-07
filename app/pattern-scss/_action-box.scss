@@ -73,8 +73,14 @@
 
       &, &:hover, &:focus {
         color: $white;
+
+        .light-background-main & {
+          color: $light-back-main-color;
+        }
       }
     }
+
+    &
 
     &:not(.active) {
       a {
@@ -89,6 +95,10 @@
       &, &:hover, &:focus {
         color: $white;
         background: $brand-primary;
+        
+        .light-background-highlight & {
+          color: $light-back-highlight-color;
+        }
       }
     }
   }

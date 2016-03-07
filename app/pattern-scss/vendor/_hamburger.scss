@@ -40,6 +40,18 @@ $b-trans-dur: 0.2s;     // The transition duration
   }
 }
 
+@mixin hamburger-icon-color(
+  $button-bar-color: $white ) {
+
+  span {
+    background: $button-bar-color;
+    
+    &:before, &:after {
+      background-color: $button-bar-color;
+    }
+  }
+}
+
 @mixin hamburger-icon-animate(
   $button-bar-color: $white,
   $button-active:    '.menu-nav-open &',
@@ -79,7 +91,6 @@ $b-trans-dur: 0.2s;     // The transition duration
     left: $button-pad;
     right: $button-pad;
     height: $bar-thickness;
-    background: $button-bar-color;
     @include transition(background 0s $button-trans-dur);
     
     &:before, &:after {
@@ -88,7 +99,6 @@ $b-trans-dur: 0.2s;     // The transition duration
       left: 0;
       width: 100%;
       height: $bar-thickness;
-      background-color: $button-bar-color;
       content: "";
       @include transition-duration($button-trans-dur, $button-trans-dur);
       @include transition-delay($button-trans-dur, 0s);
@@ -110,4 +120,6 @@ $b-trans-dur: 0.2s;     // The transition duration
       @include hambuger-icon-active($button-trans-dur)
     }
   }
+
+  @include hamburger-icon-color($button-bar-color);
 }

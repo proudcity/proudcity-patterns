@@ -135,7 +135,21 @@ $button-height: $button-d;
 
       .hamburger {
         @include hamburger-icon-animate($navbar-default-link-color, false);
+
+        .light-background-main & { 
+          @include hamburger-icon-color($light-back-main-color);
+        }
       }
+    }
+  }
+
+  // Light colors
+  .light-background-main & {
+    .navbar-btn {
+      color: $light-back-main-color;
+    }
+    .navbar-btn:hover {
+      color: darken($light-back-main-color, 5%);
     }
   }
 
@@ -244,6 +258,17 @@ $button-height: $button-d;
     .navbar-btn {
       margin-top: ($nav-height-short - $nav-height-mod - $button-height) / 2;
     }
+
+
+    // Light colors
+    .light-background-main & {
+      .navbar-nav > li > a {
+        color: $light-back-main-color;
+      }
+      .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+        color: darken($light-back-main-color, 5%);
+      }
+    }
   }
 
   .below {
@@ -293,7 +318,7 @@ $button-height: $button-d;
 @include respond($mq-nav-fixed-top) {
 
 
-  $logo-container-width: 120px;
+  $logo-container-width: 120px!default;
 
   // Switch to top header
   .navbar-external {

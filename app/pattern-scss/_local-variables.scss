@@ -20,6 +20,8 @@ $white:                       #FFF!default;
 
 $black:                       #000!default;
 
+
+
 // Primary (default blue)
 $brand-primary:               #0071bc!default;
 $brand-primary-darker:        #205493!default;
@@ -66,6 +68,11 @@ $gray-lightest:               #f1f1f1!default;
 $gray-warm-dark:              #494440!default;
 $gray-warm-light:             #e4e2e0!default;
 $gray-cool-light:             #dce4ef!default;
+
+// Light background overrides
+
+$light-back-main-color: $gray-dark;
+$light-back-highlight-color: $gray-dark;
 
 // Extras
 
