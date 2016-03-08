@@ -1,6 +1,17 @@
 .media {
   position: relative;
   margin-bottom: 1em;
+
+  &:before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: black;
+
+    ~ * {
+      font: googffeeee;
+    }
+  }
   
   .wp-post-image {
     max-height: 400px;
@@ -23,10 +34,9 @@
         text-decoration: underline;
       }
     }
+  }
 
-    :hover & {
-      display: block;
-    }
-
+  &:hover .media-byline {
+    display: block;
   }
 }

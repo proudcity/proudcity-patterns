@@ -87,7 +87,7 @@ footer.page-footer {
     margin-bottom: $padding-base-vertical;
   }
 
-  .light-background-main & {
+  .light-background-footer & {
 
     &,
     a,
@@ -96,15 +96,15 @@ footer.page-footer {
     h4,
     h5,
     h6 {
-      color: $light-back-main-color;
+      color: $light-back-footer-color;
     }
 
     a:hover, a:focus {
-      color: lighten($light-back-main-color, 20%);
+      color: lighten($light-back-footer-color, 20%);
     }
 
     h4 {
-      color: $light-back-main-color !important;
+      color: $light-back-footer-color !important;
     }
   }
 
