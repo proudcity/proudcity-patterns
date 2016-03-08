@@ -22,19 +22,36 @@
   "main": "./dist/scss/proud-patterns.scss",
   "dependencies": {
     "bootstrap-sass-official": "~3.3.1",
-    "font-awesome": "~4.2.0",
+    "font-awesome": "~4.4.0",
     "bourbon": "v3.2.3"
+  },
+  "overrides": {
+    "bootstrap-sass": {
+      "main": [
+        "./assets/javascripts/bootstrap/transition.js",
+        "./assets/javascripts/bootstrap/alert.js",
+        "./assets/javascripts/bootstrap/button.js",
+        "./assets/javascripts/bootstrap/carousel.js",
+        "./assets/javascripts/bootstrap/collapse.js",
+        "./assets/javascripts/bootstrap/dropdown.js",
+        "./assets/javascripts/bootstrap/modal.js",
+        "./assets/javascripts/bootstrap/tooltip.js",
+        "./assets/javascripts/bootstrap/popover.js",
+        "./assets/javascripts/bootstrap/scrollspy.js",
+        "./assets/javascripts/bootstrap/tab.js",
+        "./assets/javascripts/bootstrap/affix.js"
+      ]
+    }
   },
   "ignore": [],
   "devDependencies": {},
-  "version": "0.1.2",
-  "_release": "0.1.2",
+  "_release": "ca55025002",
   "_resolution": {
-    "type": "version",
-    "tag": "v0.1.2",
-    "commit": "c1e901f7dbfc98ae1b6f1d4b4c724048fd91ef43"
+    "type": "branch",
+    "branch": "master",
+    "commit": "ca550250027367444090a26ae8cd8f4f4d454347"
   },
   "_source": "git://github.com/proudcity/proudcity-patterns.git",
-  "_target": "~0.1.2",
-  "_originalSource": "proudcity-patterns"
+  "_target": "master",
+  "_originalSource": "proudcity/proudcity-patterns"
 }
