@@ -131,12 +131,12 @@ $icon-dim: 40px;
     min-height: $icon-dim;
 
     &:hover {
-      background-color: $gray-lighter;
+      background-color: $gray-lightest;
     }
 
     &.active {
       // border-color: $gray-lighter;
-      background-color: lighten($gray-lightest, 5%);
+      background-color: transparent;
       // @include box-shadow(0 2px 3px -1px rgba(0,0,0,0.1));
     }
   }
