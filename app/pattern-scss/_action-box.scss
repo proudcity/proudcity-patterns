@@ -136,14 +136,14 @@ $icon-dim: 40px;
 
     &.active {
       // border-color: $gray-lighter;
-      background-color: transparent;
+      background-color: none;
       // @include box-shadow(0 2px 3px -1px rgba(0,0,0,0.1));
     }
   }
 
   h4 {
     margin: 0;
-    font-weight: $medium-weight;
+    // font-weight: $medium-weight;
 
     a {
       &:focus, &:hover {
@@ -160,7 +160,7 @@ $icon-dim: 40px;
       position: absolute;
       left: $grid-gutter-width/2;
       top: $icon-dim * .2;
-      color: $black;
+      color: $font-color-h4;
     }
 
     .fa ~ span {

@@ -8,6 +8,7 @@ $header-dim-width: $header-dim-height - 10;
     min-width: 42px;
     font-size: 20px;
     padding: 6px 11px; 
+    text-align: center;
   }
 }
 
@@ -21,9 +22,10 @@ $header-dim-width: $header-dim-height - 10;
     display: block;
     height: 0;
     overflow: hidden;
-    border-bottom: $card-border-width solid $card-border-color;
+    // border-top: $card-border-width solid $card-border-color;
 
     img {
+      border-radius: 0;
       position: absolute;
       margin-bottom: 0;
       width: 100%;
@@ -35,14 +37,24 @@ $header-dim-width: $header-dim-height - 10;
   }
 
   .social-card-header { 
-    background-color: $gray-lightest;
+    // background-color: $gray-lightest;
+    background-color: $brand-primary;
     height: $header-dim-height;
     padding: 10px 8px 6px ($header-dim-width + 10);
     position: relative;
+    border-radius: $card-border-radius $card-border-radius 0 0;
 
     & > * {
       z-index: 1;
       position: relative;
+    }
+
+    &, a {
+      color: $white;
+
+      .light-background-main & {  
+        color: $light-back-main-color;
+      }
     }
 
     .post-link {
@@ -54,10 +66,11 @@ $header-dim-width: $header-dim-height - 10;
       a {
         display: block;
         background-color: $brand-primary;
+        border-radius: $card-border-radius 0 0 0;
         @include transition(background-color ease 0.2s);
 
         &:hover {
-          background-color: darken($brand-primary, 5%);
+          background-color: rgba(0,0,0,0.1);
         }
       }
 
@@ -66,14 +79,9 @@ $header-dim-width: $header-dim-height - 10;
       }
       
       &, a {
-        color: $white;
         height: $header-dim-height;
         line-height: $header-dim-height + 5;
         width: $header-dim-width;
-
-        .light-background-main & {  
-          color: $light-back-main-color;
-        }
       }
 
     }
@@ -131,6 +139,8 @@ $header-dim-width: $header-dim-height - 10;
 
 [dynamic-layout] {
   position: relative;
+  margin-right: -($grid-gutter-width / 2);
+  margin-left: -($grid-gutter-width / 2);
 }
 
 // Animation
