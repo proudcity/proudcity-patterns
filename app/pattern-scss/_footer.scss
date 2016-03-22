@@ -14,7 +14,7 @@ $footer-padding: 20px;
     &:active,
     &:focus {
       background: transparent;
-      text-decoration: underline !important;
+      text-decoration: underline;
     }
   }
 
@@ -43,10 +43,6 @@ $footer-padding: 20px;
     padding-top: 5px;
     padding-bottom: 5px;
     margin-top: 7px;
-
-    &:hover {
-      text-decoration: none;
-    }
   }
 }
 
