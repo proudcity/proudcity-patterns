@@ -2,20 +2,18 @@ $footer-padding: 20px;
 
 .footer-actions {
   background: transparent;
-  background-color: $gray-lighter;
+  border-top: 1px solid $gray-lighter;
   padding: $padding-base-vertical 0;
   margin-top: $page-section-spacing;
 
   .navbar-nav > li > a,
   .navbar-nav > li.open > a {
-    color: $white;
     background: transparent;
 
     &:hover,
     &:active,
     &:focus {
       background: transparent;
-      color: darken($white, 10%);
       text-decoration: underline !important;
     }
   }
@@ -38,6 +36,16 @@ $footer-padding: 20px;
     &.dropdown,
     & > .social {
       padding: $padding-base-vertical $padding-base-horizontal $padding-base-vertical 0;
+    }
+  }
+
+  .btn.proudscore-widget {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 7px;
+
+    &:hover {
+      text-decoration: none;
     }
   }
 }
