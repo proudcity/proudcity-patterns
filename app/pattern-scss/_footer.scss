@@ -18,7 +18,9 @@ $footer-padding: 20px;
     }
   }
 
-  .light-background-highlight & {
+  // now defaulting to white for footer actions
+  // .light-background-highlight & {
+  body & {
     .navbar-nav > li > a,
     .navbar-nav > li.open > a {
       color: $light-back-highlight-color;
@@ -61,6 +63,24 @@ $footer-padding: 20px;
         text-decoration: underline !important;
       }
     }
+
+    // now defaulting to white for footer actions
+    // .light-background-highlight & {
+    body & {
+      .nav > li a {
+        color: $light-back-highlight-color;
+        
+        &:hover,
+        &:active,
+        &:focus {
+          color: darken($light-back-highlight-color, 10%);
+        }
+      }
+    }
+  }
+
+  .btn.proudscore-widget {
+    margin-left: $grid-gutter-width/2;
   }
 }
 
