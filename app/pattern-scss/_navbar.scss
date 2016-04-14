@@ -416,6 +416,12 @@ $button-height: $button-d;
 
 // Hide site name if it is included in the logo
 // -------------------------
-.hide-site-name .site-name {
-  display: none;
+.hide-site-name {
+  .site-name {
+    display: none !important;
+  }
+
+  img.logo {
+    max-width: 300px !important;
+  }
 }
