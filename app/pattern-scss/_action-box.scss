@@ -202,6 +202,11 @@ $icon-dim: 40px;
 
 .action-box {
   form {
+
+    textarea {
+      width: 100%
+    }
+
     .has-error {
       .error-message {
         display: block !important;
@@ -218,6 +223,7 @@ $icon-dim: 40px;
         margin-bottom: 0;
       } 
     }
+    
   }
 
  .track-status {
