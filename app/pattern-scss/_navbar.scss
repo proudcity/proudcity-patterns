@@ -413,3 +413,9 @@ $button-height: $button-d;
     }
   }
 }
+
+// Hide site name if it is included in the logo
+// -------------------------
+.hide-site-name .site-name {
+  display: none;
+}
