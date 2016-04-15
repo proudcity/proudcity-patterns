@@ -318,7 +318,7 @@ $button-height: $button-d;
 @include respond($mq-nav-fixed-top) {
 
 
-  $logo-container-width: 120px!default;
+  $logo-container-width: 96px!default;
 
   // Switch to top header
   .navbar-external {
@@ -334,7 +334,8 @@ $button-height: $button-d;
     .nav-logo {
       position: relative;
       padding: 0 10px;
-      width: $logo-container-width!important;
+      text-align: center;
+      width: $logo-container-width;
       @include transition(margin 0.25s ease-out);
     }
 
@@ -343,6 +344,9 @@ $button-height: $button-d;
       margin-left: -($logo-container-width - $grid-gutter-width/2);
       margin-top: -20px;
       margin-bottom: -20px;
+      height: 90px;
+      display: flex;
+      align-items: center;
     }
 
     img.logo {
@@ -354,6 +358,8 @@ $button-height: $button-d;
     // withOUT site name
     &.hide-site-name {
       .nav-logo {
+        margin-left: 0!important;
+        
         > a {
           padding-top: 8px;
           padding-bottom: 8px;
@@ -424,7 +430,7 @@ $button-height: $button-d;
         }
 
         img.logo {
-          max-height: $nav-height-short + $nav-big-padding*2 - 20px;
+          max-height: $nav-height-short + $nav-big-padding*2 - 28px;
           width: auto;
         }
       }
