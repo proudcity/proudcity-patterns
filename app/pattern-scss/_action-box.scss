@@ -226,12 +226,25 @@ $icon-dim: 40px;
     
   }
 
- .track-status {
+  .track-status {
     text-transform: uppercase;
     font-weight: bold;
   }
+
 }
 
+
+// Issue report map
+// -------------------------------
+#issue-map {
+  .leaflet-control-mapbox-geocoder {
+    position: absolute;
+  }
+
+  .leaflet-control-zoom {
+    margin-top: 50px;
+  }
+}
 
 
 // *
