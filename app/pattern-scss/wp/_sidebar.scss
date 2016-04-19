@@ -1,14 +1,22 @@
 
 // Calypso settings
-$color-sidebar-bg: #f7f7f7;
+
+// Dark theme
+$color-sidebar-bg: #f7f7f7; //#F8F8F8
 $color-sidebar-border: #ebebeb;
 $color-sidebar-link: #4a4a4a;
 $color-sidebar-submenu-bg: #ebebeb;
-$color-sidebar-active-bg: #ABABAB;
-$color-sidebar-active-color: #fff;
+$color-sidebar-active-bg: #F2F2F2;
+$color-sidebar-active-color: #000;
 $color-sidebar-caret-color: #f1f1f1;
+$color-sidebar-submenu-link-color: $color-sidebar-link;
+$color-sidebar-heading: #929292;
 
+$font-size-sidebar-link: 14px;
+$padding-sidebar-link: 10px 0 10px 10px;
 
+// Dark theme
+/*
 $color-sidebar-bg: #212121; //$gray-base
 $color-sidebar-border: $color-sidebar-bg;
 $color-sidebar-link: $gray-light;
@@ -17,6 +25,7 @@ $color-sidebar-active-bg: $black;
 $color-sidebar-active-color: $white;
 $color-sidebar-submenu-link-color: $gray-lightest;
 $color-sidebar-caret-color: $gray-lighter;
+*/
 
 
 #wpcontent,
@@ -34,16 +43,18 @@ $color-sidebar-caret-color: $gray-lighter;
 
 #adminmenu {
   padding-bottom: 10px;
+  border-right: 1px solid $color-sidebar-border;
 
   li,
   a {
     background-color: $color-sidebar-bg !important;
     background: none !important;
-    font-size: $font-size !important;
+    font-size: $font-size-sidebar-link !important;
   }
 
   a {
     color: $color-sidebar-link !important;
+    padding: $padding-sidebar-link !important;
 
     &.wp-has-current-submenu,
     &:hover {
@@ -64,7 +75,7 @@ $color-sidebar-caret-color: $gray-lighter;
   }
 
   div.wp-menu-name {
-    //padding: $sidebar-link-padding;
+    padding: 0;
   }
 
   .dashicons-before {
@@ -80,7 +91,8 @@ $color-sidebar-caret-color: $gray-lighter;
       -webkit-font-smoothing: antialiased;
       display: none;
       color: $color-sidebar-link !important;
-      margin-top: 3px;
+      padding: 2px 0 !important;
+      //margin-top: 3px;
     }
   }
 
@@ -88,10 +100,14 @@ $color-sidebar-caret-color: $gray-lighter;
     content: "\f015";
     display: inline-block;
   }
-  .menu-icon-analytics .dashicons-before:before {
-    content: "\f1fe";
+  .menu-icon-dashboard .dashicons-before:before {
+    content: "\f0e4";
     display: inline-block;
   }
+  //.menu-icon-analytics .dashicons-before:before {
+  //  content: "\f1fe";
+  //  display: inline-block;
+  //}
 
   .menu-icon-page .dashicons-before:before {
     content: "\f15b";
@@ -166,21 +182,28 @@ $color-sidebar-caret-color: $gray-lighter;
     }
   }
 
-  li.menu-top:before {
-    padding-left: 10px; // @todo: var
-    color: $gray-light;
-    font-size: $font-size-h3;
-    padding-top: 10px;
-    font-weight: 100;
+  li.menu-top:after {
+    //padding-left: 10px; // @todo: var
+    color: $color-sidebar-heading;
+    padding-top: 15px;
+    font-weight: bold;
+    position: absolute;
+    left: 20px; // @todo: make variable
   }
 
-  li.menu-icon-page:before {
-    content: 'Publish';
+  li.menu-icon-dashboard {
+    margin-bottom: 40px; // @todo: make variable
+
+    &:after {
+      content: 'Publish';
+    }
   }
 
-  li.menu-icon-appearance:before {
-    content: 'Configure';
-  }
+
+
+  //li.menu-icon-appearance:before {
+  //  content: 'Configure';
+  //}
 
   //li.hide-if-no-customize:before {
     //content: 'Configure';

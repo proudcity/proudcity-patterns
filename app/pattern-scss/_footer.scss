@@ -19,8 +19,19 @@ $footer-padding: 20px;
   }
 
   // now defaulting to white for footer actions
-  // .light-background-highlight & {
   body & {
+    .navbar-nav > li > a,
+    .navbar-nav > li.open > a {
+      color: darken($white, 20%);
+      
+      &:hover,
+      &:active,
+      &:focus {
+        color: darken($white, 10%);
+      }
+    }
+  }
+  .light-background-footer-actions & {
     .navbar-nav > li > a,
     .navbar-nav > li.open > a {
       color: $light-back-highlight-color;
@@ -32,6 +43,8 @@ $footer-padding: 20px;
       }
     }
   }
+
+  
 
   .navbar-left,
   .navbar-right {
