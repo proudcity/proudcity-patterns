@@ -247,6 +247,48 @@ $icon-dim: 40px;
 }
 
 
+// Issue lookup
+// -------------------------------
+.issue-status {
+
+  form {
+    padding-bottom: .6em;
+    border-bottom: 1px solid $gray-lighter;
+
+    .form-group,
+    label {
+      margin-right: .5em;
+    }
+  }
+
+  .issue-status-tabs {
+   
+    ul.nav {
+      margin-top: .75em;
+
+      li a {
+        background-color: $gray-lightest;
+        margin-bottom: .2em;
+      }
+      li.active a {
+        background-color: #d6d7d9 !important;
+      }
+
+    }
+
+    img.pull-right {
+      margin-left: 1em;
+    }
+  }
+
+  .tab-content {
+    margin-top: 1em;
+  }
+
+}
+
+
+
 // *
 // * Media Queries
 // *
