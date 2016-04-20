@@ -1,0 +1,31 @@
+
+.powered-by-footer {
+  background: rgba(0,0,0,0.3);
+  text-align: center;
+  position: absolute;
+  line-height: $page-section-spacing - 20px;
+  height: $page-section-spacing;
+  bottom: $nav-height-short;
+  left: 0;
+  width: 100%;
+
+  p {
+    margin-bottom: 0;
+    padding: 10px;
+    
+    img {
+      display: inline-block;
+      max-width: 100px;
+      padding: 0 5px;
+      margin-top: -2px;
+    }
+  }
+}
+
+
+// Navbar at top
+@include respond($mq-nav-fixed-top) {
+  .powered-by-footer {
+    bottom: 0;
+  }
+}

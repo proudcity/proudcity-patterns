@@ -27,6 +27,11 @@ $extra-padding: 40px;
   .padding-md-right {
     padding-right: $extra-padding
   }
+
+  .col-md-offset-both-half {
+    margin-left: percentage(((1 / $grid-columns) / 2));
+    margin-right: percentage(((1 / $grid-columns) / 2));
+  }
 }
 
 @include respond($lg-up) {
@@ -36,5 +41,10 @@ $extra-padding: 40px;
 
   .padding-lg-right {
     padding-right: $extra-padding
+  }
+
+  .col-lg-offset-both-half {
+    margin-left: percentage(((1 / $grid-columns) / 2));
+    margin-right: percentage(((1 / $grid-columns) / 2));
   }
 }

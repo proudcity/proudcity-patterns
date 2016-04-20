@@ -94,7 +94,11 @@ $proudbar-logo-height: $proudbar-line-height - 6px;
 
     // Bottom padding
     .page-footer {
-      padding-bottom: $nav-height-short - $nav-height-mod - 2px + $proudbar-height + $footer-padding;
+      padding-bottom: $nav-height-short - $nav-height-mod - 2px + $proudbar-height + $footer-padding + $page-section-spacing;
+    }
+
+    .powered-by-footer {
+      bottom: $proudbar-height + $nav-height-short - $nav-height-mod - 2px;
     }
 
     .proudbar {
@@ -118,7 +122,11 @@ $proudbar-logo-height: $proudbar-line-height - 6px;
 
     // Bottom padding
     .page-footer {
-      padding-bottom: $proudbar-height + $footer-padding;
+      padding-bottom: $proudbar-height + $page-section-spacing + $footer-padding;
+    }
+
+    .powered-by-footer {
+      bottom: $proudbar-height;
     }
   }
 }

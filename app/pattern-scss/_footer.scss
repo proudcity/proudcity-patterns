@@ -100,7 +100,8 @@ $footer-padding: 20px;
 
 footer.page-footer {
   font-size: $font-size-small;
-  padding: $footer-padding 0;
+  padding: $footer-padding 0 ($footer-padding + $page-section-spacing) 0;
+  position: relative;
 
   &,
   a,
@@ -165,3 +166,4 @@ footer.page-footer {
     
   }
 }
+
