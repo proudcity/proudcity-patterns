@@ -13,6 +13,7 @@ $type-mod: .75;
   h2 {
     font-size: $font-size-h1 * $type-mod;
     margin-top: 0;
+    color: $white;
   }
 
   &.jumbotron-inverse {
