@@ -74,6 +74,11 @@ $color-sidebar-caret-color: $gray-lighter;
     }
   }
 
+  #adminmenu li.wp-has-submenu.wp-not-current-submenu:hover:after,
+  li.wp-has-submenu:after {
+    display: none !important;
+  }
+
   div.wp-menu-name {
     padding: 0;
   }
