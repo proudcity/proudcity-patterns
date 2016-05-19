@@ -9,3 +9,8 @@
     padding-right: $grid-gutter-width/2!important;
   }
 }
+
+[data-stretch-type=full] .panel-grid-cell {
+  padding-left: 0!important;
+  padding-right: 0!important;
+}
