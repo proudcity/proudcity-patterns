@@ -359,6 +359,12 @@ $column-gap: 1.25rem;
 
 // Makes columns work for mobile
 @include respond($xs-only) {
+  .card-columns-xs-1 {
+    & > * {
+      width: 100%;
+    }
+  }
+
   .card-columns-xs-2 {
     & > * {
       width: 50%;

@@ -5,18 +5,18 @@
 $fa-font-size-base:   $font-size-base;
 $fa-font-path:        "//netdna.bootstrapcdn.com/font-awesome/4.4.0/fonts"; // for referencing Bootstrap CDN font files directly
 
-@import "../../../font-awesome/scss/variables";
-@import "../../../font-awesome/scss/mixins";
-@import "../../../font-awesome/scss/path";
-@import "../../../font-awesome/scss/core";
-@import "../../../font-awesome/scss/larger";
-@import "../../../font-awesome/scss/fixed-width";
-@import "../../../font-awesome/scss/list";
-@import "../../../font-awesome/scss/bordered-pulled";
-@import "../../../font-awesome/scss/animated";
-@import "../../../font-awesome/scss/rotated-flipped";
-@import "../../../font-awesome/scss/stacked";
-@import "../../../font-awesome/scss/icons";
+@import "bower_components/font-awesome/scss/variables";
+@import "bower_components/font-awesome/scss/mixins";
+@import "bower_components/font-awesome/scss/path";
+@import "bower_components/font-awesome/scss/core";
+@import "bower_components/font-awesome/scss/larger";
+@import "bower_components/font-awesome/scss/fixed-width";
+@import "bower_components/font-awesome/scss/list";
+@import "bower_components/font-awesome/scss/bordered-pulled";
+@import "bower_components/font-awesome/scss/animated";
+@import "bower_components/font-awesome/scss/rotated-flipped";
+@import "bower_components/font-awesome/scss/stacked";
+@import "bower_components/font-awesome/scss/icons";
 
 
 %fa-icon {
