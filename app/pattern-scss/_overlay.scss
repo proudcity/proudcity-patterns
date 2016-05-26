@@ -6,7 +6,8 @@
 
 // The search / answers overlay demo
 
-$top-pad: 50px;
+$top-pad: 70px;
+$search-top-mobile: 28px;
 
 .proud-overlay {
   position: fixed;
@@ -25,10 +26,6 @@ $top-pad: 50px;
   @include transition(opacity 0.3s ease-in-out, z-index 0.2s linear);
   padding-top: $top-pad;
 
-  .admin-bar & {
-    padding-top: $top-pad + 50;
-  }
-
   // Make container scrollable!
   & > .container {
     height: 100%;
@@ -41,12 +38,13 @@ $top-pad: 50px;
   color: $black;
   position: absolute;
   right: 0;
-  top: $top-pad - 50;
-
-  .admin-bar & {
-    top: $top-pad;
-  }
+  top: $top-pad - 70;
 }
+
+.close-search {
+  top: $search-top-mobile - 3;
+}
+
 
 body {
   &.active-311, &.search-active {
@@ -68,18 +66,11 @@ body {
   #wrapper-search {
     position: fixed!important;
     z-index: $nav-user-overlay-z + 1;
-    top: 70px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    padding-left: $jumbotron-padding;
-    padding-right: $jumbotron-padding;
-  }
-
-  &.admin-bar {
-    #wrapper-search {
-      top: 70px + 50;
-    }
+    top: $search-top-mobile + 5;
+    padding-right: 0;
+    left: $jumbotron-padding;
+    right: $jumbotron-padding * 2;
+    margin-top: 0!important;
   }
 
   #overlay-search {
@@ -96,6 +87,30 @@ body {
     opacity: 1;
     left: 0;
     top: 0;
+  }
+}
+
+// Admin bar
+
+.admin-bar {
+  $top-pad: $top-pad + 50;
+
+  .proud-overlay {
+    padding-top: $top-pad;
+  }
+
+  .proud-overlay-close {
+    top: $top-pad - 70;;
+  }
+
+  .close-search {
+    top: $search-top-mobile - 3 + 50px;
+  }
+
+  &.search-active {
+    #wrapper-search {
+      top: $search-top-mobile + 50px;
+    }
   }
 }
 
@@ -124,40 +139,13 @@ body {
       }
     }
   }
-
-
-  // .proud-overlay-left {
-  //   left: 110%;
-  // }
-
-  // .proud-overlay-right {
-  //   left: -110%;
-  // }
-
-
-  // .search-active {
-  //   #overlay-search {
-  //     opacity: 1;
-  //     left: 0;
-  //     top: 0;
-  //   }
-  // }
-
-  // .active-311 {
-  //   #overlay-311 {
-  //     opacity: 1;
-  //     left: 0;
-  //     top: 0;
-  //   }
-  // }
 }
 
 @include respond($sm-up) {
 
-  $top-pad: 100px;
+  $top-pad: 70px;
 
   .proud-overlay {
-    padding-top: $top-pad;
     left: 0;
 
     // Make container scrollable!
@@ -167,96 +155,47 @@ body {
     
   }
 
-  .close-311 {
-    top: $top-pad - 50;
+  .proud-overlay-close {
+    top: $top-pad - 70;
   }
-
-  .close-search {
-    top: 0;
-  }
-
-  // .admin-bar {
-  //   .proud-overlay {
-  //     padding-top: $top-pad + 50;
-  //   }
-
-  //   .close-311 {
-  //     top: $top-pad - 50 + 50;
-  //   }
-
-  //   .close-search {
-  //     top: 0 + 50;
-  //   }
-  // }
 
   .search-active {
     #wrapper-search {
-      padding-left: $jumbotron-padding * 2 + 2;
-      padding-right: $jumbotron-padding * 2 + 2;
-      width: $container-sm;
+      right: auto;
+      left: auto;
+      width: $container-sm/3*2;
+      left: 50%;
+      top: $top-pad;
+      transform: translateX(-50%);
+
+      .input-group {
+        width: 100%;
+      }
+    }
+  }
+
+  .admin-bar {
+    $top-pad: $top-pad + 50;
+
+    .proud-overlay-close {
+      top: $top-pad - 70;
+    }
+
+    &.search-active {
+      #wrapper-search {
+        top: $top-pad;
+      }
     }
   }
 }
 
 @include respond($md-up) {
 
-  $top-pad: 150px;
-
-  .proud-overlay {
-    padding-top: $top-pad;
-  }
-
-  .close-311 {
-    top: $top-pad - 50;
-  }
-
-  .close-search {
-    top: 90px;
-  }
 
   .search-active {
 
     #wrapper-search {
-      width: $container-md;
-      top: 70px + 100;
-    }
-
-    // &.admin-bar {
-    //   #wrapper-search {
-    //     top: 70px + 100 + 50;
-    //   }
-    // }
-  }
-
-  // .admin-bar {
-  //   .proud-overlay {
-  //     padding-top: $top-pad + 50;
-  //   }
-
-  //   .close-311 {
-  //     top: $top-pad - 50 + 50;
-  //   }
-
-  //   .close-search {
-  //     top: 90px + 50;
-  //   }
-  // }
-}
-
-@include respond($lg-up) {
-  // $top-pad: 150px;
-
-  // .proud-overlay {
-  //   padding-top: $top-pad;
-  // }
-
-  // .close-311 {
-  //   top: $top-pad - 50;
-  // }
-
-  .search-active {
-    #wrapper-search {
-      width: $container-lg;
+      width: $container-md/3*2;
     }
   }
 }
@@ -266,25 +205,78 @@ body {
 // -------------------------
 @include respond($mq-nav-fixed-top) {
 
-  .search-active.admin-bar {
+  $top-pad: 160px;
+
+  .proud-overlay {
+    padding-top: $top-pad;
+    left: 0;
+  }
+
+  .proud-overlay-close {
+    top: $top-pad - 70;
+  }
+
+  .search-active {
     #wrapper-search {
-      top: 150px;
+      top: $top-pad;
     }
   }
 
-  // if admin, move
-  body.admin-menu, body.admin-bar {
-    $top-pad: 190px;
+  .scrolled {
+    $top-pad: $top-pad - 38px;
 
     .proud-overlay {
       padding-top: $top-pad;
     }
-    .close-311 {
-      top: 135px;
+
+    .proud-overlay-close {
+      top: $top-pad - 70;
     }
 
-    .close-search {
-      top: 135px;
+    &.search-active {
+      #wrapper-search {
+        top: $top-pad;
+      }
+    }
+  }
+
+  
+
+  // if admin, move
+  .admin-bar {
+    $top-pad: 210px;
+
+    .proud-overlay {
+      padding-top: $top-pad;
+    }
+
+    .proud-overlay-close {
+      top: $top-pad - 70;
+    }
+
+    &.search-active {
+      #wrapper-search {
+        top: $top-pad;
+      }
+    }
+
+    &.scrolled {
+      $top-pad: $top-pad - 38px;
+
+      .proud-overlay {
+        padding-top: $top-pad;
+      }
+
+      .proud-overlay-close {
+        top: $top-pad - 70;
+      }
+
+
+      &.search-active {
+        #wrapper-search {
+          top: $top-pad;
+        }
+      }
     }
   }
 }

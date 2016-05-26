@@ -204,6 +204,10 @@ $button-height: $button-d;
        #main-menu {
         padding-top: 20%;
       }
+
+      &.menu-nav-open {
+        height: 95%;
+      } 
     }
 
     .menu-box {
