@@ -32,6 +32,32 @@
         vertical-align: middle;
       }
     }
+    
+    // vertical alignment
+    & > .full-v-align-top {
+      & > * {
+        vertical-align: top;
+      }
+    }
+    & > .full-v-align-bottom {
+      & > * {
+        vertical-align: bottom;
+      }
+    }
+
+    // horizonal alignment
+    & > .full-h-align-center {
+      & > * > * {
+        float: none;
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+    & > .full-h-align-right {
+      & > * > * {
+        float: right;
+      }
+    }
   }
 }
 
