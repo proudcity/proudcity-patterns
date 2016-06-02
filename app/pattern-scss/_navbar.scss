@@ -222,6 +222,16 @@ $button-height: $button-d;
         padding: $nav-height-short 20px;
       }
     }
+
+    // Proud menu with depth
+    // ---------------------
+    .navbar-depth {
+      .caret {
+        border-bottom: 0;
+        border-top: $caret-width-base dashed;
+        border-top: $caret-width-base solid \9; // IE8
+      }
+    }
   }
 }
 
@@ -231,7 +241,7 @@ $button-height: $button-d;
 // -------------------------
 @include respond($mq-menu-visible) {
   .navbar-external {
-    z-index: $nav-user-overlay-z + 1;
+    z-index: $nav-user-overlay-z + 2;
 
     .menu-box {
       float: right!important;
@@ -395,6 +405,27 @@ $button-height: $button-d;
       &.search-btn {
         i {
           margin-right: 0;
+        }
+      }
+    }
+
+    // Proud menu with depth
+    // ---------------------
+    .navbar-depth {
+      .caret {
+        border-bottom: 0;
+        border-top: $caret-width-base dashed;
+        border-top: $caret-width-base solid \9; // IE8
+      }
+
+      .dropdown .dropdown-menu {
+        top: 100%;
+        bottom: auto;
+        margin-top: 1px;
+        
+        // add additional for non scrolled
+        body:not(.scrolled) & {
+          margin-top: $nav-big-padding - 1;
         }
       }
     }
