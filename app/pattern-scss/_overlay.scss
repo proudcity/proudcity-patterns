@@ -71,6 +71,7 @@ body {
     left: $jumbotron-padding;
     right: $jumbotron-padding * 2;
     margin-top: 0!important;
+    -webkit-filter: #{"blur(0.0000"}#{"001px)"};
   }
 
   #overlay-search {
