@@ -10,6 +10,15 @@ $header-dim-width: $header-dim-height - 10;
     padding: 6px 11px; 
     text-align: center;
   }
+
+  .light-background-main & {
+    .nav-pills>li>a {
+      color: $light-back-main-color;
+    }
+    .nav-pills>li.active>a {
+      background: $gray-lighter;
+    }
+  }
 }
 
 
