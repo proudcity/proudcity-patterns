@@ -1,3 +1,5 @@
+$levels: 1,2,3,4,5,6,7,8,9,10;
+
 .menu-slider {
   overflow: hidden;
   width: 100%;
@@ -13,63 +15,19 @@
     }
   }
 
-  &.level-count-1 > .inner {
-    width: 100%;
+  @each $level in $levels {
+    &.level-count-#{$level} > .inner {
+      width: #{$level}00%;
 
-    > * {
-      width: 100%;
+      > * {
+        width: (100/$level)#{'%'};
+      }
     }
-  }
 
-  &.level-count-2 > .inner {
-    width: 200%;
+    $levelLeft: $level - 1;
 
-    > * {
-      width: (100/2)#{'%'};
+    &.level-#{$level}-active > .inner {
+      margin-left: -#{100*$levelLeft}#{'%'};
     }
-  }
-
-  &.level-count-3 > .inner {
-    width: 300%;
-
-    > * {
-      width: (100/3)#{'%'};
-    }
-  }
-
-  &.level-count-4 > .inner {
-    width: 400%;
-
-    > * {
-      width: (100/4)#{'%'};
-    }
-  }
-
-  &.level-count-5 > .inner {
-    width: 500%;
-
-    > * {
-      width: (100/5)#{'%'};
-    }
-  }
-  
-  &.level-1-active > .inner {
-    margin-left: 0;
-  }
-
-  &.level-2-active > .inner {
-    margin-left: -100%;
-  }
-
-  &.level-3-active > .inner {
-    margin-left: -200%;
-  }
-
-  &.level-4-active > .inner {
-    margin-left: -300%;
-  }
-  
-  &.level-5-active > .inner {
-    margin-left: -400%;
   }
 }
