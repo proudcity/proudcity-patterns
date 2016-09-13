@@ -13,7 +13,7 @@
     }
   }
 
-  @for $level from 1 through 20 {
+  @for $level from 1 through 100 {
     &.level-count-#{$level} > .inner {
       width: #{$level}00%;
 
