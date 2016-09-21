@@ -83,6 +83,10 @@ $color-sidebar-caret-color: $gray-lighter;
     padding: 0;
   }
 
+  div.wp-menu-image.svg {
+    margin-top: -8px;
+  }
+
   .dashicons-before {
     //display: none !important;
     img {
@@ -152,6 +156,10 @@ $color-sidebar-caret-color: $gray-lighter;
   }
   .menu-icon-proud_location .dashicons-before:before {
     content: "\f041";
+    display: inline-block;
+  }
+  .menu-icon-issue .dashicons-before:before {
+    content: "\f071";
     display: inline-block;
   }
 
