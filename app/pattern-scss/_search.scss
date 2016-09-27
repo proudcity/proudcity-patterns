@@ -27,12 +27,15 @@ ul.search-autosuggest {
     list-style: none;
   }
 
+  &, a {
+    color: $gray-base;
+  }
+
   a {
     display: block;
     padding: 10px 0;
     text-decoration: none;
     min-height: 2em;
-    color: $gray-base;
     line-height: 1.5em;
     overflow: hidden;
     white-space: nowrap;
