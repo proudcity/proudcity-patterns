@@ -1,10 +1,12 @@
 .menu-slider {
   overflow: hidden;
   width: 100%;
+  margin-bottom: 20px;
 
   > .inner {
     position: relative;
     float: left;
+    margin-bottom: 0;
     @include transition(margin-left ease-in 0.2s);
     @inlude clearfix();
 
