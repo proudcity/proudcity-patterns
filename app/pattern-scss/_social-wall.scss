@@ -212,7 +212,6 @@ $header-dim-width: $header-dim-height - 10;
 }
 
 @include respond($md-up) {
-  @debug $container-md;
   [social-wall] {
     .dynamic-layout-item-parent {
       width: (100/3)*1%;
@@ -226,7 +225,6 @@ $header-dim-width: $header-dim-height - 10;
 }
 
 @include respond($lg-up) {
-  @debug $container-lg;
   // Hacky fix for firefox
   .container [social-wall] {
     .dynamic-layout-item-parent {
