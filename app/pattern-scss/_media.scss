@@ -3,7 +3,6 @@
 //
 
 
-
 img {
   display: inline-block;
   max-width: 100%;
@@ -84,5 +83,45 @@ path, polygon, rect, image {
 
   .svg-gray-dark & {
     fill: $gray-dark;
+  }
+}
+
+// 
+// Bootstrap media types
+//
+
+.media {
+  .media-left, .media-right {
+    img {
+      max-width: none;
+    }
+  }
+
+  // Teaser
+  .media-list & {
+    margin-bottom: 40px;
+    margin-top: 0;
+
+    .media-left, .media-right {
+      img {
+        border-radius: 100%;
+        max-width: 66px;
+      }
+    }
+
+    .media-heading {
+      margin-top: 15px;  
+    }
+  }
+}
+
+@include respond($sm-up) {
+  .media-list[data-equalizer] {
+    .media {
+      padding-right: $grid-gutter-width;
+      float: left;
+      width: 50%;
+
+    }
   }
 }
