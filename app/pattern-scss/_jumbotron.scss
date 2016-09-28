@@ -31,9 +31,8 @@ $type-mod: .75;
 
   // background-color
   .jumbotron-bg {
-    z-index: 1;
     padding: 15px;
-    position: relative;
+    position: static;
 
     h1,
     h2 {
@@ -50,14 +49,14 @@ $type-mod: .75;
       }
     }
 
-    &:before {
+    .jumbotron-bg-mask {
       display: block;
-      content: "";
       position: absolute;
-      width: 100%;
+      width: auto;
       height: 100%;
       top: 0;
-      left: 0;
+      left: $grid-gutter-width/2;
+      right: $grid-gutter-width/2;
       opacity: 0.9;
       border-radius: $border-radius-base;
       background-color: $gray-lighter;
@@ -65,7 +64,7 @@ $type-mod: .75;
   }
 
   &.jumbotron-inverse {
-    .jumbotron-bg:before {
+    .jumbotron-bg-mask {
       background-color: $black;
       opacity: .6;
     }

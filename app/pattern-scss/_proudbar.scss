@@ -2,16 +2,16 @@
 // BETA bar on sites
 //
 
-
+$proudbar-background: $brand-primary!default;
 $nav-height-short: 52px!default;
 $nav-height-mod: 2px!default;
-$proudbar-height: 45px;
-$proudbar-padding: 7px;
-$proudbar-line-height: $proudbar-height - $proudbar-padding*2;
-$proudbar-logo-height: $proudbar-line-height - 6px;
+$proudbar-height: 45px!default;
+$proudbar-padding: 7px!default;
+$proudbar-line-height: $proudbar-height - $proudbar-padding*2!default;
+$proudbar-logo-height: $proudbar-line-height - 6px!default;
 
 .proudbar {
-  background: $brand-primary;
+  background: $proudbar-background;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -42,7 +42,7 @@ $proudbar-logo-height: $proudbar-line-height - 6px;
   .proudbar-btn {
     background: $white;
     border-radius: 5px;
-    color: $brand-primary;
+    color: $proudbar-background;
     padding: 0 $proudbar-padding;
     font-size: .9em;
     display: inline-block;

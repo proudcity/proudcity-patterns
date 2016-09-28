@@ -1,0 +1,205 @@
+$navbar-transparent-opacity: 0.8;
+
+// Expanding/contracting topnav + tablet view
+body.proud-navbar-transparent {
+
+  // Deal with jumbotron items
+  .main {
+    & > div > .panel-grid:first-child {
+      // backpound
+      .jumbotron-inverse {
+        .jumbotron-bg {
+          position: static;
+        }
+
+        .jumbotron-bg-mask {
+          opacity: $navbar-transparent-opacity;
+        }
+      }
+    }
+  }
+}
+
+// Only init for blendmode capable, plus
+// insane bug with chrome + mapbox prevents this mode with admin bar
+.backgroundblendmode body.proud-navbar-transparent:not(.admin-bar) {
+  .main {
+    & > div > .panel-grid:first-child {
+      .jumbotron-inverse {
+        .jumbotron-bg-mask {
+          opacity: 1;
+          @include background-blend();
+          z-index: $nav-user-overlay-z - 11;
+
+          & ~ * {
+            position: relative;
+            z-index: $nav-user-overlay-z - 10;
+          } 
+        }
+      }
+    }
+  }
+}
+
+// Top menu
+// -------------------------
+@include respond($mq-nav-fixed-top) {
+
+  // Expanding/contracting topnav + tablet view
+  body.proud-navbar-transparent {
+    padding-top: 0;
+
+    .menu-box, .navbar-external {
+      background-color: rgba(0,0,0,0)!important;
+      border-color: rgba(0,0,0,0)!important;
+    }
+
+    .navbar-external {
+      @include transition(background-color 0.35s ease-out, border-color 0.35s ease-out);
+
+      > * {
+        z-index: 2;
+        position: relative;
+      }
+    }
+
+    // When screen is scrolled to TOP
+    &:not(.scrolled) {
+      padding-top: 0 !important;
+    }
+
+    #navbar-transparent-mask {
+      @include transition(opacity 0.35s ease-out);
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: $nav-height-short + $nav-big-padding*2 - $nav-height-mod !important;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      opacity: $navbar-transparent-opacity;
+      z-index: $nav-user-overlay-z - 8; 
+    }
+
+        // Admin menu active, compensate
+    &.admin-menu, &.admin-bar {
+      padding-top: $admin-bar-height!important;
+
+      #navbar-transparent-mask {
+        top: $admin-bar-height;
+      }
+
+      &:not(.scrolled) {
+        padding-top: $admin-bar-height!important;
+      }
+    }
+
+    // Deal with jumbotron items
+    .main {
+      & > div > .panel-grid:first-child {
+        // "full" height style jumbotrons
+        .jumbotron-header-container {
+          padding-top: $nav-height-short + $nav-big-padding*2 - $nav-height-mod !important;
+        }
+
+        // backpound
+        .jumbotron-inverse {
+          .jumbotron-bg {
+            position: static;
+          }
+
+          .jumbotron-bg-mask {
+            opacity: $navbar-transparent-opacity;
+          }
+        }
+      }
+    }
+  }
+
+  // Only init for blendmode capable, plus
+  // insane bug with chrome + mapbox prevents this mode with admin bar
+  .backgroundblendmode body.proud-navbar-transparent:not(.admin-bar) {
+
+    // #wpadminbar {
+    //   z-index: $nav-user-overlay-z - 12; 
+    // }
+
+    // &.search-active, &.active-311 {
+    //   #wpadminbar {
+    //     z-index: 9999;
+    //   }
+    // }
+
+    #navbar-transparent-mask {
+       opacity: 1;
+       @include background-blend();
+    }
+
+    // Deal with jumbotron items
+    .main {
+      & > div > .panel-grid:first-child {
+        .jumbotron-inverse {
+          .jumbotron-bg-mask {
+            opacity: 1;
+            @include background-blend();
+            z-index: $nav-user-overlay-z - 11;
+
+            & ~ * {
+              position: relative;
+              z-index: $nav-user-overlay-z - 10;
+            } 
+          }
+        }
+      }
+    }
+  }
+
+  //
+  // Overlay spacing
+  //
+  .proud-navbar-transparent.scrolled {
+    $top-pad: 160px;
+
+    .proud-overlay {
+      padding-top: $top-pad;
+    }
+
+    .proud-overlay-close {
+      top: $top-pad - 70;
+    }
+
+    &.search-active {
+      #wrapper-search {
+        top: $top-pad;
+      }
+    }
+  }
+
+  
+
+  // if admin, move
+  .proud-navbar-transparent.admin-bar {
+    $top-pad: 210px;
+
+    &.scrolled {
+      $top-pad: $top-pad;
+
+      .proud-overlay {
+        padding-top: $top-pad;
+      }
+
+      .proud-overlay-close {
+        top: $top-pad - 70;
+      }
+
+
+      &.search-active {
+        #wrapper-search {
+          top: $top-pad;
+        }
+      }
+    }
+  }
+}
