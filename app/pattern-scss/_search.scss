@@ -14,9 +14,8 @@
 .search-form .search-field {
   @extend .form-control;
 }
-.search-form .search-submit {
-  @extend .btn;
-  @extend .btn-default;
+.search-form button[type="submit"] {
+  line-height: 1.45em;
 }
 
 ul.search-autosuggest {
