@@ -54,53 +54,57 @@
 
 .nav-contain {
   padding-top: $grid-gutter-width/2;
-  padding-bottom: $grid-gutter-width/2;
+  padding-bottom: 0;
 
-  .nav-pills li {
-    float: left;
-    width: 25%;
-    padding-right: 1px;
-    margin-top: 0!important;
+  .nav-pills {
+    margin-bottom: 0;
 
-    & ~ li {
-      padding-left: 1px;
-    }
+    li {
+      float: left;
+      width: 25%;
+      padding-right: 1px;
+      margin-top: 0!important;
 
-    &:last-child {
-      padding-right: 0;
-    }
-
-    a {
-      background-color: $gray-base;
-
-
-      &, &:hover, &:focus {
-        color: $white;
-
-        .light-background-main & {
-          color: $light-back-main-color;
-        }
+      & ~ li {
+        padding-left: 1px;
       }
-    }
 
-    &
+      &:last-child {
+        padding-right: 0;
+      }
 
-    &:not(.active) {
       a {
-        &:hover, &:focus {
-          background: darken($gray, 5%);
+        background-color: $gray-base;
+
+
+        &, &:hover, &:focus {
+          color: $white;
+
+          .light-background-main & {
+            color: $light-back-main-color;
+          }
         }
       }
-    }
 
-    &.active a {
-        
-      &, &:hover, &:focus {
-        color: $white;
-        background: $brand-primary;
-        
-        .light-background-highlight & {
-          color: $light-back-highlight-color;
+      &
+
+      &:not(.active) {
+        a {
+          &:hover, &:focus {
+            background: darken($gray, 5%);
+          }
+        }
+      }
+
+      &.active a {
+          
+        &, &:hover, &:focus {
+          color: $white;
+          background: $brand-primary;
+          
+          .light-background-highlight & {
+            color: $light-back-highlight-color;
+          }
         }
       }
     }
@@ -267,6 +271,7 @@ $icon-dim: 40px;
    
     ul.nav {
       margin-top: .75em;
+      margin-bottom: 0;
 
       li a {
         background-color: $gray-lightest;
@@ -421,7 +426,7 @@ $icon-dim: 40px;
   }
 
   .content-contain {
-    padding: 0 $grid-gutter-width/2 $grid-gutter-width/2;
+    padding: $grid-gutter-width/2;
   }
 }
 
@@ -461,7 +466,7 @@ $icon-dim: 40px;
   // Menu 
   // --------------------------------
   .nav-contain {
-    padding: $grid-gutter-width $grid-gutter-width 16px;
+    padding: $grid-gutter-width $grid-gutter-width 0;
 
     .nav-pills {
       li {
@@ -489,7 +494,7 @@ $icon-dim: 40px;
   // Content
   // -------------------------------
   .content-contain {
-    padding: 0 $grid-gutter-width $grid-gutter-width;
+    padding: $grid-gutter-width $grid-gutter-width;
   }
 
   .action-box dl {
