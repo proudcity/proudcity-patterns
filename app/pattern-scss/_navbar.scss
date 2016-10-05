@@ -10,6 +10,11 @@ $nav-user-overlay-z: 1050!default;
 $nav-big-padding: 20px!default;
 // WP bar
 $admin-bar-height: 47px!default;
+// Link vars
+$nav-active-border-width: 4px!default;
+$nav-active-border-color: rgba(0,0,0,0.4)!default;
+$nav-active-border-color-light: rgba(0,0,0,0.4)!default;
+
 
 
 // Keep navabr styles consistent
@@ -263,9 +268,19 @@ $button-height: $button-d;
         float: left;
 
         > a {
-          padding-top:    $navbar-padding-vertical;
+          padding-top:    $navbar-padding-vertical + 1;
           padding-bottom: $navbar-padding-vertical;
         }
+
+        // &, &.open {
+        //   > a, &:hover > a, &:focus > a {
+        //     border-top: $nav-active-border-width solid transparent;
+        //   }
+        // }
+
+        // &.active > a {
+        //   border-top-color: $nav-active-border-color;
+        // }
       }
     }
 
@@ -276,11 +291,13 @@ $button-height: $button-d;
 
     // Light colors
     .light-background-main & {
-      .navbar-nav > li > a {
+      .navbar-nav > li > a, .navbar-nav >.open > a {
         color: $light-back-main-color;
       }
-      .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+      .navbar-nav > li > a:hover, .navbar-nav > li > a:focus,
+      .navbar-nav >.open > a:hover, .navbar-nav >.open > a:focus {
         color: darken($light-back-main-color, 5%);
+        outline: none;
       }
     }
   }
@@ -423,10 +440,10 @@ $button-height: $button-d;
         bottom: auto;
         margin-top: 1px;
         
-        // add additional for non scrolled
-        body:not(.scrolled) & {
-          margin-top: $nav-big-padding - 1;
-        }
+        // // add additional for non scrolled
+        // body:not(.scrolled) & {
+        //   margin-top: $nav-big-padding - 1;
+        // }
       }
     }
   }
