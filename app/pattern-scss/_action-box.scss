@@ -86,8 +86,6 @@
         }
       }
 
-      &
-
       &:not(.active) {
         a {
           &:hover, &:focus {
@@ -118,6 +116,10 @@
   position: absolute;
   right: $grid-gutter-width/2;
   top: -2px;
+}
+
+.content-contain {
+  padding-top: $grid-gutter-width/2;
 }
 
 
