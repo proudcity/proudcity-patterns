@@ -57,7 +57,7 @@ body.proud-navbar-active {
 
   // Bottom padding
   .page-footer {
-    padding-bottom: $nav-height-short + $page-section-spacing + $footer-padding;
+    padding-bottom: $nav-height-short + $powered-by-spacing + $footer-padding;
   }
 
   // Admin toolbvar
@@ -110,7 +110,7 @@ $button-height: $button-d;
     font-size: 18px;
     border-radius: 10px;
     color: $navbar-default-link-color;
-    margin-top: ($nav-height-short - $button-height) / 2;
+    margin-top: ($nav-height-short - $button-height) / 2 - 1;
     margin-bottom: 0;
     background-color: rgba(#fff, 0);
     // background-color: lighten($navbar-default-bg, 10%);
@@ -146,6 +146,12 @@ $button-height: $button-d;
         }
       }
     }
+  }
+
+  // Normal button in the navbar actions
+  .navbar-btn-normal {
+    margin-top: 6px;
+    margin-right: 5px;
   }
 
   // Light colors
@@ -456,7 +462,7 @@ $button-height: $button-d;
 
     // Bottom padding
     .page-footer {
-      padding-bottom: $page-section-spacing + $footer-padding;
+      padding-bottom: $powered-by-spacing + $footer-padding;
     }
 
     // When screen is scrolled to TOP
