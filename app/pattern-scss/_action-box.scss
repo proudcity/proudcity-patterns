@@ -10,6 +10,10 @@
 .app-wrap {
   padding-bottom: $page-section-spacing;
   overflow: hidden;
+
+  .widget-proud-actions-app & {
+    overflow: initial;
+  }
 }
 
 .main-311 {
