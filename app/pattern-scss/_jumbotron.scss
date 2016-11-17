@@ -87,6 +87,21 @@ $type-mod: .75;
     max-width: none;
     position: absolute;
   }
+
+  &.image-vertical-top {
+    img {
+      top: 0;
+      @include transform(translate( -50%, 0% ));
+    }
+  }
+
+  &.image-vertical-bottom {
+    img{
+      bottom: 0;
+      top: auto;
+      @include transform(translate( -50%, 0% ));
+    }
+  }
 }
 
 .jumbo-header {
