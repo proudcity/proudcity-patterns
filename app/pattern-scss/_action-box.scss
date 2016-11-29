@@ -208,6 +208,21 @@ $icon-dim: 40px;
 }
 
 
+// General helpers
+// -------------------------------
+.action-box {
+  hr {
+    clear: both;
+  }
+
+  .unhide-dropdown {
+    display:block;
+    top:auto;
+    padding:10px;
+  }
+}
+
+
 // Forms
 // -------------------------------
 
@@ -344,6 +359,10 @@ $icon-dim: 40px;
       margin-right: auto;
     }
   }
+
+  .mobile-margin-top {
+    margin-top: 2.5em;
+  }
 }
 
 // Small up
@@ -397,6 +416,11 @@ $icon-dim: 40px;
 
   // Content
   // -------------------------------
+  
+  .col-icon {
+    padding-left: 0;
+    padding-right: 0;
+  }
 
   $icon-dim: 50px;
 
