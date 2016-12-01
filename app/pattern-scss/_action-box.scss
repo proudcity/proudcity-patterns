@@ -207,6 +207,32 @@ $icon-dim: 40px;
   }
 }
 
+// Answers Display
+// -------------------------------
+.action-box {
+  .panel-group { 
+    .panel-heading {
+      background: $gray-lightest;
+    }
+
+    .panel.active {
+      border-color: $gray-lightest;
+
+      .panel-heading {
+        background: $white;
+      }
+    }
+    .panel-body {
+      padding-top: 0;
+
+      > div {
+        border-top: 1px solid $gray-lightest;
+        padding-top: $panel-body-padding;
+      }
+    }
+  }
+}
+
 
 // General helpers
 // -------------------------------
