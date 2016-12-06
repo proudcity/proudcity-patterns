@@ -125,6 +125,10 @@
   padding-top: $grid-gutter-width/2;
 }
 
+hr.compact {
+  margin: 10px 0;
+}
+
 
 // Category Listings
 // ------------------------------
@@ -245,6 +249,15 @@ $icon-dim: 40px;
     display:block;
     top:auto;
     padding:10px;
+  }
+
+  .action-buttons {
+    .btn {
+      display: block;
+      margin-bottom: 5px;
+      min-width: 94px;
+      text-align: left;  
+    }
   }
 }
 
@@ -446,6 +459,10 @@ $icon-dim: 40px;
   .col-icon {
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .padding-top {
+    padding-top: 20px;
   }
 
   $icon-dim: 50px;
