@@ -84,6 +84,15 @@ body.proud-navbar-transparent {
       z-index: $nav-user-overlay-z - 8; 
     }
 
+    // Alert banner
+    .alert-banner {
+      left: 0;
+      width: 100%;
+      position: absolute;
+      top: $nav-height-short + $nav-big-padding*2 - $nav-height-mod;
+      z-index: 1;
+    }
+
     &:not(.scrolled) {
       #navbar-transparent-mask {
         opacity: $navbar-transparent-opacity;
@@ -91,12 +100,17 @@ body.proud-navbar-transparent {
       }
     }
 
-        // Admin menu active, compensate
+    // Admin menu active, compensate
     &.admin-menu, &.admin-bar {
       padding-top: $admin-bar-height!important;
 
       #navbar-transparent-mask {
         top: $admin-bar-height;
+      }
+
+      // Alert banner
+      .alert-banner {
+        margin-top: $admin-bar-height;
       }
 
       &:not(.scrolled) {
@@ -194,7 +208,6 @@ body.proud-navbar-transparent {
     $top-pad: 210px;
 
     &.scrolled {
-      $top-pad: $top-pad;
 
       .proud-overlay {
         padding-top: $top-pad;
