@@ -1,3 +1,5 @@
+$search-icon-width: 35px;
+
 
 // 
 // Search form
@@ -18,49 +20,6 @@
   line-height: 1.45em;
 }
 
-ul.search-autosuggest {
-  padding: 10px 0 0 0;
-  display: none;
-  color: $gray-base;
-
-  li {
-    list-style: none;
-  }
-
-  
-
-  a.result-link {
-    display: block;
-    padding: 10px 0;
-    text-decoration: none;
-    min-height: 2em;
-    line-height: 1.5em;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    color: $gray-base;
-
-    &:hover {
-      color: $brand-primary;
-    }
-
-    i {
-      font-size: 1.5em;
-      display: block;
-      float: left;
-    }
-  }
-
-  .search-autosuggest-content {
-    margin-left: 3em;
-  }
-
-  body.search-active &, body.search-active-lite & {
-    display: block;
-  } 
-  
-}
-
 // Search page form styles
 
 body.search-active-lite {
@@ -78,17 +37,56 @@ body.search-active-lite {
   }
 }
 
-
-// Small up
+//
+// Proud autocomplete search
 // -------------------------
-@include respond($sm-up) {
-  ul.search-autosuggest {
+
+ul.search-autosuggest {
+  padding: 10px 0 0 0;
+  display: none;
+  color: $gray-base;
+
+  li {
+    list-style: none;
+    clear: left;
+  }
+
+  a.result-link {
+    color: $gray-base;
+    display: block;
+    text-decoration: none;
+    min-height: 2em;
+    line-height: 1.5em;
+    float: left;
+    padding: 10px 0 10px $search-icon-width;
+    position: relative!important;
+
+    &:hover {
+      color: $brand-primary;
+    }
+
     i {
+      font-size: 1.5em;
+      display: block;
+      float: left;
       text-align: center;
-      width: 2em;
+      position: absolute!important;
+      left: 0;
+      top: 10px;
+      width: $search-icon-width;
     }
   }
+
+  .search-autosuggest-content {
+    margin-left: 3em;
+  }
+
+  body.search-active &, body.search-active-lite & {
+    display: block;
+  } 
+  
 }
+
 
 
 // 
@@ -105,17 +103,29 @@ body.search-active-lite {
 
   .search-title {
     position: relative;
-    padding-left: 40px;
+    padding-left: $search-icon-width;
     padding-bottom: 10px;
 
     i {
-      position: absolute;
+      font-size: 1.5em;
       left: 0;
-      top: -5px;
+      position: absolute;
+      text-align: center;
+      top: -2px;
+      width: $search-icon-width;
     }
   }
 }
 
+//
+// Elastic Multi-site
+// -------------------------
+
+.search-teaser, ul.search-autosuggest {
+  .title-span {
+    display: block;
+  }
+}
 
 // 
 // Granicus, etc Results
@@ -124,4 +134,51 @@ body.search-active-lite {
 .search-additional-box {
   padding: 10px;
   background-color: $gray-lightest;
+}
+
+// Small up
+// -------------------------
+@include respond($sm-up) {
+  $search-icon-width: 48px;
+
+  //
+  // Proud autocomplete search
+  // -------------------------
+  ul.search-autosuggest {
+   
+    a.result-link {
+      padding-left: $search-icon-width;
+
+      i {
+        width: $search-icon-width;
+      }
+    }
+  }
+
+  // 
+  // Results
+  // ----------------------
+
+  .search-teaser {
+    .search-title {
+      padding-left: $search-icon-width;
+
+      i {
+        font-size: 2em;
+        width: $search-icon-width;
+      }
+    }
+  }
+
+
+  //
+  // Elastic Multi-site
+  // -------------------------
+
+  .search-teaser, ul.search-autosuggest {
+    .title-span {
+      display: inline;
+      margin-right: 10px;
+    }
+  }
 }
