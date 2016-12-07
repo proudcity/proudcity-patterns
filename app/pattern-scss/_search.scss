@@ -21,16 +21,15 @@
 ul.search-autosuggest {
   padding: 10px 0 0 0;
   display: none;
+  color: $gray-base;
 
   li {
     list-style: none;
   }
 
-  &, a {
-    color: $gray-base;
-  }
+  
 
-  a {
+  a.result-link {
     display: block;
     padding: 10px 0;
     text-decoration: none;
@@ -39,19 +38,22 @@ ul.search-autosuggest {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    color: $gray-base;
 
     &:hover {
       color: $brand-primary;
     }
+
+    i {
+      font-size: 1.5em;
+      display: block;
+      float: left;
+    }
   }
 
-  i {
-    font-size: 1.5em;
-    display: block;
-    float: left;
-    width: 1em;
+  .search-autosuggest-content {
+    margin-left: 3em;
   }
-  
 
   body.search-active &, body.search-active-lite & {
     display: block;
@@ -112,4 +114,14 @@ body.search-active-lite {
       top: -5px;
     }
   }
+}
+
+
+// 
+// Granicus, etc Results
+// ----------------------
+
+.search-additional-box {
+  padding: 10px;
+  background-color: $gray-lightest;
 }
