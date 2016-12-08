@@ -261,6 +261,15 @@ $icon-dim: 40px;
   }
 }
 
+.pc-map {
+  height: 600px;
+  width: 100%;
+}
+
+.local-location .pc-map {
+  height: 400px;
+}
+
 
 // Forms
 // -------------------------------
@@ -452,6 +461,7 @@ $icon-dim: 40px;
       }
     }
   }
+
 
   // Content
   // -------------------------------
