@@ -47,7 +47,7 @@ $transition: -100%;
 
 @include respond($xs-only) {
 
-.transform,
+  .transform,
   .slidedown {
     &.ng-enter,
     &.ng-leave ,
@@ -95,7 +95,7 @@ $transition: -100%;
   .ng-enter,
   .ng-hide-add {
     &.transform {
-      left: -($transition);
+      left: $transition;
     }
 
     &.slidedown {
@@ -151,7 +151,7 @@ $transition: -100%;
   .ng-hide-remove.ng-hide-remove-active {
 
     &.transform {
-      left: $transition;
+      left: -($transition);
     }
 
     &.slidedown {
@@ -168,7 +168,7 @@ $transition: -100%;
   .transform,
   .slidedown {
     &.ng-enter,
-    &.ng-leave ,
+    &.ng-leave,
     &.ng-hide-add,
     &.ng-hide-remove {
       @include transition(all $trans-desk-speed ease-in-out);
