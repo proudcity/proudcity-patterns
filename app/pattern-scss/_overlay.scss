@@ -72,6 +72,7 @@ body {
     right: $jumbotron-padding * 2;
     margin-top: 0!important;
     -webkit-filter: #{"blur(0.0000"}#{"001px)"};
+    bottom: 70px;
   }
 
   #overlay-search {
@@ -145,6 +146,7 @@ body {
 @include respond($sm-up) {
 
   $top-pad: 70px;
+  $search-form-width: $container-sm;
 
   .proud-overlay {
     left: 0;
@@ -163,11 +165,10 @@ body {
   .search-active {
     #wrapper-search {
       right: auto;
-      left: auto;
-      width: $container-sm/3*2;
+      width: $search-form-width;
       left: 50%;
       top: $top-pad;
-      transform: translateX(-50%);
+      margin-left: -($search-form-width/2);
 
       .input-group {
         width: 100%;
@@ -192,11 +193,13 @@ body {
 
 @include respond($md-up) {
 
+  $search-form-width: $container-md/4*3;
 
   .search-active {
 
     #wrapper-search {
-      width: $container-md/3*2;
+      width: $search-form-width;
+      margin-left: -($search-form-width/2);
     }
   }
 }
@@ -219,6 +222,7 @@ body {
 
   .search-active {
     #wrapper-search {
+      bottom: 20px;
       top: $top-pad;
     }
   }
