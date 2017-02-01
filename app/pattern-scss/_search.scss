@@ -46,7 +46,11 @@ body.search-active-lite {
   @include webkit-scrollbar($gray-dark, $white, 5px);
   overflow-y: scroll;
   overflow-x: hidden;
-  max-height: 98%;
+  max-height: 80%;
+
+  .csscalc & {
+    max-height: calc(100% - 40px);
+  }
 
   body.search-active &, body.search-active-lite & {
     display: block;

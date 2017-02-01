@@ -1,3 +1,45 @@
+// So widget layout
+
+$widget-margin: 15px;
+
+.panel-grid-cell .so-panel {
+  margin-bottom: $widget-margin!important;
+
+  &:last-child {
+    margin-bottom: 0!important;
+  }
+}
+
+.panel-grid-cell .so-panel.margin-bottom-none {
+  margin-bottom: 0!important;
+}
+
+.panel-grid-cell .so-panel.margin-bottom-large {
+  margin-bottom: ($widget-margin*2)!important;
+}
+
+.panel-grid-cell .so-panel.margin-bottom-huge {
+  margin-bottom: ($widget-margin*3)!important;
+}
+
+.panel-grid-cell .so-panel.margin-top {
+  margin-top: $widget-margin;
+}
+
+.panel-grid-cell .so-panel.margin-top-none {
+  margin-top: 0;
+}
+
+.panel-grid-cell .so-panel.margin-top-large {
+  margin-top: ($widget-margin*2);
+}
+
+.panel-grid-cell .so-panel.margin-top-huge {
+  margin-top: ($widget-margin*3);
+}
+
+
+// Panels
 .panel-row-multiple {
   .container {
     padding-left: 0;

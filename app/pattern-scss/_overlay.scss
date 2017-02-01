@@ -68,10 +68,11 @@ body {
     z-index: $nav-user-overlay-z + 1;
     top: $search-top-mobile + 5;
     padding-right: 0;
-    left: $jumbotron-padding;
+    left: $jumbotron-padding/2;
     right: $jumbotron-padding * 2;
     margin-top: 0!important;
-    -webkit-filter: #{"blur(0.0000"}#{"001px)"};
+    // Since we're doing normal positioning no longer needed
+    // -webkit-filter: #{"blur(0.0000"}#{"001px)"};
     bottom: 70px;
   }
 
