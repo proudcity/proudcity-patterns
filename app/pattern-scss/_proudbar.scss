@@ -122,7 +122,7 @@ $proudbar-logo-height: $proudbar-line-height - 6px!default;
 
     // Bottom padding
     .page-footer {
-      padding-bottom: $proudbar-height + $page-section-spacing + $footer-padding;
+      padding-bottom: $proudbar-height + $page-section-spacing*2 + $footer-padding;
     }
 
     .powered-by-footer {
