@@ -130,9 +130,19 @@ ul.search-autosuggest {
 // Elastic Multi-site
 // -------------------------
 
-.search-teaser, ul.search-autosuggest {
+.entry-title, .search-teaser, ul.search-autosuggest {
   .title-span {
     display: block;
+  }
+}
+
+.external-post .entry-title a {
+  &:hover {
+    text-decoration: none;
+
+    .title-span {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -196,7 +206,7 @@ ul.search-autosuggest {
   // Elastic Multi-site
   // -------------------------
 
-  .search-teaser, ul.search-autosuggest {
+  .entry-title, .search-teaser, ul.search-autosuggest {
     .title-span {
       display: inline;
       margin-right: 10px;
