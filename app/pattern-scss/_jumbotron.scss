@@ -126,6 +126,36 @@ $type-mod: .75;
       font-size: 18px;
     }
   }
+
+  // Carousel needs to be auto-height
+  .carousel {
+    .jumbo-image-container {
+      &, img { 
+        top: auto;
+        left: auto;
+        min-width: 0;
+        min-height: 0;
+        position: relative!important;
+        @include transform(initial)
+      }
+
+      &.media {
+        margin-bottom: 0;
+      }
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    .full-image {
+      .carousel-caption {
+        position: absolute;
+        left: 15%;
+        right: 15%;
+      }
+    }
+  }
 }
 
 @include respond($sm-up) {
