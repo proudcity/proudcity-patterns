@@ -46,7 +46,7 @@ $widget-margin: 15px;
 }
 
 // Fix for pages on mobile
-@include respond($sm-and-down) {
+@include respond($xs-only) {
   .wrap.container {
     .panel-grid {
       margin-left: 0!important;
