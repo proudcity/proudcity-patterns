@@ -1,3 +1,15 @@
+
+// Main page breadcrumb
+.wrap > .breadcrumb {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  margin-bottom: 0;
+  margin-top: -3px;
+}
+
+// Action box breadcrumbs
+
 .breadcrumb-wrapper {
   background-color: $gray-lightest;
   //margin-bottom: $line-height-computed;
