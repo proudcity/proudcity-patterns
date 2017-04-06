@@ -139,7 +139,8 @@ path, polygon, rect, image {
     .media-left, .media-right {
       img {
         border-radius: 100%;
-        max-width: 66px;
+        max-width: 64px;
+        min-height: 64px;
       }
     }
 
