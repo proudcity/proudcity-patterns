@@ -13,6 +13,10 @@ $search-icon-width: 35px;
 
   .input-group {
     width: 100%;
+
+    .search-site & {
+      width: auto;
+    }
   }
 
   .form-control-search-icon {
