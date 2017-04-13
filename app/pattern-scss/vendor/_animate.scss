@@ -36,6 +36,45 @@ to prevent collapsing during animation*/
 }
 
 
+.fadeonly {
+    &.ng-enter,
+    &.ng-leave,
+    &.ng-hide-add,
+    &.ng-hide-remove {
+      position: relative;
+    }
+  }
+
+// fade only
+.ng-enter,
+.ng-hide-add {
+  &.fadeonly {
+    opacity: 0;
+  }
+}
+
+.ng-enter.ng-enter-active,
+.ng-hide-add.ng-hide-add-active {
+  &.fadeonly {
+    opacity: 1;
+  }
+}
+
+.ng-leave,
+.ng-hide-remove {
+  &.fadeonly {
+    opacity: 1;
+  }
+}
+
+.ng-leave.ng-leave-active,
+.ng-hide-remove.ng-hide-remove-active {
+  &.fadeonly {
+    opacity: 0;
+  }
+}
+
+
 // *
 // * Media Queries
 // *
