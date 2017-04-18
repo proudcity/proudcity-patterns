@@ -182,11 +182,11 @@ body.proud-navbar-active.admin-bar {
       top: 35px + $admin-bar-height; 
     }
     
-    .overflow .details {
+    .overflow .map-details {
       padding-top: 30px + $admin-bar-height;
     }
 
-    .overflow #details-close {
+    .overflow .map-details-close {
       top: 20px + $admin-bar-height;
     }
   }
