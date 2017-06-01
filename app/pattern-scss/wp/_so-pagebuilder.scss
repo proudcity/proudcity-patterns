@@ -115,19 +115,19 @@ $widget-margin: 15px;
   }
 }
 
-[data-stretch-type=full] {
+.siteorigin-panels-stretch[data-stretch-type] {
   padding-left: 0!important;
   padding-right: 0!important;
-}
 
-[data-stretch-type=full] .panel-grid-cell {
-  padding-left: 0!important;
-  padding-right: 0!important;
+  .panel-grid-cell {
+    padding-left: 0!important;
+    padding-right: 0!important;
+  }
 }
 
 
 @media screen and (min-width: 781px) {
-  [data-stretch-type="full"] {
+  .siteorigin-panels-stretch[data-stretch-type] {
     margin-left: 15px!important; 
     margin-right: 15px!important;
   }
