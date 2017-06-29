@@ -146,6 +146,22 @@ ul.search-autosuggest {
 }
 
 //
+// Matcing text
+// -------------------------
+
+.matching {
+
+  .match-label {
+    opacity: 0.9;
+  }
+
+  // The highlited text
+  em {
+    font-weight: bold;
+  }
+}
+
+//
 // Elastic Multi-site
 // -------------------------
 
