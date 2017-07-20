@@ -22,7 +22,7 @@ $footer-padding: 20px!default;
   body & {
     .navbar-nav > li > a,
     .navbar-nav > li.open > a {
-      color: darken($white, 20%);
+      color: $white;
       
       &:hover,
       &:active,
@@ -110,15 +110,15 @@ footer.page-footer {
   h4,
   h5,
   h6 {
-    color: $gray-light;
+    color: $white;
   }
 
   a:hover, a:focus {
-    color: lighten($gray-light, 20%);
+    color: lighten($white, 20%);
   }
 
   h4 {
-    color: $gray-light !important;
+    color: $white !important;
   }
 
   h5 {
