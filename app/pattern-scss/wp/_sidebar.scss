@@ -166,6 +166,31 @@ $color-sidebar-caret-color: $gray-lighter;
     content: "\f071";
     display: inline-block;
   }
+  .menu-icon-popup .dashicons-before:before {
+    content: "\f2d2";
+    display: inline-block;
+  }
+  .toplevel_page_esign-doc .dashicons-before:before {
+    content: "\f044";
+    display: inline-block;
+  }
+  
+  .toplevel_page_bp-activity .dashicons-before:before {
+    content: "\f012" !important;
+    display: inline-block;
+  }
+  .toplevel_page_bp-groups .dashicons-before:before {
+    content: "\f0c0" !important;
+    display: inline-block;
+  }
+  .menu-icon-bp-email .dashicons-before:before {
+    content: "\f003";
+    display: inline-block;
+  }
+  .menu-icon-bp_doc .dashicons-before:before {
+    content: "\f0f6";
+    display: inline-block;
+  }
 
   .menu-icon-appearance .dashicons-before:before {
     content: "\f1fc";
@@ -183,6 +208,7 @@ $color-sidebar-caret-color: $gray-lighter;
     content: "\f085";
     display: inline-block;
   }
+  
 
 
   .wp-submenu {
@@ -238,7 +264,10 @@ $color-sidebar-caret-color: $gray-lighter;
     li.menu-icon-appearance:before {
       content: '';
     }
+  
+    div.wp-menu-image {
+      left: 0;
+    }
   }
 }
-
 
