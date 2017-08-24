@@ -18,7 +18,8 @@ body.proud-navbar-active.admin-bar {
   background-color: $admin-bar-bg;
 
   a.ab-item:hover,
-  .hover a.ab-item {
+  .hover a.ab-item,
+  a.ab-item {
     border-top: 5px solid $brand-primary !important;
     background: none !important;
     margin-top: 0 !important;
