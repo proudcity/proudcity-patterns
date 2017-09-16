@@ -9,6 +9,10 @@
   width: 100%;
   margin-bottom: $padding-small-vertical;
 
+  .month-big {
+    display: none;
+  }
+
   .date-big {
     display: block;
     font-size: 1.3em;
@@ -29,6 +33,14 @@
   .date-box {
     border-width: 4px;
     min-width: 90px;
+
+    .month-big {
+      display: block;
+    }
+
+    .month-sml {
+      display: none;
+    }
 
     .date-big {
       font-size: 1.9em;

@@ -2,11 +2,24 @@
 
 $widget-margin: 15px;
 
-.panel-grid-cell .so-panel {
-  margin-bottom: $widget-margin!important;
+.panel-grid-cell {
+  .so-panel {
+    margin-bottom: $widget-margin !important;
 
-  &:last-child {
-    margin-bottom: 0!important;
+    &:last-child {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  // Full width style pages (front page)
+  &:only-child {
+    .so-panel {
+      margin-bottom: $widget-margin * 2 !important;
+
+      &:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
   }
 }
 
@@ -38,6 +51,27 @@ $widget-margin: 15px;
   margin-top: ($widget-margin*3);
 }
 
+// Full width / contrained in Site origins
+.panel-grid {
+  margin-bottom: 0!important;
+
+  // Add padding to grids after title row
+  + .panel-grid > .container {
+    padding-bottom: $page-section-spacing;
+  }
+}
+
+// Force additional padding
+.panel-row-multiple {
+  margin-left: -$grid-gutter-width/2!important;
+  margin-right: -$grid-gutter-width/2!important;
+
+  .panel-grid-cell {
+    padding-left: $grid-gutter-width/2!important;
+    padding-right: $grid-gutter-width/2!important;
+  }
+}
+
 // Fix for agency subpages done in panels
 .wrap.container {
   .panel-grid>.container {
@@ -46,37 +80,48 @@ $widget-margin: 15px;
 }
 
 // Fix for pages on mobile
-@include respond($xs-only) {
-  .wrap.container {
-    .panel-grid {
-      margin-left: 0!important;
-      margin-right: 0!important;
+@include respond($sm-up) {
+  //.wrap.container {
+  //  .panel-grid {
+  //    margin-left: 0!important;
+  //    margin-right: 0!important;
+  //
+  //    >.container {
+  //      &, & >.panel-grid-cell {
+  //        padding-left: 0!important;
+  //        padding-right: 0!important;
+  //      }
+  //    }
+  //  }
+  //}
 
-      >.container {
-        &, & >.panel-grid-cell {
-          padding-left: 0!important;
-          padding-right: 0!important;
-        }
-      }
+  // Force additional padding
+  .panel-row-multiple {
+
+    .container {
+      padding-left: 0!important;
+      padding-right: 0!important;
     }
-  }
-}
 
-// Panels
-.panel-row-multiple {
-  .container {
-    padding-left: 0;
-    padding-right: 0;
-  }
+    .panel-grid-cell:first-child {
+      padding-left: 3px !important;
+    }
 
-  .panel-grid-cell {
-    padding-left: $grid-gutter-width/2!important;
-    padding-right: $grid-gutter-width/2!important;
+    .panel-grid-cell:last-child {
+      padding-right: 3px !important;
+    }
+
+    .panel-grid-cell:only-child {
+      padding-left: $grid-gutter-width/2 !important;
+      padding-right: $grid-gutter-width/2 !important;
+    }
   }
 }
 
 // full width pages
 .full-width-container {
+  overflow: hidden;
+
   .jsn-bootstrap3 {
 
     // Full width
@@ -93,7 +138,7 @@ $widget-margin: 15px;
       margin-right: auto;
       margin-left: auto;
       @include clearfix;
-      
+
       // Container widths
       //
       @media (min-width: $screen-sm-min) {
@@ -125,12 +170,16 @@ $widget-margin: 15px;
   }
 }
 
-
 @media screen and (min-width: 781px) {
   .siteorigin-panels-stretch[data-stretch-type] {
-    margin-left: 15px!important; 
-    margin-right: 15px!important;
+    margin-left: $grid-gutter-width/2!important;
+    margin-right: $grid-gutter-width/2!important;
   }
+}
+
+// Card columns in SO don't need a margin
+.panel-grid .card-columns {
+  margin-bottom: 0;
 }
 
 // Emulated gallery widget
