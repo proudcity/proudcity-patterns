@@ -4,10 +4,19 @@
 
 // Deal with background colors / images
 .background-color-active {
-  
-  // Don't do anything for mobile
-  .wrap {
-    background-color: $body-bg;
+
+
+  @include respond($xs-only) {
+    .wrap {
+      // Mask body background for mobile
+      background-color: $body-bg;
+      padding-bottom: $page-section-spacing * 2;
+    }
+
+    // Reset bottom portion for mobile
+    .footer-actions {
+      margin-top: 0;
+    }
   }
 
   @include respond($sm-up) {
@@ -24,7 +33,6 @@
 
     // Full width pages
     .wrap.full-width-container {
-      background-color: transparent;
 
       // Targets full width stlye pages with just page title widget
       .panel-grid:not(:only-child):first-child > .container:not(.siteorigin-panels-stretch) {

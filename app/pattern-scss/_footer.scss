@@ -4,7 +4,7 @@ $footer-padding: 20px!default;
   background: transparent;
   border-top: 1px solid $gray-lighter;
   padding: $padding-base-vertical 0;
-  margin-top: $page-section-spacing;
+  margin-top: $page-section-spacing * 2;
 
   .navbar-nav > li > a,
   .navbar-nav > li.open > a {
