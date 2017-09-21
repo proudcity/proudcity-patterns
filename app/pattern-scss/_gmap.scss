@@ -103,6 +103,36 @@ $bounce-height: 30px;
 
   &.map-loading {
     &:before {
+      z-index: $nav-user-overlay-z - 11;
+    }
+
+    .fullscreen-wrap:before {
+      z-index: 2;
+    }
+
+    $fullscreen-icon-size: 30px;
+
+    .fullscreen-wrap:after {
+      content: "\f110";
+      color: rgba(0,0,0,0.5);
+      display: inline-block;
+      font: normal normal normal $fullscreen-icon-size#{"/"}$fullscreen-icon-size FontAwesome;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      animation: fa-spin 2s infinite linear;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -($fullscreen-icon-size/2);
+      margin-top: -($fullscreen-icon-size/2);
+      width: $fullscreen-icon-size;
+      height: $fullscreen-icon-size;
+      text-align: center;
+      z-index: 2;
+    }
+
+    &:before, .fullscreen-wrap:before {
       content: '';
       opacity: 0.5;
       background: #ddd;
@@ -111,7 +141,6 @@ $bounce-height: 30px;
       left: 0;
       width: 100%;
       height: 100%;
-      z-index: $nav-user-overlay-z - 11;
     }
   }
 
@@ -248,7 +277,7 @@ $bounce-height: 30px;
     right: 8px;
     position: absolute;
     text-align: center;
-    z-index: 1;
+    z-index: 3;
     display: none;
   }
 
