@@ -509,6 +509,73 @@ $button-height: $button-d;
   }
 }
 
+// Top menu width restrictions
+// -------------------------
+
+$main-menu-max-width: 900px;
+@media #{$mq-nav-fixed-top} and (max-width: #{$screen-lg-min}) {
+
+
+  // Get
+  body.proud-navbar-active:not(.scrolled) .hide-site-name .nav-logo {
+    margin-bottom: 0;
+  }
+
+  .navbar-external {
+    display: flex;
+    align-items: center;
+
+    > * {
+      float: none!important;
+    }
+
+    &.hide-site-name .nav-logo {
+      width: auto;
+    }
+
+    #logo-menu {
+      flex: 1;
+      order: 1;
+    }
+
+    .below {
+      flex: 1;
+      order: 2;
+    }
+
+    #main-menu {
+      //max-width: $main-menu-max-width;
+      overflow: auto;
+      text-align: right;
+      margin: 0;
+      white-space: nowrap;
+      width: 100%;
+
+      li {
+        display: inline-block;
+        float: none;
+      }
+    }
+
+    .menu-box {
+      display: flex;
+      flex-wrap: nowrap;
+      order: 3;
+      float: none!important;
+      min-width: 240px;
+
+      > div, a {
+        display: inline-block;
+        float: none!important;
+      }
+    }
+    
+    #menu-button {
+      display: none;
+    }
+  }
+}
+
 // Hide site name if it is included in the logo
 // -------------------------
 .hide-site-name {
