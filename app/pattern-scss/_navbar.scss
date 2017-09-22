@@ -345,9 +345,17 @@ $button-height: $button-d;
         white-space: nowrap;
         width: 100%;
 
-        li {
+        > li {
           display: inline-block;
           float: none;
+        }
+
+        // Handle dropdown menus
+        .open .dropdown-menu {
+          position: fixed;
+          left: auto;
+          top: auto;
+          bottom: $nav-height-short;
         }
       }
 
@@ -612,6 +620,11 @@ $button-height: $button-d;
 
       #main-menu {
         text-align: right;
+
+        // Handle dropdown menus
+        .open .dropdown-menu {
+          bottom: auto;
+        }
       }
 
       .menu-box {
