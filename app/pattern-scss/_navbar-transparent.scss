@@ -74,14 +74,17 @@ body.proud-navbar-transparent {
       @include transition(height 0.15s ease-out, opacity 0.35s ease-out);
       content: "";
       display: block;
-      position: absolute;
-      top: 0;
       left: 0;
       height: $nav-height-short;
       width: 100%;
       position: fixed;
       top: 0;
-      z-index: $nav-user-overlay-z - 8; 
+      z-index: $nav-user-overlay-z - 8;
+
+      // Google translate active (only react for non admin menu)
+      .translated-ltr &, .translated-rtl & {
+        top: 40px;
+      }
     }
 
     // Alert banner
