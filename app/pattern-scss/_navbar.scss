@@ -311,6 +311,70 @@ $button-height: $button-d;
   .below {
     border-top: 1px solid $gray-light;
   }
+
+  // Use Flexbox if possible to deal with dynamic elements
+  // -----------------------------------------------------
+
+  .flexbox {
+
+    .navbar-external {
+      display: flex;
+      align-items: center;
+
+      &, &.navbar-default {
+        border-top: 1px solid $gray-light !important;
+      }
+
+      // Hit children with no float
+      .below, .menu-box {
+        float: none !important;
+        border-top: 0!important;
+      }
+
+      .below {
+        flex: 1;
+        flex-shrink: 1;
+        order: 1;
+        overflow: auto;
+        @include webkit-scrollbar(rgba(255,255,255,0.2), rgba(0,0,0,0.2), 4px, 6px, 4px, 4px);
+      }
+
+      #main-menu {
+        margin: 0;
+        flex-shrink: 1;
+        white-space: nowrap;
+        width: 100%;
+
+        li {
+          display: inline-block;
+          float: none;
+        }
+      }
+
+      .menu-box {
+        display: flex;
+        flex-wrap: nowrap;
+        order: 2;
+        flex-shrink: 0;
+        float: none !important;
+        min-height: $nav-height-short;
+
+        & > div {
+          display: flex;
+          flex-wrap: nowrap;
+        }
+
+        a {
+          display: inline-block;
+          float: none !important;
+        }
+      }
+
+      #menu-button {
+        display: none;
+      }
+    }
+  }
 }
 
 
@@ -507,71 +571,47 @@ $button-height: $button-d;
       }
     }
   }
-}
 
-// Top menu width restrictions
-// -------------------------
+  // Use Flexbox if possible to deal with dynamic elements
+  // -----------------------------------------------------
 
-$main-menu-max-width: 900px;
-@media #{$mq-nav-fixed-top} and (max-width: #{$screen-lg-min}) {
+  .flexbox {
 
-
-  // Get
-  body.proud-navbar-active:not(.scrolled) .hide-site-name .nav-logo {
-    margin-bottom: 0;
-  }
-
-  .navbar-external {
-    display: flex;
-    align-items: center;
-
-    > * {
-      float: none!important;
+    // Get
+    body.proud-navbar-active:not(.scrolled) .hide-site-name .nav-logo {
+      margin-bottom: 0;
     }
 
-    &.hide-site-name .nav-logo {
-      width: auto;
-    }
+    .navbar-external {
 
-    #logo-menu {
-      flex: 1;
-      order: 1;
-    }
-
-    .below {
-      flex: 1;
-      order: 2;
-    }
-
-    #main-menu {
-      //max-width: $main-menu-max-width;
-      overflow: auto;
-      text-align: right;
-      margin: 0;
-      white-space: nowrap;
-      width: 100%;
-
-      li {
-        display: inline-block;
-        float: none;
+      &, &.navbar-default {
+        border-top: 0 !important;
       }
-    }
 
-    .menu-box {
-      display: flex;
-      flex-wrap: nowrap;
-      order: 3;
-      float: none!important;
-      min-width: 240px;
-
-      > div, a {
-        display: inline-block;
-        float: none!important;
+      &.hide-site-name .nav-logo {
+        width: auto;
       }
-    }
-    
-    #menu-button {
-      display: none;
+
+      #logo-menu {
+        display: flex;
+        flex-wrap: nowrap;
+        order: 1;
+        flex-shrink: 0;
+        float: none !important;
+
+        //li {
+        //  display: flex;
+        //  flex-wrap: nowrap;
+        //}
+      }
+
+      #main-menu {
+        text-align: right;
+      }
+
+      .menu-box {
+        order: 3;
+      }
     }
   }
 }
