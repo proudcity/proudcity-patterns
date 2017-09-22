@@ -106,13 +106,13 @@ $bounce-height: 30px;
       z-index: $nav-user-overlay-z - 11;
     }
 
-    .fullscreen-wrap:before {
+    &.map-style-fullscreen .fullscreen-wrap:before {
       z-index: 2;
     }
 
     $fullscreen-icon-size: 30px;
 
-    .fullscreen-wrap:after {
+    &.map-style-fullscreen .fullscreen-wrap:after {
       content: "\f110";
       color: rgba(0,0,0,0.5);
       display: inline-block;
@@ -132,7 +132,7 @@ $bounce-height: 30px;
       z-index: 2;
     }
 
-    &:before, .fullscreen-wrap:before {
+    &:before, &.map-style-fullscreen .fullscreen-wrap:before {
       content: '';
       opacity: 0.5;
       background: #ddd;
