@@ -166,6 +166,11 @@ $color-sidebar-caret-color: $gray-lighter;
     content: "\f071";
     display: inline-block;
   }
+  .menu-icon-directory .dashicons-before:before {
+    content: "\f0e8";
+    display: inline-block;
+  }
+  
   .menu-icon-popup .dashicons-before:before {
     content: "\f2d2";
     display: inline-block;
