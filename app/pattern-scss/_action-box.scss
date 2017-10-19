@@ -216,7 +216,12 @@ $icon-dim: 40px;
 // Answers Display
 // -------------------------------
 .action-box {
-  .panel-group { 
+  .panel-group {
+    
+    .panel-title {
+      display: block;
+    }
+    
     .panel-heading {
       background: $gray-lightest;
     }
