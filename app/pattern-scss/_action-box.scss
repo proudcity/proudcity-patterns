@@ -319,6 +319,10 @@ $icon-dim: 40px;
     text-transform: uppercase;
     font-weight: bold;
   }
+  
+  button.close:active {
+    outline: none;
+  }
 
 }
 
