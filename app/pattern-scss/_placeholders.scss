@@ -8,6 +8,13 @@
     color: $text-color;
     display: inline-block;
   }
+
+  // Shadow text making things huge on mobile
+  @include respond($xs-only) {
+    .shadow-icon + .shadow-text {
+      display: inline;
+    }
+  }
   
   $loading-icon-size: 40px;
 
