@@ -1,6 +1,7 @@
 $admin-bar-height: 47px;
 $admin-bar-bg: $brand-primary;
 $admin-bar-sub-bg:  $brand-primary-darkest;
+$admin-bar-profile-links: #233c54;
 
 // Admin menu active, compensate, override
 html, html[lang] {
@@ -121,8 +122,24 @@ body.proud-navbar-active.admin-bar {
       }
     }
   }
-
+  
+  .quicklinks .menupop {
+    
+    ul.ab-sub-secondary,
+    ul.ab-sub-secondary .ab-submenu {
+      background: $admin-bar-profile-links !important;
+      
+      a.ab-item {
+        border-top: 0 !important;
+      }
+    }
+    
+    
+  }
+  
+  
 }
+
 
 #screen-meta-links #contextual-help-link-wrap,
 #screen-options-wrap .metabox-prefs,
