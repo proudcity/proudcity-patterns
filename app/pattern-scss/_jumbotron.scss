@@ -33,6 +33,7 @@ $type-mod: .75;
   .jumbotron-bg {
     padding: 15px;
     position: static;
+    background: rgba($gray-lighter, 0.8);
 
     h1,
     h2 {
@@ -48,19 +49,6 @@ $type-mod: .75;
         margin-top: 0;
       }
     }
-
-    .jumbotron-bg-mask {
-      display: block;
-      position: absolute;
-      width: auto;
-      height: 100%;
-      top: 0;
-      left: $grid-gutter-width/2;
-      right: $grid-gutter-width/2;
-      opacity: 0.9;
-      border-radius: $border-radius-base;
-      background-color: $gray-lighter;
-    }
   }
 
   > .container {
@@ -69,9 +57,8 @@ $type-mod: .75;
   }
 
   &.jumbotron-inverse {
-    .jumbotron-bg-mask {
-      background-color: $black;
-      opacity: .6;
+    .jumbotron-bg {
+      background: rgba($black, 0.8);
     }
   }
 }

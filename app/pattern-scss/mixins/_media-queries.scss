@@ -32,11 +32,15 @@ $lg-up: "screen and (min-width: #{$screen-lg-min})";
 // Navigational queries
 // ----------------
 
+// Overridden by json in wp-proud-theme
+$nav-fixed-bottom-max: 1200px!default;
+$nav-fixed-top-min: 1201px!default;
+
 // full mobile appearance
 $mq-nav-xs-mode: "screen and (max-width: #{$grid-float-breakpoint-max})"!default;
 // Navbar fixed below
-$mq-nav-fixed-bottom: "screen and (max-width: 1200px)"!default;
+$mq-nav-fixed-bottom: "screen and (max-width: #{$nav-fixed-bottom-max})"!default;
 // No longer hiding menu 
 $mq-menu-visible: "screen and (min-width: #{$grid-float-breakpoint})"!default;
 // Full navigation at top
-$mq-nav-fixed-top: "screen and (min-width: 1201px)"!default;
+$mq-nav-fixed-top: "screen and (min-width: #{$nav-fixed-top-min})"!default;
