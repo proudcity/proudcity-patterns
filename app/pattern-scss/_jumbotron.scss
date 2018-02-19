@@ -9,8 +9,8 @@ $type-mod: .75;
   background-size: cover;
   background-position: center 30%;
 
-  h1,
-  h2 {
+  h1, .h1,
+  h2, .h2 {
     font-size: $font-size-h1 * $type-mod;
     margin-top: 0;
     color: $jumbotron-inverse-color;
@@ -20,7 +20,7 @@ $type-mod: .75;
     background-color: $jumbotron-inverse-bg;
     color: $jumbotron-inverse-color;
 
-    h1, h2 {
+    h1, .h1, h2, .h2 {
       color: $jumbotron-inverse-heading-color;
     }
   }
@@ -35,8 +35,8 @@ $type-mod: .75;
     position: static;
     background: rgba($gray-lighter, 0.8);
 
-    h1,
-    h2 {
+    h1, .h1,
+    h2, .h2 {
       color: $jumbotron-color;
     }
 

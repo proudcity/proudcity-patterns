@@ -106,10 +106,15 @@ footer.page-footer {
   &,
   a,
   h2,
+  .h2,
   h3,
+  .h3,
   h4,
+  .h4,
   h5,
-  h6 {
+  .h5,
+  h6,
+  .h6 {
     color: $white;
   }
 
@@ -117,11 +122,11 @@ footer.page-footer {
     color: lighten($white, 20%);
   }
 
-  h4 {
+  h4, .h4 {
     color: $white !important;
   }
 
-  h5 {
+  h5, .h5 {
     margin-bottom: $padding-base-vertical;
   }
 
@@ -130,10 +135,15 @@ footer.page-footer {
     &,
     a,
     h2,
+    .h2,
     h3,
+    .h3,
     h4,
+    .h4,
     h5,
-    h6 {
+    .h5,
+    h6,
+    .h6 {
       color: $light-back-footer-color;
     }
 
@@ -141,14 +151,14 @@ footer.page-footer {
       color: lighten($light-back-footer-color, 20%);
     }
 
-    h4 {
+    h4, .h4 {
       color: $light-back-footer-color !important;
     }
   }
 
   .footer-logo-wrapper {
     
-    h4 {
+    h4, .h4 {
       margin: 0;
       line-height: 1.1em;
       font-size: 30px; // @todo: variable

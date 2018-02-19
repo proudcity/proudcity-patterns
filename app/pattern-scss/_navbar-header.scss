@@ -7,7 +7,7 @@
 .navbar-header-region {
   // text-align: center;
 
-  h2, h3 {
+  h2, h3, .h2, .h3 {
     margin: 12px 0; 
 
     &, a {
@@ -34,7 +34,7 @@
   .nav-logo {
     margin-top: -5px;
     margin-bottom: -5px;
-    paddign: 10px;
+    padding: 10px;
 
     img.logo {
       max-width: 150px;
@@ -59,7 +59,7 @@
       float: none;
     }
 
-    h2, h3 {
+    h2, h3, .h2, .h3 {
       margin: 12px 0; 
     }
 
