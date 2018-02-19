@@ -16,7 +16,7 @@
 
 .main-311 {
   @include transition(all ease 0.5s);
-  @inlude clearfix();
+  @include clearfix();
   float: left;
   padding-bottom: 5px;
   left: 0;
@@ -44,12 +44,12 @@
     height: auto;
     position: relative;
 
-    & + .slide-left-2 { 
+    & + .slide-left-2 {
       height: 1px;
     }
   }
 
-  h2:first-child {
+  h2:not(.h1):first-child {
     margin-top: 0;
   }
 }
@@ -100,11 +100,11 @@
       }
 
       &.active a {
-          
+
         &, &:hover, &:focus {
           color: $white;
           background: $brand-primary;
-          
+
           .light-background-highlight & {
             color: $light-back-highlight-color;
           }
@@ -158,7 +158,7 @@ $icon-dim: 40px;
     }
   }
 
-  h4 {
+  .h4 {
     margin: 0;
     // font-weight: $medium-weight;
 
@@ -217,11 +217,11 @@ $icon-dim: 40px;
 // -------------------------------
 .action-box {
   .panel-group {
-    
+
     .panel-title {
       display: block;
     }
-    
+
     .panel-heading {
       background: $gray-lightest;
     }
@@ -263,7 +263,7 @@ $icon-dim: 40px;
       display: block;
       margin-bottom: 5px;
       min-width: 94px;
-      text-align: left;  
+      text-align: left;
     }
   }
 }
@@ -302,10 +302,10 @@ $icon-dim: 40px;
     &.form-inline {
       .form-group + .btn {
         margin-bottom: 0;
-      } 
+      }
     }
 
-    // Search form 
+    // Search form
     &.form-inline-mobile {
       .form-control {
         display: inline-block;
@@ -319,7 +319,7 @@ $icon-dim: 40px;
     text-transform: uppercase;
     font-weight: bold;
   }
-  
+
   button.close:active {
     outline: none;
   }
@@ -355,7 +355,7 @@ $icon-dim: 40px;
   }
 
   .issue-status-tabs {
-   
+
     ul.nav {
       margin-top: .75em;
       margin-bottom: 0;
@@ -395,11 +395,11 @@ $icon-dim: 40px;
 
   .action-box {
     // make local headers a little more managable
-    h1, h2 {
+    h1, .h1, h2, .h2 {
       font-size: 21px;
     }
 
-    h3, h4 {
+    h3, .h3, h4, .h4 {
       font-size: 18px;
     }
   }
@@ -452,7 +452,7 @@ $icon-dim: 40px;
 
   .action-box {
     // make local headers a little more managable
-    h1, h2 {
+    h1, .h1, h2, .h2 {
       font-size: 30px;
     }
 
@@ -461,7 +461,7 @@ $icon-dim: 40px;
     }
   }
 
-  // Menu 
+  // Menu
   // --------------------------------
   .nav-contain {
 
@@ -484,7 +484,7 @@ $icon-dim: 40px;
 
   // Content
   // -------------------------------
-  
+
   .col-icon {
     padding-left: 0;
     padding-right: 0;
@@ -503,7 +503,7 @@ $icon-dim: 40px;
       min-height: $icon-dim;
     }
 
-    h4 {
+    .h4 {
       font-size: 20px;
 
       span {
@@ -549,14 +549,13 @@ $icon-dim: 40px;
 // -------------------------
 @include respond($sm-only) {
 
-  // Menu 
+  // Menu
   // --------------------------------
   .nav-contain {
 
     .nav-pills li {
       .fa {
-        margin-left: auto;
-        margin-right: auto;
+        margin-right: 0!important;
         margin-bottom: 5px;
       }
     }
@@ -586,7 +585,7 @@ $icon-dim: 40px;
 
     .nav-pills {
       li {
-        
+
         .fa {
           font-size: 22px;
           display: inline-block;
