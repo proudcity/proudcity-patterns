@@ -8,7 +8,13 @@
   // text-align: center;
 
   h2, h3, .h2, .h3 {
-    margin: 12px 0; 
+    margin: 12px 0;
+
+    &:after {
+      content: '';
+      clear: both;
+      display: block;
+    }
 
     &, a {
       color:  $navbar-default-link-color;
