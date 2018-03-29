@@ -21,7 +21,7 @@ $b-trans-dur: 0.2s;     // The transition duration
 //  * class that acts as a reset for all versions of the icon.
 
 @mixin hamburger-icon-active($button-trans-dur : $b-trans-dur) {
-  span {
+  .hamburger-bars {
     background: none;
 
     &:after, &:before {
@@ -43,7 +43,7 @@ $b-trans-dur: 0.2s;     // The transition duration
 @mixin hamburger-icon-color(
   $button-bar-color: $white ) {
 
-  span {
+  .hamburger-bars {
     background: $button-bar-color;
     
     &:before, &:after {
@@ -84,7 +84,7 @@ $b-trans-dur: 0.2s;     // The transition duration
     outline: none;
   }
 
-  span {
+  .hamburger-bars {
     display: block;
     position: absolute;
     top: ($button-height / 2) - ($bar-thickness / 2) - 1;
