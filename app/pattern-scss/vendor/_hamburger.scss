@@ -87,7 +87,7 @@ $b-trans-dur: 0.2s;     // The transition duration
   span {
     display: block;
     position: absolute;
-    top: ($button-height / 2) - ($bar-thickness / 2);
+    top: ($button-height / 2) - ($bar-thickness / 2) - 1;
     left: $button-pad;
     right: $button-pad;
     height: $bar-thickness;
@@ -106,12 +106,12 @@ $b-trans-dur: 0.2s;     // The transition duration
     
     &:before {
       @include transition-property(top, transform);
-      top: -$bar-thickness - $button-bar-space;
+      top: -$bar-thickness - $button-bar-space - 1;
     }
     
     &:after {
       @include transition-property(bottom, transform);
-      bottom: -$bar-thickness - $button-bar-space;
+      bottom: -$bar-thickness - $button-bar-space - 1;
     }
   }
   
