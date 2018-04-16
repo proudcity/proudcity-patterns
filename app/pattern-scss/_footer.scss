@@ -103,23 +103,24 @@ footer.page-footer {
   padding: $footer-padding 0 ($footer-padding + $page-section-spacing) 0;
   position: relative;
 
-  &,
-  a,
-  h2,
-  .h2,
-  h3,
-  .h3,
-  h4,
-  .h4,
-  h5,
-  .h5,
-  h6,
-  .h6 {
+  &, a, label,
+  h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6,
+  form input[type="submit"]{
     color: $white;
   }
 
   a:hover, a:focus {
     color: lighten($white, 20%);
+  }
+
+  form input[type="submit"] {
+    background: rgba(#000, 0.6);
+    border-color: rgba(#000, 0.5);
+
+    &:hover {
+      color: $white;
+      background: rgba(#000, 0.7);
+    }
   }
 
   h4, .h4 {
@@ -132,23 +133,24 @@ footer.page-footer {
 
   .light-background-footer & {
 
-    &,
-    a,
-    h2,
-    .h2,
-    h3,
-    .h3,
-    h4,
-    .h4,
-    h5,
-    .h5,
-    h6,
-    .h6 {
+    &, a, label,
+    h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6,
+    form input[type="submit"]{
       color: $light-back-footer-color;
     }
 
-    a:hover, a:focus {
+    form input[type="submit"]:hover, a:hover, a:focus {
       color: lighten($light-back-footer-color, 20%);
+    }
+
+    form input[type="submit"] {
+      background: rgba(#fff, 0.4);
+      border-color: rgba($light-back-footer-color, 0.2);
+
+      &:hover {
+        color: $light-back-footer-color;
+        background: rgba(#fff, 0.6);
+      }
     }
 
     h4, .h4 {

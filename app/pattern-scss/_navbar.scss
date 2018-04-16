@@ -102,6 +102,15 @@ $button-height: $button-d;
   }
 
   // Action buttons
+
+  .btn-toolbar {
+    margin-bottom: 0;
+
+    li {
+      float: left;
+    }
+  }
+
   .navbar-btn {
     padding-top: 0;
     padding-bottom: 0;

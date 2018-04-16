@@ -14,6 +14,12 @@ label {
   font-weight: normal;
 }
 
+// Hidden labels throwing off accessibility
+.gform_wrapper .hidden_label .gfield_label {
+  background: #fff;
+  color: $text-color;
+}
+
 .form-group {
   position: relative;
 
