@@ -206,7 +206,8 @@ $headings-color:          $gray-base!default;
 
 // [converter] Asset helpers such as Sprockets and Node.js Mincer do not resolve relative paths
 //$icon-font-path: if($bootstrap-sass-asset-helper, "bootstrap/", "../fonts/bootstrap/") !default;
-$icon-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.2.0/fonts"!default; // for referencing Bootstrap CDN font files directly
+//$icon-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.2.0/fonts"!default; // for referencing Bootstrap CDN font files directly
+$icon-font-path: "//use.fontawesome.com/releases/v5.3.1/webfonts"!default; // for referencing fontawesome files directly
 
 //** File name for all font files.
 $icon-font-name:          "glyphicons-halflings-regular" !default;
