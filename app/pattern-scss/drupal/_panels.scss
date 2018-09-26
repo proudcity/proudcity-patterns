@@ -34,13 +34,11 @@
   background-image: none;
   padding-right: 20px;
 
-  &:after {
-    @extend %fa-icon;
-    content: $fa-var-chevron-right; 
+  @include fa-icon-force($fa-var-chevron-right, '&:after') {
     float: right;
     padding-top: 0.25em;
     margin-right: -15px;
-  } 
+  }
 }
 
 .panels-section-columns .progress-disabled.card-btn {

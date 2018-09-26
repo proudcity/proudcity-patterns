@@ -25,9 +25,7 @@
     width: 100%;
     font-size: $font-size-small;
 
-    &:before {
-      @extend %fa-icon;
-      content: $fa-var-picture-o;
+    @include fa-icon-force($fa-var-image) {
       display: none;
     }
 
@@ -36,12 +34,10 @@
       background-color: rgba(0, 0, 0, 0.2);
       color: $gray-lighter;
 
-      &:before {
-        @extend %fa-icon;
-        content: $fa-var-picture-o;
+      @include fa-icon-force($fa-var-image) {
         margin-right: 2px;
       }
-      
+
       a {
         color: $gray-lighter;
         text-decoration: underline;

@@ -19,15 +19,12 @@ $throb-dim: 25px;
     left: 50%;
     margin: (-($throb-dim/2)) 0 0 (-($throb-dim/2));
 
-    &:before{
-      @extend %fa-icon;
+    @include fa-icon-force($fa-var-cog) {
       color: $brand-info;
-      content: $fa-var-cog; 
       line-height: $throb-dim;
       font-size: $throb-dim*0.75;
       -webkit-animation: fa-spin 2s infinite linear;
       animation: fa-spin 2s infinite linear;
     }
-
   }
 }

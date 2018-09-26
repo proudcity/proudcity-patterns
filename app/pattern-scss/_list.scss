@@ -32,12 +32,9 @@ ul.list-inline-middot {
     
     li {
       display: block;
-      @extend %fa-icon-before;
       position: relative;
 
-      &:before {
-        @extend %fa-icon;
-        content: $fa-var-circle;
+      @include fa-icon-force($fa-var-circle) {
         font-size: 0.6em;
         left: -($font-size-base);
         line-height: ($font-size-base*$line-height-base);
