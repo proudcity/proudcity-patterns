@@ -10,16 +10,14 @@
   a {
     display: block;
     text-decoration: none !important;
-  }
 
-  a:after {
-    font-family: 'FontAwesome';
-    content: "\f0d7";
-    float: right;
-    color: grey;
-  }
+    @include fa-icon-force($fa-var-caret-down, 'default', '&:after') {
+      float: right;
+      color: grey;
+    }
 
-  a.collapsed:after {
-    content: "\f0da";
+    &.collapsed {
+      @include fa-icon-force($fa-var-caret-up, 'default', '&:after');
+    }
   }
 }

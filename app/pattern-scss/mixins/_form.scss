@@ -41,16 +41,14 @@
 }
 
 @mixin datepicker {
-  content: "\f073";
-  font-family: FontAwesome;
+  content: fa-content($fa-var-calendar-alt);
+  @extend %fa-style-solid;
   padding-right: $padding-small-horizontal;
 }
 
 @mixin text-search {
-  &::before {
+  @include fa-icon-force($fa-var-search) {
     float: right;
-    content: "\f002";
-    font-family: FontAwesome;
     padding-left: $padding-small-horizontal;
   }
 }

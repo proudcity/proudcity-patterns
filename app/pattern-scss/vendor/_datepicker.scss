@@ -44,10 +44,8 @@
     .ui-datepicker-prev,
     .ui-datepicker-next {
         cursor: default;
-        font-family: 'FontAwesome';
-        -webkit-font-smoothing: antialiased;
-        font-style: normal;
-        font-weight: normal;
+        @extend %fa-icon;
+        @extend %fa-style-solid;
         height: 20px;
         line-height: 1;
         margin-top: 2px;
@@ -62,10 +60,10 @@
         text-align: right;
     }
     .ui-datepicker-prev:before {
-        content: "\f0d9";
+        content: fa-content($fa-var-caret-left);
     }
     .ui-datepicker-next:before {
-        content: "\f0da";
+        content: fa-content($fa-var-caret-right);
     }
     .ui-icon {
         display: none;

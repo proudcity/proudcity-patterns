@@ -112,24 +112,22 @@ $bounce-height: 30px;
 
     $fullscreen-icon-size: 30px;
 
-    &.map-style-fullscreen .fullscreen-wrap:after {
-      content: "\f110";
-      color: rgba(0,0,0,0.5);
-      display: inline-block;
-      font: normal normal normal $fullscreen-icon-size#{"/"}$fullscreen-icon-size FontAwesome;
-      text-rendering: auto;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      animation: fa-spin 2s infinite linear;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      margin-left: -($fullscreen-icon-size/2);
-      margin-top: -($fullscreen-icon-size/2);
-      width: $fullscreen-icon-size;
-      height: $fullscreen-icon-size;
-      text-align: center;
-      z-index: 2;
+    &.map-style-fullscreen .fullscreen-wrap {
+      @include fa-icon-force($fa-var-spinner, 'default', '&:after') {
+        color: rgba(0,0,0,0.5);
+        font-size: $fullscreen-icon-size;
+        line-height: $fullscreen-icon-size;
+        @include animation(fa-spin 1s infinite steps(8));
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -($fullscreen-icon-size/2);
+        margin-top: -($fullscreen-icon-size/2);
+        width: $fullscreen-icon-size;
+        height: $fullscreen-icon-size;
+        text-align: center;
+        z-index: 2;
+      }
     }
 
     &:before, &.map-style-fullscreen .fullscreen-wrap:before {
@@ -186,13 +184,8 @@ $bounce-height: 30px;
     }
 
     $icon-size: 40px;
-    &:after {
-      content: "\f0a6";
-      font: normal normal normal 14px/1 FontAwesome;
-      font-size: inherit;
-      text-rendering: auto;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
+
+    @include fa-icon-force($fa-var-hand-point-up, 'default', '&:after') {
       @include animation(bounce 2s infinite);
       position: absolute;
       font-size: $icon-size * 0.6;
@@ -474,10 +467,9 @@ $details-width: 400px;
 @include respond($md-up) {
   .map-wrapper {
     &.has-overlay {
-      &:after {
+      @include fa-icon-force($fa-var-mouse-pointer, 'default', '&:after') {
         background: none;
         color: $text-color;
-        content: "\f245";
         font-size: 30px;
       }
     }
