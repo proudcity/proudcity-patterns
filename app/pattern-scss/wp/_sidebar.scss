@@ -92,126 +92,151 @@ $color-sidebar-caret-color: $gray-lighter;
     img {
       display: none;
     }
-    &:before {
-      content: "\f15c";
-      font: normal normal normal 14px/1 FontAwesome !important;
-      font-size: inherit;
-      text-rendering: auto;
-      -webkit-font-smoothing: antialiased;
+    @include fa-icon-force($fa-var-file-alt) {
       display: none;
+      font-size: 14px;
       color: $color-sidebar-link !important;
       padding: 2px 0 !important;
       //margin-top: 3px;
     }
   }
 
-  .menu-icon-home .dashicons-before:before {
-    content: "\f015";
-    display: inline-block;
+  .menu-icon-home .dashicons-before {
+    @include fa-icon-force($fa-var-home) {
+      display: inline-block;
+    }
   }
-  .menu-icon-dashboard .dashicons-before:before {
-    content: "\f0e4";
-    display: inline-block;
+  .menu-icon-dashboard .dashicons-before {
+    @include fa-icon-force($fa-var-tachometer-alt) {
+      display: inline-block;
+    }
   }
-  .toplevel_page_service-center .dashicons-before:before {
-    content: "\f108";
-    display: inline-block;
+  .toplevel_page_service-center .dashicons-before {
+    @include fa-icon-force($fa-var-desktop) {
+      display: inline-block;
+    }
   }
-  //.menu-icon-analytics .dashicons-before:before {
-  //  content: "\f1fe";
-  //  display: inline-block;
+  //.menu-icon-analytics .dashicons-before {
+    // @include fa-icon-force($fa-var-chart-area) {
+      //  display: inline-block;
+    // }
   //}
 
-  .menu-icon-page .dashicons-before:before {
-    content: "\f15b";
-    display: inline-block;
+  .menu-icon-page .dashicons-before {
+    @include fa-icon-force($fa-var-file) {
+      display: inline-block;
+    }
   }
-  .menu-icon-agency .dashicons-before:before {
-    content: "\f19c";
-    display: inline-block;
+  .menu-icon-agency .dashicons-before {
+    @include fa-icon-force($fa-var-university) {
+      display: inline-block;
+    }
   }
-  .menu-icon-document .dashicons-before:before {
-    content: "\f15c";
-    display: inline-block;
+  .menu-icon-document .dashicons-before {
+    @include fa-icon-force($fa-var-file-alt) {
+      display: inline-block;
+    }
   }
-  .menu-icon-question .dashicons-before:before {
-    content: "\f059";
-    display: inline-block;
+  .menu-icon-question .dashicons-before {
+    @include fa-icon-force($fa-var-question-circle) {
+      display: inline-block;
+    }
   }
-  .menu-icon-payment .dashicons-before:before {
-    content: "\f09d";
-    display: inline-block;
+  .menu-icon-payment .dashicons-before {
+    @include fa-icon-force($fa-var-credit-card) {
+      display: inline-block;
+    }
   }
-  .menu-icon-post .dashicons-before:before {
-    content: "\f1ea";
-    display: inline-block;
+  .menu-icon-post .dashicons-before {
+    @include fa-icon-force($fa-var-newspaper) {
+      display: inline-block;
+    }
   }
-  .menu-icon-job_listing .dashicons-before:before {
-    content: "\f0b1";
-    display: inline-block;
+  .menu-icon-job_listing .dashicons-before {
+    @include fa-icon-force($fa-var-briefcase) {
+      display: inline-block;
+    }
   }
-  .menu-icon-staff-member .dashicons-before:before {
-    content: "\f007";
-    display: inline-block;
+  .menu-icon-staff-member .dashicons-before {
+    @include fa-icon-force($fa-var-user) {
+      display: inline-block;
+    }
   }
-  .menu-icon-event .dashicons-before:before {
-    content: "\f073";
-    display: inline-block;
+  .menu-icon-event .dashicons-before {
+    @include fa-icon-force($fa-var-calendar-alt) {
+      display: inline-block;
+    }
   }
-  .menu-icon-proud_location .dashicons-before:before {
-    content: "\f041";
-    display: inline-block;
+  .menu-icon-proud_location .dashicons-before {
+    @include fa-icon-force($fa-var-map-marker) {
+      display: inline-block;
+    }
   }
-  .menu-icon-issue .dashicons-before:before {
-    content: "\f071";
-    display: inline-block;
+  .menu-icon-issue .dashicons-before {
+    @include fa-icon-force($fa-var-exclamation-triangle) {
+      display: inline-block;
+    }
   }
-  .menu-icon-directory .dashicons-before:before {
-    content: "\f0e8";
-    display: inline-block;
+  .menu-icon-directory .dashicons-before {
+    @include fa-icon-force($fa-var-sitemap) {
+      display: inline-block;
+    }
   }
   
-  .menu-icon-popup .dashicons-before:before {
-    content: "\f2d2";
-    display: inline-block;
+  .menu-icon-popup .dashicons-before {
+    @include fa-icon-force($fa-var-window-restore) {
+      display: inline-block;
+    }
   }
-  .toplevel_page_esign-doc .dashicons-before:before {
-    content: "\f044";
-    display: inline-block;
+  .toplevel_page_esign-doc .dashicons-before {
+    @include fa-icon-force($fa-var-edit) {
+      display: inline-block;
+    }
   }
   
-  .toplevel_page_bp-activity .dashicons-before:before {
-    content: "\f012" !important;
-    display: inline-block;
+  .toplevel_page_bp-activity .dashicons-before {
+    @include fa-icon-force($fa-var-signal) {
+      display: inline-block;
+    }
+    //content: "\f012" !important;
   }
-  .toplevel_page_bp-groups .dashicons-before:before {
-    content: "\f0c0" !important;
-    display: inline-block;
+  .toplevel_page_bp-groups .dashicons-before {
+    @include fa-icon-force($fa-var-users) {
+      display: inline-block;
+    }
+    //content: "\f0c0" !important;
   }
-  .menu-icon-bp-email .dashicons-before:before {
-    content: "\f003";
-    display: inline-block;
+  .menu-icon-bp-email .dashicons-before {
+    @include fa-icon-force($fa-var-envelope-open) {
+      display: inline-block;
+    }
   }
-  .menu-icon-bp_doc .dashicons-before:before {
-    content: "\f0f6";
-    display: inline-block;
+  .menu-icon-bp_doc .dashicons-before {
+    @include fa-icon-force($fa-var-file-alt) {
+      display: inline-block;
+      @extend .far;
+    }
   }
 
-  .menu-icon-appearance .dashicons-before:before {
-    content: "\f1fc";
-    display: inline-block;
+  .menu-icon-appearance .dashicons-before {
+    @include fa-icon-force($fa-var-paint-brush) {
+      display: inline-block;
+    }
   }
-  .menu-icon-menus .dashicons-before:before {
-    content: "\f0c9";
-    display: inline-block;
+  .menu-icon-menus .dashicons-before {
+    @include fa-icon-force($fa-var-bars) {
+      display: inline-block;
+    }
   }
-  .menu-icon-media .dashicons-before:before {
-    content: "\f03e";
-    display: inline-block;
+  .menu-icon-media .dashicons-before {
+    @include fa-icon-force($fa-var-image) {
+      display: inline-block;
+    }
   }
-  .toplevel_page_proudsettings .dashicons-before:before {
-    content: "\f085";
-    display: inline-block;
+  .toplevel_page_proudsettings .dashicons-before {
+    @include fa-icon-force($fa-var-cogs) {
+      display: inline-block;
+    }
   }
   
 

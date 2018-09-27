@@ -34,7 +34,7 @@
   background-image: none;
   padding-right: 20px;
 
-  @include fa-icon-force($fa-var-chevron-right, '&:after') {
+  @include fa-icon-force($fa-var-chevron-right, 'default', '&:after') {
     float: right;
     padding-top: 0.25em;
     margin-right: -15px;

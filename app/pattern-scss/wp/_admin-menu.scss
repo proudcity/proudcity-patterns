@@ -72,13 +72,10 @@ body.proud-navbar-active.admin-bar {
   #wp-admin-bar-menu-toggle,
   #wp-admin-bar-edit,
   #wp-admin-bar-view {
-    a:before {
-      margin-top: 4px;
-      content: "\f0e4";
-      font-family: FontAwesome !important;
-      font-size: inherit;
-      text-rendering: auto;
-      -webkit-font-smoothing: antialiased;
+    a {
+      @include fa-icon-force($fa-var-file-alt) {
+        margin-top: 4px;
+      }
     }
 
     .ab-icon {
@@ -86,20 +83,20 @@ body.proud-navbar-active.admin-bar {
     }
   }
 
-  #wp-admin-bar-my-item a:before {
-    content: "\f0e4";
+  #wp-admin-bar-my-item a {
+    @include fa-icon-force($fa-var-file-alt);
   }
-  #wp-admin-bar-new-content a:before {
-    content: "\f055";
+  #wp-admin-bar-new-content a {
+    @include fa-icon-force($fa-var-plus-circle);
   }
-  #wp-admin-bar-menu-toggle a:before {
-    content: "\f0c9";
+  #wp-admin-bar-menu-toggle a {
+    @include fa-icon-force($fa-var-bars);
   }
-  #wp-admin-bar-edit a:before {
-    content: "\f040" !important;
+  #wp-admin-bar-edit a {
+    @include fa-icon-force($fa-var-pencil-alt);
   }
-  #wp-admin-bar-view a:before {
-    content: "\f14c" !important;
+  #wp-admin-bar-view a {
+    @include fa-icon-force($fa-var-external-link-square-alt);
   }
 
   .ab-item {
