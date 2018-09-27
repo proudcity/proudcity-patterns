@@ -195,16 +195,14 @@ $color-sidebar-caret-color: $gray-lighter;
   }
   
   .toplevel_page_bp-activity .dashicons-before {
-    @include fa-icon-force($fa-var-signal) {
+    @include fa-icon-force($fa-var-signal, 'default', '&:before', true) {
       display: inline-block;
     }
-    //content: "\f012" !important;
   }
   .toplevel_page_bp-groups .dashicons-before {
-    @include fa-icon-force($fa-var-users) {
+    @include fa-icon-force($fa-var-users, 'default', '&:before', true) {
       display: inline-block;
     }
-    //content: "\f0c0" !important;
   }
   .menu-icon-bp-email .dashicons-before {
     @include fa-icon-force($fa-var-envelope-open) {
@@ -212,9 +210,8 @@ $color-sidebar-caret-color: $gray-lighter;
     }
   }
   .menu-icon-bp_doc .dashicons-before {
-    @include fa-icon-force($fa-var-file-alt) {
+    @include fa-icon-force($fa-var-file-alt, 'regular') {
       display: inline-block;
-      @extend .far;
     }
   }
 

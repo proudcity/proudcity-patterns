@@ -72,8 +72,8 @@ body.proud-navbar-active.admin-bar {
   #wp-admin-bar-menu-toggle,
   #wp-admin-bar-edit,
   #wp-admin-bar-view {
-    a {
-      @include fa-icon-force($fa-var-file-alt) {
+    > a {
+      @include fa-icon-force($fa-var-file-alt, ':before') {
         margin-top: 4px;
         font-size: 13px;
       }
@@ -84,20 +84,20 @@ body.proud-navbar-active.admin-bar {
     }
   }
 
-  #wp-admin-bar-my-item a {
+  #wp-admin-bar-my-item > a {
     @include fa-icon-force($fa-var-tachometer-alt);
   }
-  #wp-admin-bar-new-content a {
+  #wp-admin-bar-new-content > a {
     @include fa-icon-force($fa-var-plus-circle);
   }
-  #wp-admin-bar-menu-toggle a {
+  #wp-admin-bar-menu-toggle > a {
     @include fa-icon-force($fa-var-bars);
   }
   #wp-admin-bar-edit a {
-    @include fa-icon-force($fa-var-pencil-alt);
+    @include fa-icon-force($fa-var-pencil-alt, 'default', '&:before', true);
   }
   #wp-admin-bar-view a {
-    @include fa-icon-force($fa-var-external-link-square-alt);
+    @include fa-icon-force($fa-var-external-link-square-alt, 'default', '&:before', true);
   }
 
   .ab-item {
