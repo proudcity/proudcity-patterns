@@ -75,6 +75,7 @@ body.proud-navbar-active.admin-bar {
     a {
       @include fa-icon-force($fa-var-file-alt) {
         margin-top: 4px;
+        font-size: 13px;
       }
     }
 
@@ -84,7 +85,7 @@ body.proud-navbar-active.admin-bar {
   }
 
   #wp-admin-bar-my-item a {
-    @include fa-icon-force($fa-var-file-alt);
+    @include fa-icon-force($fa-var-tachometer-alt);
   }
   #wp-admin-bar-new-content a {
     @include fa-icon-force($fa-var-plus-circle);
