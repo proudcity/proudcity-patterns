@@ -63,7 +63,8 @@ body.proud-navbar-active.admin-bar {
   #wp-admin-bar-comments,
   #wp-admin-bar-site-name,
   #wp-admin-bar-wpseo-menu,
-  #wp-admin-bar-popup-maker{
+  #wp-admin-bar-popup-maker,
+  #wp-admin-bar-new_draft{
     display: none !important;
   }
 
@@ -73,7 +74,7 @@ body.proud-navbar-active.admin-bar {
   #wp-admin-bar-edit,
   #wp-admin-bar-view {
     > a {
-      @include fa-icon-force($fa-var-file-alt, ':before') {
+      @include fa-icon-force($fa-var-file, ':before') {
         margin-top: 4px;
         font-size: 13px;
       }
