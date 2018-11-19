@@ -183,7 +183,7 @@ $color-sidebar-caret-color: $gray-lighter;
     }
   }
   .menu-icon-meeting .dashicons-before {
-    @include fa-icon-force($fa-var-users) {
+    @include fa-icon-force($fa-var-gavel) {
       display: inline-block;
     }
   }
