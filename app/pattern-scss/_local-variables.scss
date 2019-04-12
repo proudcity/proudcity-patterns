@@ -164,7 +164,7 @@ $font-size-base:          16px !default;
 $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
 
-$font-size-h1:            36px!default; 
+$font-size-h1:            50px!default;
 $font-size-h2:            30px!default; 
 $font-size-h3:            24px!default; 
 $font-size-h4:            20px!default; 
@@ -178,12 +178,12 @@ $font-color-h4:            $gray-base!default;
 $font-color-h5:            $gray-base!default;
 $font-color-h6:            $gray-base!default;
 
-$font-weight-h1:            600!default;
-$font-weight-h2:            100!default;
-$font-weight-h3:            100!default;
-$font-weight-h4:            100!default; 
-$font-weight-h5:            100!default;
-$font-weight-h6:            600!default;
+$font-weight-h1:            900!default;
+$font-weight-h2:            900!default;
+$font-weight-h3:            900!default;
+$font-weight-h4:            900!default;
+$font-weight-h5:            900!default;
+$font-weight-h6:            900!default;
 
 $font-line-height-h1:            1.1!default; 
 $font-line-height-h2:            1.2!default; 
