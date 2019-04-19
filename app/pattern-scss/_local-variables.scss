@@ -9,7 +9,7 @@ $bootstrap-sass-asset-helper: (twbs-font-path("") != unquote('twbs-font-path("")
 // --------------------------------------------------
 $light-weight:      300!default;
 $regular-weight:    400!default;
-$medium-weight:     500!default;
+$medium-weight:     400!default;
 $bold-weight:       700!default;
 
 //== Colors
@@ -179,15 +179,15 @@ $font-color-h5:            $gray-base!default;
 $font-color-h6:            $gray-base!default;
 
 $font-weight-h1:            900!default;
-$font-weight-h2:            900!default;
-$font-weight-h3:            900!default;
-$font-weight-h4:            900!default;
-$font-weight-h5:            900!default;
-$font-weight-h6:            900!default;
+$font-weight-h2:            700!default;
+$font-weight-h3:            700!default;
+$font-weight-h4:            400!default;
+$font-weight-h5:            300!default;
+$font-weight-h6:            300!default;
 
-$font-line-height-h1:            1.1!default; 
-$font-line-height-h2:            1.2!default; 
-$font-line-height-h3:            1.2!default; 
+$font-line-height-h1:            1.1!default;
+$font-line-height-h2:            1.2!default;
+$font-line-height-h3:            1.2!default;
 $font-line-height-h4:            1.5!default; 
 $font-line-height-h5:            1.4!default;
 $font-line-height-h6:            1.4!default;
