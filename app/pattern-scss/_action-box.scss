@@ -85,8 +85,8 @@
         &, &:hover, &:focus {
           color: $white;
 
-          .light-background-main & {
-            color: $light-back-main-color;
+          .light-secondary-highlight & {
+            color: $light-secondary-highlight-color;
           }
         }
       }
