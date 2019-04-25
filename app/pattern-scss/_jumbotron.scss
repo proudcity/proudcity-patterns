@@ -152,6 +152,8 @@ $type-mod: .75;
 }
 
 @include respond($sm-up) {
+
+  $type-mod: 0.9;
   
   .jumbotron {
 
@@ -159,7 +161,7 @@ $type-mod: .75;
     .h1,
     h2,
     .h2 {
-      font-size: $font-size-h1;
+      font-size: $font-size-h1 * $type-mod;
     }
     
     .jumbotron-bg {
