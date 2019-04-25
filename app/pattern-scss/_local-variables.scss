@@ -60,6 +60,7 @@ $brand-warning-lightest:      #fff1d2!default;
 $gray-base:                   #212121 !default;
 $gray-darker:                 lighten($gray-base, 13.5%) !default;
 $gray-dark:                   #323a45!default;
+$gray-darkest:                #101010!default;
 $gray:                        #5b616b!default;
 $gray-forwhite:               #6C717F!default;
 $gray-light:                  #aeb0b5!default;
@@ -72,9 +73,14 @@ $gray-cool-light:             #dce4ef!default;
 
 // Light background overrides
 
-$light-back-main-color: $gray-darker!default;
-$light-back-highlight-color: $gray-darker!default;
-$light-back-footer-color: $gray-darker!default;
+$extra-light-back-topnav-color: $gray-darker!default;
+$light-back-topnav-color: $gray-darkest!default;
+$extra-light-back-secondary-color: $gray-darker!default;
+$light-back-secondary-color: $gray-darkest!default;
+$extra-light-back-highlight-color: $gray-darker!default;
+$light-back-highlight-color: $gray-darkest!default;
+$extra-light-back-footer-color: $gray-darker!default;
+$light-back-footer-color: $gray-darkest!default;
 
 // Extras
 

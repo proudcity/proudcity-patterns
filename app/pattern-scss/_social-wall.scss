@@ -11,9 +11,18 @@ $header-dim-width: $header-dim-height - 10;
     text-align: center;
   }
 
-  .light-background-main & {
+  .light-background-topnav & {
     .nav-pills>li>a {
-      color: $light-back-main-color;
+      color: $light-back-topnav-color;
+    }
+    .nav-pills>li.active>a {
+      background: $gray-lighter;
+    }
+  }
+
+  .extra-light-background-topnav & {
+    .nav-pills>li>a {
+      color: $extra-light-back-topnav-color;
     }
     .nav-pills>li.active>a {
       background: $gray-lighter;
@@ -61,8 +70,12 @@ $header-dim-width: $header-dim-height - 10;
     &, a {
       color: $white;
 
-      .light-background-main & {  
-        color: $light-back-main-color;
+      .light-background-highlight & {
+        color: $light-back-highlight-color;
+      }
+
+      .extra-light-background-highlight & {
+        color: $extra-light-back-highlight-color;
       }
     }
 

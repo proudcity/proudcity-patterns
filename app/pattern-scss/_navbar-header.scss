@@ -15,9 +15,15 @@
     }
 
     // Light colore
-    .light-background-main & {
+    .light-background-topnav & {
       &, a {
-        color:  $light-back-main-color;
+        color:  $light-back-topnav-color;
+      }
+    }
+
+    .extra-light-background-topnav & {
+      &, a {
+        color:  $extra-light-back-topnav-color;
       }
     }
 

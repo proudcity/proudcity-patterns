@@ -43,6 +43,18 @@ $footer-padding: 20px!default;
       }
     }
   }
+  .extra-light-background-footer-actions & {
+    .navbar-nav > li > a,
+    .navbar-nav > li.open > a {
+      color: $extra-light-back-highlight-color;
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: darken($extra-light-back-highlight-color, 10%);
+      }
+    }
+  }
 
   
 
@@ -155,6 +167,33 @@ footer.page-footer {
 
     h4, .h4 {
       color: $light-back-footer-color !important;
+    }
+  }
+
+  .extra-light-background-footer & {
+
+    &, a, label,
+    h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6,
+    form input[type="submit"]{
+      color: $extra-light-back-footer-color;
+    }
+
+    form input[type="submit"]:hover, a:hover, a:focus {
+      color: lighten($extra-light-back-footer-color, 20%);
+    }
+
+    form input[type="submit"] {
+      background: rgba(#fff, 0.4);
+      border-color: rgba($extra-light-back-footer-color, 0.2);
+
+      &:hover {
+        color: $extra-light-back-footer-color;
+        background: rgba(#fff, 0.6);
+      }
+    }
+
+    h4, .h4 {
+      color: $extra-light-back-footer-color !important;
     }
   }
 
