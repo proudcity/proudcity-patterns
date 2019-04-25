@@ -85,8 +85,12 @@
         &, &:hover, &:focus {
           color: $white;
 
-          .light-secondary-highlight & {
-            color: $light-secondary-highlight-color;
+          .light-background-secondary & {
+            color: $light-back-secondary-color;
+          }
+
+          .extra-light-background-secondary & {
+            color: $extra-light-back-secondary-color;
           }
         }
       }
@@ -107,6 +111,10 @@
 
           .light-background-highlight & {
             color: $light-back-highlight-color;
+          }
+
+          .extra-light-background-highlight & {
+            color: $extra-light-back-highlight-color;
           }
         }
       }

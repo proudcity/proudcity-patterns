@@ -148,8 +148,12 @@ $button-height: $button-d;
     .hamburger {
       @include hamburger-icon-animate($navbar-default-link-color, false);
 
-      .light-background-main & {
-        @include hamburger-icon-color($light-back-main-color);
+      .light-background-topnav & {
+        @include hamburger-icon-color($light-back-topnav-color);
+      }
+
+      .extra-light-background-topnav & {
+        @include hamburger-icon-color($extra-light-back-topnav-color);
       }
     }
   }
@@ -170,12 +174,21 @@ $button-height: $button-d;
   }
 
   // Light colors
-  .light-background-main & {
+  .light-background-topnav & {
     .navbar-btn {
-      color: $light-back-main-color;
+      color: $light-back-topnav-color;
     }
     .navbar-btn:hover {
-      color: darken($light-back-main-color, 5%);
+      color: darken($light-back-topnav-color, 5%);
+    }
+  }
+
+  .extra-light-background-topnav & {
+    .navbar-btn {
+      color: $extra-light-back-topnav-color;
+    }
+    .navbar-btn:hover {
+      color: darken($extra-light-back-topnav-color, 5%);
     }
   }
 
@@ -310,13 +323,24 @@ $button-height: $button-d;
 
 
     // Light colors
-    .light-background-main & {
+    .light-background-topnav & {
       .navbar-nav > li > a, .navbar-nav >.open > a {
-        color: $light-back-main-color;
+        color: $light-back-topnav-color;
       }
       .navbar-nav > li > a:hover, .navbar-nav > li > a:focus,
       .navbar-nav >.open > a:hover, .navbar-nav >.open > a:focus {
-        color: darken($light-back-main-color, 5%);
+        color: darken($light-back-topnav-color, 5%);
+        outline: none;
+      }
+    }
+
+    .extra-light-background-topnav & {
+      .navbar-nav > li > a, .navbar-nav >.open > a {
+        color: $extra-light-back-topnav-color;
+      }
+      .navbar-nav > li > a:hover, .navbar-nav > li > a:focus,
+      .navbar-nav >.open > a:hover, .navbar-nav >.open > a:focus {
+        color: darken($extra-light-back-topnav-color, 5%);
         outline: none;
       }
     }

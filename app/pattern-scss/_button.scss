@@ -8,6 +8,12 @@
   }
 }
 
+.extra-light-background-highlight {
+  .btn-primary {
+    color: $extra-light-back-highlight-color;
+  }
+}
+
 // .light-background-highlight & {
 //   .btn
 //     color: $gray-dark;
