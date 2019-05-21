@@ -29,9 +29,10 @@ img {
     left: 50%;
     min-height: 100%;
     margin-left: auto;
-    top: 0;
+    margin-top: auto;
     position: absolute;
-    @include transform(translateX(-50%));
+    top: 50%;
+    @include transform(translate(-50%, -50%));
   }
 
   &.ratio-2-1 {

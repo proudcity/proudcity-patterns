@@ -160,6 +160,7 @@ $widget-margin: 15px;
   }
 }
 
+body.siteorigin-panels-before-js .siteorigin-panels-stretch[data-stretch-type],
 .siteorigin-panels-stretch[data-stretch-type] {
   padding-left: 0!important;
   padding-right: 0!important;
@@ -171,6 +172,7 @@ $widget-margin: 15px;
 }
 
 @media screen and (min-width: 781px) {
+  body.siteorigin-panels-before-js .siteorigin-panels-stretch[data-stretch-type],
   .siteorigin-panels-stretch[data-stretch-type] {
     margin-left: $grid-gutter-width/2!important;
     margin-right: $grid-gutter-width/2!important;
