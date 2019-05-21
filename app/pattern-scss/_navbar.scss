@@ -15,7 +15,80 @@ $nav-active-border-width: 4px!default;
 $nav-active-border-color: rgba(0,0,0,0.4)!default;
 $nav-active-border-color-light: rgba(0,0,0,0.4)!default;
 
+// Action buttons
+@mixin navbar-action-toolbar($button-width, $button-height, $lighten: 'topnav') {
+    .btn-toolbar {
+      margin-bottom: 0;
 
+      li {
+        float: left;
+      }
+    }
+
+    .navbar-btn {
+      padding-top: 0;
+      padding-bottom: 0;
+      padding-left: 0;
+      padding-right: 0;
+      font-size: 18px;
+      border-radius: 10px;
+      color: $navbar-default-link-color;
+      margin-top: ($nav-height-short - $button-height) / 2 - 1;
+      margin-bottom: 0;
+      background: none;
+      //background-color: rgba(#fff, 0);
+      // background-color: lighten($navbar-default-bg, 10%);
+      //@include transition(margin-top 0.2s ease-in-out, background-color 0.1s ease-in);
+
+      &, i {
+        overflow: hidden;
+        width: $button-width;
+        height: $button-height;
+        vertical-align: middle;
+        line-height: $button-height * 0.95;
+      }
+
+      i {
+        @include transition(transform 0.2s linear);
+        vertical-align: middle;
+      }
+
+      &:hover {
+        background-color: lighten($navbar-default-bg, 25%);
+        // color: $navbar-default-link-hover-color;
+        background-color: rgba(#fff, 0.1);
+      }
+    }
+
+    // Normal button in the navbar actions
+    .navbar-btn-normal {
+      margin-top: 6px;
+      margin-right: 5px;
+      max-height: 43px;
+    }
+
+    // Light colors
+    .light-background-#{$lighten} & {
+      .navbar-btn {
+        color: $light-back-topnav-color;
+      }
+
+      .navbar-btn:hover {
+        color: darken($light-back-topnav-color, 5%);
+      }
+    }
+
+    .extra-light-background-#{$lighten} & {
+      .navbar-btn {
+        color: $extra-light-back-topnav-color;
+      }
+
+      .navbar-btn:hover {
+        color: darken($extra-light-back-topnav-color, 5%);
+      }
+    }
+  //}
+}
 
 // Keep navabr styles consistent
 
@@ -101,62 +174,8 @@ $button-height: $button-d;
     font-size: 20px;
   }
 
-  // Action buttons
-
-  .btn-toolbar {
-    margin-bottom: 0;
-
-    li {
-      float: left;
-    }
-  }
-
-  .navbar-btn {
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    font-size: 18px;
-    border-radius: 10px;
-    color: $navbar-default-link-color;
-    margin-top: ($nav-height-short - $button-height) / 2 - 1;
-    margin-bottom: 0;
-    background: none;
-    //background-color: rgba(#fff, 0);
-    // background-color: lighten($navbar-default-bg, 10%);
-    //@include transition(margin-top 0.2s ease-in-out, background-color 0.1s ease-in);
-    
-    &, i {
-      overflow: hidden;
-      width: $button-width;
-      height: $button-height;
-      vertical-align: middle;
-      line-height: $button-height * 0.95;
-    }
-
-    i {
-      @include transition(transform 0.2s linear);
-      vertical-align: middle;
-    }  
-
-    &:hover {
-      background-color: lighten($navbar-default-bg, 25%);
-      // color: $navbar-default-link-hover-color;
-      background-color: rgba(#fff, 0.1);
-    }
-
-    .hamburger {
-      @include hamburger-icon-animate($navbar-default-link-color, false);
-
-      .light-background-topnav & {
-        @include hamburger-icon-color($light-back-topnav-color);
-      }
-
-      .extra-light-background-topnav & {
-        @include hamburger-icon-color($extra-light-back-topnav-color);
-      }
-    }
-  }
+  // Actions toolbar
+  @include navbar-action-toolbar($button-width, $button-height);
 
   // Mobile menu toggle
   .menu-button {
@@ -166,29 +185,15 @@ $button-height: $button-d;
     z-index: $nav-user-overlay-z + 2;
   }
 
-  // Normal button in the navbar actions
-  .navbar-btn-normal {
-    margin-top: 6px;
-    margin-right: 5px;
-    max-height: 43px;
-  }
+  .hamburger {
+    @include hamburger-icon-animate($navbar-default-link-color, false);
 
-  // Light colors
-  .light-background-topnav & {
-    .navbar-btn {
-      color: $light-back-topnav-color;
+    .light-background-topnav & {
+      @include hamburger-icon-color($light-back-topnav-color);
     }
-    .navbar-btn:hover {
-      color: darken($light-back-topnav-color, 5%);
-    }
-  }
 
-  .extra-light-background-topnav & {
-    .navbar-btn {
-      color: $extra-light-back-topnav-color;
-    }
-    .navbar-btn:hover {
-      color: darken($extra-light-back-topnav-color, 5%);
+    .extra-light-background-topnav & {
+      @include hamburger-icon-color($extra-light-back-topnav-color);
     }
   }
 
@@ -619,6 +624,41 @@ $button-height: $button-d;
 
       .navbar-external {
         top: $admin-bar-height;
+      }
+    }
+
+    // With topbar
+    &.proud-navbar-topbar-active {
+      padding-top: $nav-height-short*2;
+
+      // Deal with empty menu box
+      .navbar-external {
+        .menu-box.topbar-has-toolbar {
+          padding-left: 0;
+          min-width: 0;
+        }
+      }
+
+      &:not(.scrolled) {
+        padding-top: $nav-height-short*2 + $nav-big-padding*2 - $nav-height-mod !important;
+
+        &:not(.search-active):not(.active-311) .navbar-external {
+          position: absolute;
+          top: $nav-height-short;
+        }
+      }
+
+      // Admin menu active, compensate
+      &.admin-menu, &.admin-bar {
+        padding-top: $admin-bar-height + $nav-height-short*2 - $nav-height-mod!important;
+
+        &:not(.scrolled) {
+          padding-top: $admin-bar-height + $nav-height-short*2 - $nav-height-mod + $nav-big-padding*2 !important;
+
+          &:not(.search-active):not(.active-311) .navbar-external {
+            top: $admin-bar-height + $nav-height-short;
+          }
+        }
       }
     }
   }

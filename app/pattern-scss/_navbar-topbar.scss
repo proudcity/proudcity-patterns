@@ -1,0 +1,131 @@
+//
+// Front end page header: only visible for smaller screens
+//
+
+$button-d: 45px;
+$button-width: 47px;
+$button-height: $button-d;
+
+.navbar-topbar {
+  height: $nav-height-short;
+  border-top: 0;
+  // text-align: center;
+
+  h2, h3, .h2, .h3 {
+    margin: 0;
+
+    &, a {
+      // just use main color
+      color:  $navbar-default-link-color;
+    }
+
+    // Light color
+    .light-background-topbar & {
+      &, a {
+        // just use main color
+        color:  $light-back-topnav-color;
+      }
+    }
+
+    .extra-light-background-topbar & {
+      &, a {
+        // just use main color
+        color:  $extra-light-back-topnav-color;
+      }
+    }
+
+    a {
+      float: left;
+      display: block;
+    }
+
+    //i {
+    //  margin-right: 0.25em;
+    //}
+  }
+
+  .logo-menu {
+    padding-left: $grid-gutter-width/2;
+    margin-bottom: 0;
+    float: left;
+
+    li {
+      float: left;
+    }
+  }
+
+  .nav-logo {
+    margin-top: -2px;
+    margin-bottom: -2px;
+    padding: 6px 6px 6px 10px;
+
+    img.logo {
+      max-width: 110px;
+      max-height: 44px;
+    }
+  }
+
+  .nav-text {
+    line-height: 27px;
+    height: 44px;
+    font-size: 16px;
+    padding-left: 10px;
+  }
+
+  // Actions toolbar
+  @include navbar-action-toolbar($button-width, $button-height, 'topbar');
+
+  .menu-box {
+    float: right!important;
+    min-width: 125px;
+
+    .btn-toolbar.pull-right {
+      margin-left: 0;
+    }
+  }
+
+
+  // img {
+  //   display: inline-block;
+  //   max-width: 300px;
+  //   max-height:
+  //   height: auto;
+  // }
+}
+
+// Small up
+// -------------------------
+@include respond($sm-up) {
+  //.navbar-topbar {
+  //  h2, h3, .h2, .h3 {
+  //    margin: 12px 0;
+  //  }
+  //}
+}
+
+// Top menu
+// -------------------------
+@include respond($mq-nav-fixed-top) {
+  .navbar-topbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: $nav-user-overlay-z - 1;
+
+    .nav-logo {
+      padding-left: 4px;
+      padding-right: 10px;
+    }
+
+    .nav-text {
+      padding-left: 4px;
+    }
+  }
+
+  .admin-menu, .admin-bar {
+    .navbar-topbar {
+      top: $admin-bar-height;
+    }
+  }
+}
