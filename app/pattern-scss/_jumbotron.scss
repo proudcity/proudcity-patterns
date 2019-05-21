@@ -106,10 +106,15 @@ $type-mod: .75;
 
   
 .full-container, .jumbo-padding {
-  .jumbotron { 
+  .jumbotron {
+    margin-bottom: 0;
+  }
+}
+
+.jumbo-padding {
+  .jumbotron {
     padding-left:  ($jumbotron-padding/2);
     padding-right: ($jumbotron-padding/2);
-    margin-bottom: 0;
   }
 }
 
