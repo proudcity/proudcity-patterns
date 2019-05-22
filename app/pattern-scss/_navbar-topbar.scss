@@ -14,34 +14,38 @@ $button-height: $button-d;
   h2, h3, .h2, .h3 {
     margin: 0;
 
-    &, a {
-      // just use main color
-      color:  $navbar-default-link-color;
-    }
-
-    // Light color
-    .light-background-topbar & {
-      &, a {
-        // just use main color
-        color:  $light-back-topnav-color;
-      }
-    }
-
-    .extra-light-background-topbar & {
-      &, a {
-        // just use main color
-        color:  $extra-light-back-topnav-color;
-      }
-    }
-
     a {
       float: left;
       display: block;
     }
+  }
 
-    //i {
-    //  margin-right: 0.25em;
-    //}
+  // Light color
+  .light-background-topnav-topbar & {
+    h2, h3, .h2, .h3,
+    h2 a, h3 a, .h2 a, .h3 a,
+    .navbar-nav > li > a, .navbar-nav > .open > a {
+      color: $light-back-topnav-color;
+
+      &:hover, &:focus {
+        color: darken($light-back-topnav-color, 5%);
+        outline: none;
+      }
+    }
+  }
+
+  // Extra light
+  .extra-light-background-topnav-topbar & {
+    h2, h3, .h2, .h3,
+    h2 a, h3 a, .h2 a, .h3 a,
+    .navbar-nav > li > a, .navbar-nav > .open > a {
+      color: $extra-light-back-topnav-color;
+
+      &:hover, &:focus {
+        color: darken($extra-light-back-topnav-color, 5%);
+        outline: none;
+      }
+    }
   }
 
   .logo-menu {
@@ -73,34 +77,85 @@ $button-height: $button-d;
   }
 
   // Actions toolbar
-  @include navbar-action-toolbar($button-width, $button-height, 'topbar');
+  @include navbar-action-toolbar($button-width, $button-height, 'topnav-topbar');
 
   .menu-box {
-    float: right!important;
+    float: right !important;
     min-width: 125px;
 
     .btn-toolbar.pull-right {
       margin-left: 0;
     }
   }
-
-
-  // img {
-  //   display: inline-block;
-  //   max-width: 300px;
-  //   max-height:
-  //   height: auto;
-  // }
 }
 
-// Small up
+// Mobile menu view, hide
 // -------------------------
-@include respond($sm-up) {
-  //.navbar-topbar {
-  //  h2, h3, .h2, .h3 {
-  //    margin: 12px 0;
-  //  }
-  //}
+@include respond($mq-nav-xs-mode) {
+  .navbar-topbar .topbar-navigation {
+    display: none;
+  }
+}
+
+// Nav visible
+// -------------------------
+@include respond($mq-menu-visible) {
+  .navbar-topbar {
+    // Hit children with no float
+    .topbar-navigation {
+      text-align: right;
+    }
+  }
+
+  // Use Flexbox if possible to deal with dynamic elements
+  // -----------------------------------------------------
+  .flexbox {
+
+    .navbar-topbar {
+      display: flex;
+      align-items: center;
+
+      // Hit children with no float
+      .topbar-navigation, .menu-box {
+        float: none !important;
+        border-top: 0!important;
+      }
+
+      .topbar-navigation {
+        flex: 1;
+        flex-shrink: 1;
+        order: 1;
+      }
+
+      #topbar-menu {
+        width: 100%;
+
+        > li {
+          display: inline-block;
+          float: none;
+        }
+      }
+
+      .menu-box {
+        display: flex;
+        flex-wrap: nowrap;
+        order: 2;
+        flex-shrink: 0;
+        float: none !important;
+        min-height: $nav-height-short;
+
+        & > div {
+          display: flex;
+          flex-wrap: nowrap;
+        }
+
+        a {
+          display: inline-block;
+          float: none !important;
+        }
+      }
+    }
+  }
 }
 
 // Top menu

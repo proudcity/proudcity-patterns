@@ -118,6 +118,27 @@ $type-mod: .75;
   }
 }
 
+body.proud-navbar-transparent {
+  // Modify jumbotrons that are being converted in wp-proud-theme/functions.php
+  .jumbotron {
+    &, &.jumbotron-inverse {
+      &, h1, .h1, h2, .h2 {
+        color: $jumbotron-inverse-color;
+      }
+    }
+  }
+
+  &.light-background-topnav {
+    .jumbotron {
+      &, &.jumbotron-inverse {
+        &, h1, .h1, h2, .h2 {
+          color: $jumbotron-color;
+        }
+      }
+    }
+  }
+}
+
 @include respond($xs-only) {
   .jumbotron {
     input.input-lg {
