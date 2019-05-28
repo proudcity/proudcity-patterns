@@ -103,13 +103,13 @@ $widget-margin: 15px;
       padding-right: 0!important;
     }
 
-    .panel-grid-cell:first-child {
-      padding-left: 3px !important;
-    }
-
-    .panel-grid-cell:last-child {
-      padding-right: 3px !important;
-    }
+    //.panel-grid-cell:first-child {
+    //  padding-left: 3px !important;
+    //}
+    //
+    //.panel-grid-cell:last-child {
+    //  padding-right: 3px !important;
+    //}
 
     .panel-grid-cell:only-child {
       padding-left: $grid-gutter-width/2 !important;

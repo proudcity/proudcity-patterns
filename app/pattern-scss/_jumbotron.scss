@@ -193,7 +193,14 @@ body.proud-navbar-transparent {
     .jumbotron-bg {
       padding: 50px;
     }
-    
+
+    // Override default SO padding
+    .panel-row-multiple & {
+      > .container {
+        padding-left: $grid-gutter-width/2!important;
+        padding-right: $grid-gutter-width/2!important;
+      }
+    }
   }
 
   .jumbo-header {
