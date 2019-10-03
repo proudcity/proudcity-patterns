@@ -619,13 +619,13 @@ $pager-disabled-color:                 $pagination-disabled-color !default;
 //##
 
 $jumbotron-padding:              30px !default;
-$jumbotron-color:                inherit !default;
-$jumbotron-bg:                   $gray-lighter !default;
-$jumbotron-heading-color:        inherit !default;
+$jumbotron-color:                $gray-base !default;
+$jumbotron-bg:                   rgba(255, 255, 255, 0.7) !default;
+$jumbotron-heading-color:        $gray-base !default;
 $jumbotron-font-size:            ceil(($font-size-base * 1.5)) !default;
 
-$jumbotron-inverse-color:                $gray-lightest !default;
-$jumbotron-inverse-bg:                   darken(desaturate($brand-primary, 50%), 20%) !default;
+$jumbotron-inverse-color:                $white !default;
+$jumbotron-inverse-bg:                   rgba(0, 0, 0,.7) !default;
 $jumbotron-inverse-heading-color:        $white !default;
 $jumbotron-inverse-btn-primary-color:    lighten(desaturate($brand-primary, 50%), 35%) !default;
 
