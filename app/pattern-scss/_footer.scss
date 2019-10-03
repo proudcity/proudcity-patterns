@@ -143,6 +143,11 @@ footer.page-footer {
     margin-bottom: $padding-base-vertical;
   }
 
+  ul {
+    padding-left: 0;
+    list-style: none;
+  }
+
   .light-background-footer & {
 
     &, a, label,
