@@ -185,7 +185,7 @@ $icon-dim: 40px;
       position: absolute;
       left: $grid-gutter-width/2;
       top: $icon-dim * .2;
-      color: $font-color-h4;
+      @extend %normal-link-color;
     }
 
     .fa ~ span {
@@ -193,10 +193,14 @@ $icon-dim: 40px;
     }
 
     span {
-      @extend %normal-link-color;
+      color: $font-color-h4;
       padding: ($icon-dim * .42) $grid-gutter-width/2;
       display: block;
       width: 100%;
+
+      &:hover, &:focus {
+        color: $font-color-h4;
+      }
     }
 
     .active & {
