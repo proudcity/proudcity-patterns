@@ -306,8 +306,9 @@ $button-height: $button-d;
         float: left;
 
         > a {
+          transition: background ease 0.2s, color ease 0.2s;
           padding-top:    $navbar-padding-vertical + 1;
-          padding-bottom: $navbar-padding-vertical;
+          padding-bottom: $navbar-padding-vertical + 1;
         }
 
         // &, &.open {
