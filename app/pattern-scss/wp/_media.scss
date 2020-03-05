@@ -74,14 +74,19 @@
         display: block;
       }
     }
-
   }
 }
 
 // Captions
 .wp-caption {
   @extend .thumbnail;
+
+  &.alignnone {
+    width: auto!important;
+  }
 }
+
+
 .wp-caption-text {
   padding: $thumbnail-caption-padding;
 }
