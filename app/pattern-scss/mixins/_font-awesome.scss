@@ -1,8 +1,8 @@
-@import "bower_components/font-awesome/web-fonts-with-css/scss/variables.scss";
-@import "bower_components/font-awesome/web-fonts-with-css/scss/mixins.scss";
-@import "bower_components/font-awesome/web-fonts-with-css/scss/core.scss";
+@import "bower_components/font-awesome/scss/variables.scss";
+@import "bower_components/font-awesome/scss/mixins.scss";
+@import "bower_components/font-awesome/scss/core.scss";
 
-$fa-regular-font-family: 'Font Awesome 5 Free';
+$fa-regular-font-family: "Font Awesome 5 Free";
 $fa-regular-font-weight: 400;
 
 %fa-style-regular {
@@ -10,7 +10,7 @@ $fa-regular-font-weight: 400;
   font-weight: $fa-regular-font-weight;
 }
 
-$fa-solid-font-family: 'Font Awesome 5 Free';
+$fa-solid-font-family: "Font Awesome 5 Free";
 $fa-solid-font-weight: 900;
 
 %fa-style-solid {
@@ -18,7 +18,7 @@ $fa-solid-font-weight: 900;
   font-weight: $fa-solid-font-weight;
 }
 
-$fa-brands-font-family: 'Font Awesome 5 Brands';
+$fa-brands-font-family: "Font Awesome 5 Brands";
 $fa-brands-font-weight: normal;
 
 %fa-style-brands {
@@ -32,17 +32,22 @@ $fa-brands-font-weight: normal;
 // $icon: the fontawesome variable name
 // $style: the font awesome style to use 'regular' or 'brands' or 'default/solid'
 
-@mixin fa-icon-force($icon, $style: 'default', $selector: '&:before', $important: false) {
+@mixin fa-icon-force(
+  $icon,
+  $style: "default",
+  $selector: "&:before",
+  $important: false
+) {
   #{$selector} {
     @if ($important) {
-      content: fa-content($icon)!important;
+      content: fa-content($icon) !important;
     } @else {
       content: fa-content($icon);
     }
     @extend %fa-icon;
-    @if ($style == 'regular') {
+    @if ($style == "regular") {
       @extend %fa-style-regular;
-    } @else if ($style == 'brands') {
+    } @else if ($style == "brands") {
       @extend %fa-style-brands;
     } @else {
       @extend %fa-style-solid;
