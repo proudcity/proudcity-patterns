@@ -393,7 +393,10 @@ $button-height: $button-d;
           display: inline-block;
           float: none;
         }
-
+      }
+      
+      #main-menu,
+      .menu-box
         // Handle dropdown menus
         .open .dropdown-menu {
           position: fixed;
@@ -699,7 +702,10 @@ $button-height: $button-d;
 
       #main-menu {
         text-align: right;
+      }
 
+      #main-menu,
+      .menu-box {
         // Handle dropdown menus
         .open .dropdown-menu {
           bottom: auto;
