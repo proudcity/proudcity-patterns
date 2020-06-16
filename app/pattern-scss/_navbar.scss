@@ -1,98 +1,103 @@
-// 
+//
 // Front end menu bar
 //
 
-
-$nav-height-short: 52px!default;
-$nav-height-mod: 2px!default;
-$nav-height-tall: 740px!default;
-$nav-user-overlay-z: 1050!default;
-$nav-big-padding: 20px!default;
+$nav-height-short: 52px !default;
+$nav-height-mod: 2px !default;
+$nav-height-tall: 740px !default;
+$nav-user-overlay-z: 1050 !default;
+$nav-big-padding: 20px !default;
 // WP bar
-$admin-bar-height: 47px!default;
+$admin-bar-height: 47px !default;
 // Link vars
-$nav-active-border-width: 4px!default;
-$nav-active-border-color: rgba(0,0,0,0.4)!default;
-$nav-active-border-color-light: rgba(0,0,0,0.4)!default;
+$nav-active-border-width: 4px !default;
+$nav-active-border-color: rgba(0, 0, 0, 0.4) !default;
+$nav-active-border-color-light: rgba(0, 0, 0, 0.4) !default;
 
 // Action buttons
-@mixin navbar-action-toolbar($button-width, $button-height, $lighten: 'topnav') {
-    .btn-toolbar {
-      margin-bottom: 0;
+@mixin navbar-action-toolbar(
+  $button-width,
+  $button-height,
+  $lighten: 'topnav'
+) {
+  .btn-toolbar {
+    margin-bottom: 0;
 
-      li {
-        float: left;
-      }
+    li {
+      float: left;
+    }
+  }
+
+  .navbar-btn {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 18px;
+    border-radius: 10px;
+    color: $navbar-default-link-color;
+    margin-top: ($nav-height-short - $button-height) / 2 - 1;
+    margin-bottom: 0;
+    background: none;
+    //background-color: rgba(#fff, 0);
+    // background-color: lighten($navbar-default-bg, 10%);
+    //@include transition(margin-top 0.2s ease-in-out, background-color 0.1s ease-in);
+
+    &,
+    i {
+      overflow: hidden;
+      width: $button-width;
+      height: $button-height;
+      vertical-align: middle;
+      line-height: $button-height * 0.95;
     }
 
+    i {
+      @include transition(transform 0.2s linear);
+      vertical-align: middle;
+    }
+
+    &:hover {
+      background-color: lighten($navbar-default-bg, 25%);
+      // color: $navbar-default-link-hover-color;
+      background-color: rgba(#fff, 0.1);
+    }
+  }
+
+  // Normal button in the navbar actions
+  .navbar-btn-normal {
+    margin-top: 6px;
+    margin-right: 5px;
+    max-height: 43px;
+  }
+
+  // Light colors
+  .light-background-#{$lighten} & {
     .navbar-btn {
-      padding-top: 0;
-      padding-bottom: 0;
-      padding-left: 0;
-      padding-right: 0;
-      font-size: 18px;
-      border-radius: 10px;
-      color: $navbar-default-link-color;
-      margin-top: ($nav-height-short - $button-height) / 2 - 1;
-      margin-bottom: 0;
-      background: none;
-      //background-color: rgba(#fff, 0);
-      // background-color: lighten($navbar-default-bg, 10%);
-      //@include transition(margin-top 0.2s ease-in-out, background-color 0.1s ease-in);
-
-      &, i {
-        overflow: hidden;
-        width: $button-width;
-        height: $button-height;
-        vertical-align: middle;
-        line-height: $button-height * 0.95;
-      }
-
-      i {
-        @include transition(transform 0.2s linear);
-        vertical-align: middle;
-      }
-
-      &:hover {
-        background-color: lighten($navbar-default-bg, 25%);
-        // color: $navbar-default-link-hover-color;
-        background-color: rgba(#fff, 0.1);
-      }
+      color: $light-back-topnav-color;
     }
 
-    // Normal button in the navbar actions
-    .navbar-btn-normal {
-      margin-top: 6px;
-      margin-right: 5px;
-      max-height: 43px;
+    .navbar-btn:hover {
+      color: darken($light-back-topnav-color, 5%);
+    }
+  }
+
+  .extra-light-background-#{$lighten} & {
+    .navbar-btn {
+      color: $extra-light-back-topnav-color;
     }
 
-    // Light colors
-    .light-background-#{$lighten} & {
-      .navbar-btn {
-        color: $light-back-topnav-color;
-      }
-
-      .navbar-btn:hover {
-        color: darken($light-back-topnav-color, 5%);
-      }
+    .navbar-btn:hover {
+      color: darken($extra-light-back-topnav-color, 5%);
     }
-
-    .extra-light-background-#{$lighten} & {
-      .navbar-btn {
-        color: $extra-light-back-topnav-color;
-      }
-
-      .navbar-btn:hover {
-        color: darken($extra-light-back-topnav-color, 5%);
-      }
-    }
+  }
   //}
 }
 
 // Keep navabr styles consistent
 
-.navbar, .navbar-nav {
+.navbar,
+.navbar-nav {
   font-size: 16px;
 
   .nav {
@@ -108,8 +113,10 @@ $nav-active-border-color-light: rgba(0,0,0,0.4)!default;
   // Force for listing
   &.navbar-force-static {
     .navbar-external {
-      &, #main-menu, .menu-box {
-        position: static!important;
+      &,
+      #main-menu,
+      .menu-box {
+        position: static !important;
       }
     }
   }
@@ -134,16 +141,16 @@ body.proud-navbar-active {
   }
 
   // Admin toolbvar
-  #admin-menu, #admin-menu .dropdown {
+  #admin-menu,
+  #admin-menu .dropdown {
     z-index: $nav-user-overlay-z + 1;
   }
 
-  // IPE 
+  // IPE
   div#panels-ipe-control-container {
     z-index: $nav-user-overlay-z - 2;
   }
 }
-
 
 $button-d: 45px;
 $button-width: 47px;
@@ -197,7 +204,7 @@ $button-height: $button-d;
     }
   }
 
-  // open 
+  // open
   .menu-nav-open & {
     .navbar-btn.menu-button {
       .hamburger {
@@ -205,18 +212,16 @@ $button-height: $button-d;
       }
     }
   }
-
 }
 
 // Hiding menu, fixed bottom
 // -------------------------
 @include respond($mq-nav-xs-mode) {
-
   .navbar-external {
     position: static;
     min-height: 0;
 
-    #main-menu, 
+    #main-menu,
     .menu-box {
       height: $nav-height-short + $nav-height-mod;
       position: fixed;
@@ -241,15 +246,15 @@ $button-height: $button-d;
         margin-bottom: 0;
       }
     }
-    
+
     .proud-toolbar-active & {
-       #main-menu {
+      #main-menu {
         padding-top: 20%;
       }
 
       &.menu-nav-open {
         height: 95%;
-      } 
+      }
     }
 
     .menu-box {
@@ -278,8 +283,6 @@ $button-height: $button-d;
   }
 }
 
-
-
 // Show menu
 // -------------------------
 @include respond($mq-menu-visible) {
@@ -287,7 +290,7 @@ $button-height: $button-d;
     z-index: $nav-user-overlay-z + 2;
 
     .menu-box {
-      float: right!important;
+      float: right !important;
       min-width: 125px;
 
       .btn-toolbar.pull-right {
@@ -307,7 +310,7 @@ $button-height: $button-d;
 
         > a {
           transition: background ease 0.2s, color ease 0.2s;
-          padding-top:    $navbar-padding-vertical + 1;
+          padding-top: $navbar-padding-vertical + 1;
           padding-bottom: $navbar-padding-vertical + 1;
         }
 
@@ -327,25 +330,30 @@ $button-height: $button-d;
       margin-top: ($nav-height-short - $nav-height-mod - $button-height) / 2;
     }
 
-
     // Light colors
     .light-background-topnav & {
-      .navbar-nav > li > a, .navbar-nav >.open > a {
+      .navbar-nav > li > a,
+      .navbar-nav > .open > a {
         color: $light-back-topnav-color;
       }
-      .navbar-nav > li > a:hover, .navbar-nav > li > a:focus,
-      .navbar-nav >.open > a:hover, .navbar-nav >.open > a:focus {
+      .navbar-nav > li > a:hover,
+      .navbar-nav > li > a:focus,
+      .navbar-nav > .open > a:hover,
+      .navbar-nav > .open > a:focus {
         color: darken($light-back-topnav-color, 5%);
         outline: none;
       }
     }
 
     .extra-light-background-topnav & {
-      .navbar-nav > li > a, .navbar-nav >.open > a {
+      .navbar-nav > li > a,
+      .navbar-nav > .open > a {
         color: $extra-light-back-topnav-color;
       }
-      .navbar-nav > li > a:hover, .navbar-nav > li > a:focus,
-      .navbar-nav >.open > a:hover, .navbar-nav >.open > a:focus {
+      .navbar-nav > li > a:hover,
+      .navbar-nav > li > a:focus,
+      .navbar-nav > .open > a:hover,
+      .navbar-nav > .open > a:focus {
         color: darken($extra-light-back-topnav-color, 5%);
         outline: none;
       }
@@ -360,19 +368,20 @@ $button-height: $button-d;
   // -----------------------------------------------------
 
   .flexbox {
-
     .navbar-external {
       display: flex;
       align-items: center;
 
-      &, &.navbar-default {
+      &,
+      &.navbar-default {
         border-top: 1px solid $gray-light !important;
       }
 
       // Hit children with no float
-      .below, .menu-box {
+      .below,
+      .menu-box {
         float: none !important;
-        border-top: 0!important;
+        border-top: 0 !important;
       }
 
       .below {
@@ -380,7 +389,14 @@ $button-height: $button-d;
         flex-shrink: 1;
         order: 1;
         overflow: auto;
-        @include webkit-scrollbar(rgba(255,255,255,0.2), rgba(0,0,0,0.2), 4px, 6px, 4px, 4px);
+        @include webkit-scrollbar(
+          rgba(255, 255, 255, 0.2),
+          rgba(0, 0, 0, 0.2),
+          4px,
+          6px,
+          4px,
+          4px
+        );
       }
 
       #main-menu {
@@ -394,9 +410,9 @@ $button-height: $button-d;
           float: none;
         }
       }
-      
+
       #main-menu,
-      .menu-box
+      .menu-box {
         // Handle dropdown menus
         .open .dropdown-menu {
           position: fixed;
@@ -413,6 +429,10 @@ $button-height: $button-d;
         flex-shrink: 0;
         float: none !important;
         min-height: $nav-height-short;
+
+        .open .dropdown-menu {
+          right: 0;
+        }
 
         & > div {
           display: flex;
@@ -432,24 +452,21 @@ $button-height: $button-d;
   }
 }
 
-
 // Fixed to bottom
 // -------------------------
 @include respond($mq-nav-fixed-bottom) {
-
   $two-bars-height: ($nav-height-short - 3);
   body.proud-navbar-active {
-
     // Proud-toolbar admin active, compensate
     &.proud-toolbar-active {
-      
       .navbar-header-region {
         padding-top: $two-bars-height;
       }
     }
 
     // Admin menu instead
-    &.admin-menu, &.admin-bar {
+    &.admin-menu,
+    &.admin-bar {
       .navbar-header-region {
         padding-top: 0;
       }
@@ -461,20 +478,17 @@ $button-height: $button-d;
       }
     }
 
-    // IPE 
+    // IPE
     div#panels-ipe-control-container {
       bottom: $two-bars-height - 1;
     }
   }
 }
 
-
 // Top menu
 // -------------------------
 @include respond($mq-nav-fixed-top) {
-
-
-  $logo-container-width: 96px!default;
+  $logo-container-width: 96px !default;
 
   // Switch to top header
   .navbar-external {
@@ -483,7 +497,8 @@ $button-height: $button-d;
     @include transition(padding 0.15s ease-out);
 
     // Google translate active (only react for non admin menu)
-    .translated-ltr &, .translated-rtl & {
+    .translated-ltr &,
+    .translated-rtl & {
       top: 40px;
     }
 
@@ -515,12 +530,11 @@ $button-height: $button-d;
       max-height: $nav-height-short;
     }
 
-
     // withOUT site name
     &.hide-site-name {
       .nav-logo {
-        margin-left: 0!important;
-        
+        margin-left: 0 !important;
+
         > a {
           padding-top: 8px;
           padding-bottom: 8px;
@@ -569,7 +583,7 @@ $button-height: $button-d;
         top: 100%;
         bottom: auto;
         margin-top: 1px;
-        
+
         // // add additional for non scrolled
         // body:not(.scrolled) & {
         //   margin-top: $nav-big-padding - 1;
@@ -577,7 +591,6 @@ $button-height: $button-d;
       }
     }
   }
-
 
   // Expanding/contracting topnav
   body.proud-navbar-active {
@@ -591,7 +604,7 @@ $button-height: $button-d;
 
     // When screen is scrolled to TOP
     &:not(.scrolled) {
-      padding-top: $nav-height-short + $nav-big-padding*2 - $nav-height-mod !important;
+      padding-top: $nav-height-short + $nav-big-padding * 2 - $nav-height-mod !important;
 
       .navbar-external {
         padding-top: $nav-big-padding;
@@ -612,18 +625,20 @@ $button-height: $button-d;
         }
 
         img.logo {
-          max-height: $nav-height-short + $nav-big-padding*2 - 28px;
+          max-height: $nav-height-short + $nav-big-padding * 2 - 28px;
           width: auto;
         }
       }
     }
 
     // Admin menu active, compensate
-    &.admin-menu, &.admin-bar {
-      padding-top: $admin-bar-height + $nav-height-short - $nav-height-mod!important;
+    &.admin-menu,
+    &.admin-bar {
+      padding-top: $admin-bar-height + $nav-height-short - $nav-height-mod !important;
 
       &:not(.scrolled) {
-        padding-top: $admin-bar-height + $nav-height-short - $nav-height-mod + $nav-big-padding*2 !important;
+        padding-top: $admin-bar-height + $nav-height-short - $nav-height-mod +
+          $nav-big-padding * 2 !important;
       }
 
       .navbar-external {
@@ -633,7 +648,7 @@ $button-height: $button-d;
 
     // With topbar
     &.proud-navbar-topbar-active {
-      padding-top: $nav-height-short*2;
+      padding-top: $nav-height-short * 2;
 
       // Deal with empty menu box
       .navbar-external {
@@ -644,7 +659,8 @@ $button-height: $button-d;
       }
 
       &:not(.scrolled) {
-        padding-top: $nav-height-short*2 + $nav-big-padding*2 - $nav-height-mod !important;
+        padding-top: $nav-height-short * 2 + $nav-big-padding * 2 -
+          $nav-height-mod !important;
 
         &:not(.search-active):not(.active-311) .navbar-external {
           position: absolute;
@@ -653,11 +669,13 @@ $button-height: $button-d;
       }
 
       // Admin menu active, compensate
-      &.admin-menu, &.admin-bar {
-        padding-top: $admin-bar-height + $nav-height-short*2 - $nav-height-mod!important;
+      &.admin-menu,
+      &.admin-bar {
+        padding-top: $admin-bar-height + $nav-height-short * 2 - $nav-height-mod !important;
 
         &:not(.scrolled) {
-          padding-top: $admin-bar-height + $nav-height-short*2 - $nav-height-mod + $nav-big-padding*2 !important;
+          padding-top: $admin-bar-height + $nav-height-short * 2 -
+            $nav-height-mod + $nav-big-padding * 2 !important;
 
           &:not(.search-active):not(.active-311) .navbar-external {
             top: $admin-bar-height + $nav-height-short;
@@ -671,15 +689,14 @@ $button-height: $button-d;
   // -----------------------------------------------------
 
   .flexbox {
-
     // Get
     //body.proud-navbar-active:not(.scrolled) .hide-site-name .nav-logo {
     //  margin-bottom: 0;
     //}
 
     .navbar-external {
-
-      &, &.navbar-default {
+      &,
+      &.navbar-default {
         border-top: 0 !important;
       }
 
