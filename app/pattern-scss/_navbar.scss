@@ -173,6 +173,10 @@ $button-height: $button-d;
 
     a {
       padding: 6px;
+
+      &#logo:focus {
+        @include tab-focus;
+      }
     }
   }
 
