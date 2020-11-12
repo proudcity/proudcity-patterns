@@ -6,6 +6,16 @@
   margin-bottom: 20px;
   @include transition(opacity ease-in 0.2s);
 
+  // only first level, no variablilty
+  &[data-level-active="1"] {
+    height: auto;
+    opacity: 1;
+
+    > .inner:first-child {
+      float: none;
+    }
+  }
+
   > .inner {
     position: relative;
     float: left;
