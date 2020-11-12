@@ -69,6 +69,10 @@ $widget-margin: 15px;
   .panel-grid-cell {
     padding-left: $grid-gutter-width/2!important;
     padding-right: $grid-gutter-width/2!important;
+
+    > .widget > .proud-widget-title {
+      margin-top: 0;
+    }
   }
 }
 

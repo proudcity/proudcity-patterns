@@ -1,7 +1,10 @@
 .menu-slider {
+  height: 43px;
+  opacity: 0;
   overflow: hidden;
   width: 100%;
   margin-bottom: 20px;
+  @include transition(opacity ease-in 0.2s);
 
   > .inner {
     position: relative;
