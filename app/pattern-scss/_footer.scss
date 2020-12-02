@@ -1,4 +1,4 @@
-$footer-padding: 20px!default;
+$footer-padding: 20px !default;
 
 .footer-actions {
   background: transparent;
@@ -22,47 +22,52 @@ $footer-padding: 20px!default;
   body & {
     .navbar-nav > li > a,
     .navbar-nav > li.open > a {
-      color: $white;
-      
-      &:hover,
-      &:active,
-      &:focus {
-        color: darken($white, 10%);
+      &:not(.btn-primary) {
+        color: $white;
+
+        &:hover,
+        &:active,
+        &:focus {
+          color: darken($white, 10%);
+        }
       }
     }
   }
   .light-background-footer-actions & {
     .navbar-nav > li > a,
     .navbar-nav > li.open > a {
-      color: $light-back-highlight-color;
-      
-      &:hover,
-      &:active,
-      &:focus {
-        color: darken($light-back-highlight-color, 10%);
+      &:not(.btn-primary) {
+        color: $light-back-highlight-color;
+
+        &:hover,
+        &:active,
+        &:focus {
+          color: darken($light-back-highlight-color, 10%);
+        }
       }
     }
   }
   .extra-light-background-footer-actions & {
     .navbar-nav > li > a,
     .navbar-nav > li.open > a {
-      color: $extra-light-back-highlight-color;
+      &:not(.btn-primary) {
+        color: $extra-light-back-highlight-color;
 
-      &:hover,
-      &:active,
-      &:focus {
-        color: darken($extra-light-back-highlight-color, 10%);
+        &:hover,
+        &:active,
+        &:focus {
+          color: darken($extra-light-back-highlight-color, 10%);
+        }
       }
     }
   }
-
-  
 
   .navbar-left,
   .navbar-right {
     &.dropdown,
     & > .social {
-      padding: $padding-base-vertical $padding-base-horizontal $padding-base-vertical 0;
+      padding: $padding-base-vertical $padding-base-horizontal
+        $padding-base-vertical 0;
     }
   }
 
@@ -76,25 +81,26 @@ $footer-padding: 20px!default;
 // Nav goes to mobile mode
 // -------------------------
 @media (max-width: $grid-float-breakpoint-max) {
-
   .footer-actions {
     .nav > li a {
-      color: $white;
+      &:not(.btn-primary) {
+        color: $white;
 
-      &:hover,
-      &:active,
-      &:focus {
-        color: darken($white, 10%);
-        text-decoration: underline !important;
+        &:hover,
+        &:active,
+        &:focus {
+          color: darken($white, 10%);
+          text-decoration: underline !important;
+        }
       }
     }
 
     // now defaulting to white for footer actions
-    .light-background-highlight & {
-      body & {
-        .nav > li a {
+    body.light-background-highlight & {
+      .nav > li a {
+        &:not(.btn-primary) {
           color: $light-back-highlight-color;
-          
+
           &:hover,
           &:active,
           &:focus {
@@ -103,6 +109,12 @@ $footer-padding: 20px!default;
         }
       }
     }
+
+    .dropdown-menu > li > a:hover,
+    .dropdown-menu > li > a:focus {
+      background: none;
+      text-decoration: underline;
+    }
   }
 
   .btn.proudscore-widget {
@@ -110,23 +122,34 @@ $footer-padding: 20px!default;
   }
 }
 
-
 footer.page-footer {
   font-size: $font-size-small;
   padding: $footer-padding 0 ($footer-padding + $page-section-spacing) 0;
   position: relative;
 
-  &, a, label,
-  h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6,
-  form input[type="submit"]{
+  &,
+  a,
+  label,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5,
+  h6,
+  .h6,
+  form input[type='submit'] {
     color: $white;
   }
 
-  a:hover, a:focus {
+  a:hover,
+  a:focus {
     color: lighten($white, 20%);
   }
 
-  form input[type="submit"] {
+  form input[type='submit'] {
     background: rgba(#000, 0.6);
     border-color: rgba(#000, 0);
 
@@ -136,11 +159,13 @@ footer.page-footer {
     }
   }
 
-  h4, .h4 {
+  h4,
+  .h4 {
     color: $white !important;
   }
 
-  h5, .h5 {
+  h5,
+  .h5 {
     margin-bottom: $padding-base-vertical;
   }
 
@@ -150,18 +175,30 @@ footer.page-footer {
   }
 
   .light-background-footer & {
-
-    &, a, label,
-    h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6,
-    form input[type="submit"]{
+    &,
+    a,
+    label,
+    h2,
+    .h2,
+    h3,
+    .h3,
+    h4,
+    .h4,
+    h5,
+    .h5,
+    h6,
+    .h6,
+    form input[type='submit'] {
       color: $light-back-footer-color;
     }
 
-    form input[type="submit"]:hover, a:hover, a:focus {
+    form input[type='submit']:hover,
+    a:hover,
+    a:focus {
       color: lighten($light-back-footer-color, 20%);
     }
 
-    form input[type="submit"] {
+    form input[type='submit'] {
       background: rgba(#fff, 0.4);
       border-color: rgba($light-back-footer-color, 0.2);
 
@@ -171,24 +208,37 @@ footer.page-footer {
       }
     }
 
-    h4, .h4 {
+    h4,
+    .h4 {
       color: $light-back-footer-color !important;
     }
   }
 
   .extra-light-background-footer & {
-
-    &, a, label,
-    h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6,
-    form input[type="submit"]{
+    &,
+    a,
+    label,
+    h2,
+    .h2,
+    h3,
+    .h3,
+    h4,
+    .h4,
+    h5,
+    .h5,
+    h6,
+    .h6,
+    form input[type='submit'] {
       color: $extra-light-back-footer-color;
     }
 
-    form input[type="submit"]:hover, a:hover, a:focus {
+    form input[type='submit']:hover,
+    a:hover,
+    a:focus {
       color: lighten($extra-light-back-footer-color, 20%);
     }
 
-    form input[type="submit"] {
+    form input[type='submit'] {
       background: rgba(#fff, 0.4);
       border-color: rgba($extra-light-back-footer-color, 0.2);
 
@@ -198,14 +248,15 @@ footer.page-footer {
       }
     }
 
-    h4, .h4 {
+    h4,
+    .h4 {
       color: $extra-light-back-footer-color !important;
     }
   }
 
   .footer-logo-wrapper {
-    
-    h4, .h4 {
+    h4,
+    .h4 {
       margin: 0;
       line-height: 1.1em;
       font-size: 30px; // @todo: variable
@@ -220,7 +271,5 @@ footer.page-footer {
       margin-top: $line-height-computed;
       margin-bottom: $padding-base-vertical;
     }
-    
   }
 }
-
