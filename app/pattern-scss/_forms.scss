@@ -20,6 +20,10 @@ label {
   color: $text-color;
 }
 
+.gform_wrapper .gfield_error input, .gform_wrapper .gfield_error select, .gform_wrapper .gfield_error textarea {
+  color: #a94442;
+}
+
 .form-group {
   position: relative;
 
