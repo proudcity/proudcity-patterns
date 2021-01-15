@@ -96,7 +96,7 @@ $footer-padding: 20px !default;
     }
 
     // now defaulting to white for footer actions
-    body.light-background-highlight & {
+    body.light-background-footer-actions & {
       .nav > li a {
         &:not(.btn-primary) {
           color: $light-back-highlight-color;
@@ -104,7 +104,7 @@ $footer-padding: 20px !default;
           &:hover,
           &:active,
           &:focus {
-            color: darken($light-back-highlight-color, 10%);
+            color: darken($extra-light-back-highlight-color, 10%);
           }
         }
       }
