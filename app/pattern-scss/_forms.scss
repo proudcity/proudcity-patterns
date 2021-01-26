@@ -26,6 +26,11 @@ label {
   color: #a94442;
 }
 
+.gform_wrapper ul.gfield_checkbox li input[type='checkbox'],
+.gform_wrapper ul.gfield_radio li input[type='radio'] {
+  width: auto;
+}
+
 .form-group {
   position: relative;
 
