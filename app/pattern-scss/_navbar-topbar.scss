@@ -83,6 +83,18 @@ $button-height: $button-d;
     float: right !important;
     min-width: 125px;
 
+    .open .dropdown-menu {
+      bottom: auto;
+      left: auto;
+      right: 0;
+      top: $nav-height-short - 3;
+      z-index: $nav-user-overlay-z + 3;
+    }
+
+    #menu-button {
+      display: none;
+    }
+
     .btn-toolbar.pull-right {
       margin-left: 0;
     }
@@ -144,6 +156,10 @@ $button-height: $button-d;
         float: none !important;
         min-height: $nav-height-short;
 
+        .open .dropdown-menu {
+          top: auto;
+        }
+
         & > div {
           display: flex;
           flex-wrap: nowrap;
@@ -166,7 +182,7 @@ $button-height: $button-d;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: $nav-user-overlay-z - 1;
+    z-index: $nav-user-overlay-z + 3;
 
     .nav-logo {
       padding-left: 4px;
