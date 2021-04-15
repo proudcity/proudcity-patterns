@@ -3,16 +3,19 @@
 .alert-banner {
   margin-bottom: 0;
   // @todo: decr padding
+
+  a {
+    text-decoration: underline;
+  }
 }
 
 // Colors from https://polaris.shopify.com/visuals/colors
-$proud-alert-red: #BF0711;
-$proud-alert-orange: #C05717;
-$proud-alert-yellow: #EEC200;
+$proud-alert-red: #bf0711;
+$proud-alert-orange: #c05717;
+$proud-alert-yellow: #eec200;
 $proud-alert-green: #108043;
-$proud-alert-black: #212B35;
-$proud-alert-gray: #C4CDD5;
-
+$proud-alert-black: #212b35;
+$proud-alert-gray: #c4cdd5;
 
 .proud-alert-banner {
   border-radius: 0 !important;
@@ -43,12 +46,19 @@ $proud-alert-gray: #C4CDD5;
   background-color: $proud-alert-gray;
 }
 
+.alert-yellow,
+.alert-gray {
+  a {
+    color: $text-color !important;
+  }
+}
+
 .alert-red,
 .alert-orange,
 .alert-green,
 .alert-black {
   color: $white;
-  
+
   a {
     color: $white !important;
     text-decoration: underline;
