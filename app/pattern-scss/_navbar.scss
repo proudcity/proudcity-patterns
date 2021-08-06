@@ -33,7 +33,7 @@ $nav-active-border-color-light: rgba(0, 0, 0, 0.4) !default;
     padding-bottom: 0;
     padding-left: 0;
     padding-right: 0;
-    font-size: 18px;
+    
     border-radius: 10px;
     color: $navbar-default-link-color;
     margin-top: ($nav-height-short - $button-height) / 2 - 1;
@@ -50,6 +50,19 @@ $nav-active-border-color-light: rgba(0, 0, 0, 0.4) !default;
       height: $button-height;
       vertical-align: middle;
       line-height: $button-height * 0.95;
+    }
+
+    i {
+      font-size: 18px;
+    }
+
+    &.show-label {
+      width: auto;
+      padding-right: 1em;
+
+      i {
+        margin-right: -.75em;
+      }
     }
 
     i {
