@@ -1,4 +1,4 @@
-// 
+//
 // Styles for action box app
 //
 
@@ -22,8 +22,7 @@
   left: 0;
   margin-left: 0;
   position: relative;
-  width: 200%!important;
-
+  width: 200% !important;
 
   &.slide-left {
     margin-left: -100%;
@@ -40,12 +39,23 @@
 
   .slide-left-2 {
     float: left;
-    width: 50%!important;
+    width: 50% !important;
     height: auto;
     position: relative;
 
     & + .slide-left-2 {
       height: 1px;
+    }
+
+    // Accessibility tabbing
+    &[aria-hidden='true'] {
+      visibility: hidden;
+      transition-property: opacity, transform, visibility;
+    }
+
+    &[aria-hidden='false'] {
+      visibility: visible;
+      transition-property: opacity, transform;
     }
   }
 
@@ -68,7 +78,7 @@
       float: left;
       width: 25%;
       padding-right: 1px;
-      margin-top: 0!important;
+      margin-top: 0 !important;
 
       & ~ li {
         padding-left: 1px;
@@ -81,8 +91,9 @@
       a {
         background-color: $gray-base;
 
-
-        &, &:hover, &:focus {
+        &,
+        &:hover,
+        &:focus {
           color: $white;
 
           .light-background-secondary & {
@@ -97,15 +108,17 @@
 
       &:not(.active) {
         a {
-          &:hover, &:focus {
+          &:hover,
+          &:focus {
             background: darken($gray, 5%);
           }
         }
       }
 
       &.active a {
-
-        &, &:hover, &:focus {
+        &,
+        &:hover,
+        &:focus {
           color: $white;
           background: $brand-primary;
 
@@ -115,6 +128,25 @@
 
           .extra-light-background-highlight & {
             color: $extra-light-back-highlight-color;
+          }
+        }
+      }
+
+      // Accessibility outline
+      &,
+      &:not(.active) {
+        a {
+          &:focus,
+          &:active {
+            outline: 1px solid lighten($gray-base, 10%);
+
+            .light-background-secondary & {
+              outline-color: darken($light-back-secondary-color, 10%);
+            }
+
+            .extra-light-background-secondary & {
+              outline-color: darken($extra-light-back-secondary-color, 10%);
+            }
           }
         }
       }
@@ -138,7 +170,6 @@
 hr.compact {
   margin: 10px 0;
 }
-
 
 // Category Listings
 // ------------------------------
@@ -171,7 +202,8 @@ $icon-dim: 40px;
     // font-weight: $medium-weight;
 
     a {
-      &:focus, &:hover {
+      &:focus,
+      &:hover {
         text-decoration: none;
       }
     }
@@ -184,7 +216,7 @@ $icon-dim: 40px;
       line-height: $icon-dim;
       position: absolute;
       left: $grid-gutter-width/2;
-      top: $icon-dim * .2;
+      top: $icon-dim * 0.2;
       @extend %normal-link-color;
     }
 
@@ -194,25 +226,27 @@ $icon-dim: 40px;
 
     span {
       color: $font-color-h4;
-      padding: ($icon-dim * .42) $grid-gutter-width/2;
+      padding: ($icon-dim * 0.42) $grid-gutter-width/2;
       display: block;
       width: 100%;
 
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         color: $font-color-h4;
       }
     }
 
     .active & {
-      padding-bottom: $icon-dim * .21;
+      padding-bottom: $icon-dim * 0.21;
 
       span {
-        padding-bottom: $icon-dim * .21;
+        padding-bottom: $icon-dim * 0.21;
       }
     }
   }
 
-  dd, li {
+  dd,
+  li {
     list-style: none;
   }
 
@@ -229,7 +263,6 @@ $icon-dim: 40px;
 // -------------------------------
 .action-box {
   .panel-group {
-
     .panel-title {
       display: block;
     }
@@ -256,7 +289,6 @@ $icon-dim: 40px;
   }
 }
 
-
 // General helpers
 // -------------------------------
 .action-box {
@@ -265,9 +297,9 @@ $icon-dim: 40px;
   }
 
   .unhide-dropdown {
-    display:block;
-    top:auto;
-    padding:10px;
+    display: block;
+    top: auto;
+    padding: 10px;
   }
 
   .action-buttons {
@@ -289,15 +321,13 @@ $icon-dim: 40px;
   height: 400px;
 }
 
-
 // Forms
 // -------------------------------
 
 .action-box {
   form {
-
     textarea {
-      width: 100%
+      width: 100%;
     }
 
     .has-error {
@@ -335,9 +365,7 @@ $icon-dim: 40px;
   button.close:active {
     outline: none;
   }
-
 }
-
 
 // Issue report map
 // -------------------------------
@@ -351,35 +379,31 @@ $icon-dim: 40px;
   }
 }
 
-
 // Issue lookup
 // -------------------------------
 .issue-status {
-
   form {
-    padding-bottom: .6em;
+    padding-bottom: 0.6em;
     border-bottom: 1px solid $gray-lighter;
 
     .form-group,
     label {
-      margin-right: .5em;
+      margin-right: 0.5em;
     }
   }
 
   .issue-status-tabs {
-
     ul.nav {
-      margin-top: .75em;
+      margin-top: 0.75em;
       margin-bottom: 0;
 
       li a {
         background-color: $gray-lightest;
-        margin-bottom: .2em;
+        margin-bottom: 0.2em;
       }
       li.active a {
         background-color: #d6d7d9 !important;
       }
-
     }
 
     img.pull-right {
@@ -390,28 +414,29 @@ $icon-dim: 40px;
   .tab-content {
     margin-top: 1em;
   }
-
 }
-
-
 
 // *
 // * Media Queries
 // *
 // ******************************************************
 
-
 // Mobile only
 // -------------------------
 @include respond($xs-only) {
-
   .action-box {
     // make local headers a little more managable
-    h1, .h1, h2, .h2 {
+    h1,
+    .h1,
+    h2,
+    .h2 {
       font-size: 21px;
     }
 
-    h3, .h3, h4, .h4 {
+    h3,
+    .h3,
+    h4,
+    .h4 {
       font-size: 18px;
     }
   }
@@ -431,7 +456,7 @@ $icon-dim: 40px;
       width: $icon-dim;
       height: $icon-dim;
       line-height: $icon-dim;
-      background-color: rgba(0,0,0,0.1);
+      background-color: rgba(0, 0, 0, 0.1);
       border-radius: 100%;
       display: block;
       margin-left: auto;
@@ -447,24 +472,22 @@ $icon-dim: 40px;
 // Small up
 // -------------------------
 @include respond($sm-up) {
-
-
   // Wrapper + animations
   // -------------------------------
 
-
   .main-311 {
-
     .slide-left-2 {
       padding-left: $grid-gutter-width/2;
       padding-right: $grid-gutter-width/2;
-
     }
   }
 
   .action-box {
     // make local headers a little more managable
-    h1, .h1, h2, .h2 {
+    h1,
+    .h1,
+    h2,
+    .h2 {
       font-size: 30px;
     }
 
@@ -476,7 +499,6 @@ $icon-dim: 40px;
   // Menu
   // --------------------------------
   .nav-contain {
-
     .nav-pills li {
       text-align: center;
 
@@ -493,7 +515,6 @@ $icon-dim: 40px;
     }
   }
 
-
   // Content
   // -------------------------------
 
@@ -509,7 +530,6 @@ $icon-dim: 40px;
   $icon-dim: 50px;
 
   .action-box dl {
-
     & > dd {
       margin-bottom: 8px;
       min-height: $icon-dim;
@@ -519,8 +539,8 @@ $icon-dim: 40px;
       font-size: 20px;
 
       span {
-        padding-bottom: $icon-dim * .42;
-        padding-top: $icon-dim * .42;
+        padding-bottom: $icon-dim * 0.42;
+        padding-top: $icon-dim * 0.42;
       }
 
       .fa {
@@ -535,10 +555,10 @@ $icon-dim: 40px;
       }
 
       .active & {
-        padding-bottom: $icon-dim * .21;
+        padding-bottom: $icon-dim * 0.21;
 
         span {
-          padding-bottom: $icon-dim * .21;
+          padding-bottom: $icon-dim * 0.21;
         }
       }
     }
@@ -560,11 +580,9 @@ $icon-dim: 40px;
 // Small only
 // -------------------------
 @include respond($sm-only) {
-
   // Menu
   // --------------------------------
   .nav-contain {
-
     .nav-pills li {
       .fa {
         margin-right: auto;
@@ -578,7 +596,6 @@ $icon-dim: 40px;
   // -------------------------------
 
   .action-box dl {
-
     dd {
       &:nth-child(2n + 1) {
         clear: left;
@@ -590,15 +607,13 @@ $icon-dim: 40px;
 // Medium up
 // -------------------------
 @include respond($md-up) {
-
-  // Menu 
+  // Menu
   // --------------------------------
   .nav-contain {
     padding: $grid-gutter-width $grid-gutter-width 0;
 
     .nav-pills {
       li {
-
         .fa {
           font-size: 22px;
           display: inline-block;
@@ -626,7 +641,6 @@ $icon-dim: 40px;
   }
 
   .action-box dl {
-
     dd {
       &:nth-child(3n + 1) {
         clear: left;
