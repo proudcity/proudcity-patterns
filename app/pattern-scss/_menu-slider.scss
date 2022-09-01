@@ -30,7 +30,7 @@
 
   @for $level from 1 through 100 {
     &.level-count-#{$level} > .inner {
-      width: #{$level}00%;
+      width: (100% * $level);
 
       > * {
         width: (100/$level)#{'%'};
