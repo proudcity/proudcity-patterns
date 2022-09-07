@@ -21,7 +21,7 @@
     float: left;
     margin-bottom: 0;
     @include transition(margin-left ease-in 0.2s);
-    @inlude clearfix();
+    @include clearfix();
 
     > * {
       float: left;
@@ -33,7 +33,7 @@
       width: (100% * $level);
 
       > * {
-        width: (100/$level)#{'%'};
+        width: (100%/$level);
       }
     }
 
