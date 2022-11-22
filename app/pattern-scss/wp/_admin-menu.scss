@@ -6,6 +6,7 @@ $admin-bar-profile-links: #233c54;
 // Admin menu active, compensate, override
 html, html[lang] {
   margin-top: 0!important;
+  scroll-padding-top: 15rem;
 }
 
 body.proud-navbar-active.admin-bar {
@@ -121,22 +122,22 @@ body.proud-navbar-active.admin-bar {
       }
     }
   }
-  
+
   .quicklinks .menupop {
-    
+
     ul.ab-sub-secondary,
     ul.ab-sub-secondary .ab-submenu {
       background: $admin-bar-profile-links !important;
-      
+
       a.ab-item {
         border-top: 0 !important;
       }
     }
-    
-    
+
+
   }
-  
-  
+
+
 }
 
 
@@ -197,9 +198,9 @@ body.proud-navbar-active.admin-bar {
     }
 
     .overflow .leaflet-top {
-      top: 35px + $admin-bar-height; 
+      top: 35px + $admin-bar-height;
     }
-    
+
     .overflow .map-details {
       padding-top: 30px + $admin-bar-height;
     }
