@@ -33,7 +33,7 @@ $nav-active-border-color-light: rgba(0, 0, 0, 0.4) !default;
     padding-bottom: 0;
     padding-left: 0;
     padding-right: 0;
-    
+
     border-radius: 10px;
     color: $navbar-default-link-color;
     margin-top: ($nav-height-short - $button-height) / 2 - 1;
@@ -196,6 +196,7 @@ $button-height: $button-d;
   .nav-text a {
     padding-left: 0;
     font-size: 20px;
+    font-weight:700;
   }
 
   // Actions toolbar
