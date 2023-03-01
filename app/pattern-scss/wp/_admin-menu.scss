@@ -89,9 +89,9 @@ body.proud-navbar-active.admin-bar {
   #wp-admin-bar-my-item > a {
     @include fa-icon-force($fa-var-tachometer-alt);
   }
-  #wp-admin-bar-new-content > a {
-    content: "\f055";
-    font-family: "Font Awesome 6 Free";
+  #wp-admin-bar-new-content > a:before {
+    content: "\f055" !important;
+    font-family: "FontAwesome";
   }
   #wp-admin-bar-menu-toggle > a {
     @include fa-icon-force($fa-var-bars);
