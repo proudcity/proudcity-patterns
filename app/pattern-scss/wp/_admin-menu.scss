@@ -90,7 +90,8 @@ body.proud-navbar-active.admin-bar {
     @include fa-icon-force($fa-var-tachometer-alt);
   }
   #wp-admin-bar-new-content > a {
-    @include fa-icon-force($fa-var-plus-circle);
+    content: "\f055";
+    font-family: "Font Awesome 6 Free";
   }
   #wp-admin-bar-menu-toggle > a {
     @include fa-icon-force($fa-var-bars);

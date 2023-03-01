@@ -2,7 +2,7 @@
 @import "bower_components/font-awesome/scss/mixins.scss";
 @import "bower_components/font-awesome/scss/core.scss";
 
-$fa-regular-font-family: "Font Awesome 5 Free";
+$fa-regular-font-family: "Font Awesome 6 Free";
 $fa-regular-font-weight: 400;
 
 %fa-style-regular {
@@ -10,7 +10,7 @@ $fa-regular-font-weight: 400;
   font-weight: $fa-regular-font-weight;
 }
 
-$fa-solid-font-family: "Font Awesome 5 Free";
+$fa-solid-font-family: "Font Awesome 7 Free";
 $fa-solid-font-weight: 900;
 
 %fa-style-solid {
@@ -18,7 +18,7 @@ $fa-solid-font-weight: 900;
   font-weight: $fa-solid-font-weight;
 }
 
-$fa-brands-font-family: "Font Awesome 5 Brands";
+$fa-brands-font-family: "Font Awesome 6 Brands";
 $fa-brands-font-weight: normal;
 
 %fa-style-brands {
