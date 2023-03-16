@@ -149,6 +149,10 @@ body.proud-navbar-active.admin-bar {
   filter:invert(77%);
 }
 
+// hiding google page speed results for now
+.googlesitekit-navigation [data-context-id="speed"]{display:none;}
+#speed.googlesitekit-widget-context{display:none;}
+
 
 #screen-meta-links #contextual-help-link-wrap,
 #screen-options-wrap .metabox-prefs,
