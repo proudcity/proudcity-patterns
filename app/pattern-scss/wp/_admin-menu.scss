@@ -124,6 +124,10 @@ body.proud-navbar-active.admin-bar {
     }
   }
 
+  .menupop .ab-sub-wrapper.googlesitekit-plugin{
+    top:15px !important;
+  }
+
   .quicklinks .menupop {
 
     ul.ab-sub-secondary,
@@ -139,6 +143,10 @@ body.proud-navbar-active.admin-bar {
   }
 
 
+}
+
+#adminmenu .toplevel_page_googlesitekit-dashboard.wp-menu-open .wp-menu-image{
+  filter:invert(77%);
 }
 
 
