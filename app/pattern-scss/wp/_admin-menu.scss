@@ -150,8 +150,12 @@ body.proud-navbar-active.admin-bar {
 }
 
 // hiding google page speed results for now
-.googlesitekit-navigation [data-context-id="speed"]{display:none;}
-#speed.googlesitekit-widget-context{display:none;}
+.googlesitekit-navigation .googlesitekit-navigation [data-context-id="speed"]{display:none !important;}
+
+.googlesitekit-plugin .googlesitekit-sharing-settings__button.mdc-button,
+.googlesitekit-plugin .googlesitekit-header .googlesitekit-user-selector,
+#speed.googlesitekit-widget-context{display:none !important;}
+
 
 
 #screen-meta-links #contextual-help-link-wrap,
