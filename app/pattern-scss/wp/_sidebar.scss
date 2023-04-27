@@ -101,10 +101,6 @@ $color-sidebar-caret-color: $gray-lighter;
     }
   }
 
-  .toplevel_page_pc-analytics{
-    .dashicons-before img{display:block;}
-  }
-
   .menu-icon-home .dashicons-before {
     @include fa-icon-force($fa-var-home) {
       display: inline-block;
