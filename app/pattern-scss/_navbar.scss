@@ -449,7 +449,7 @@ $button-height: $button-d;
         min-height: $nav-height-short;
 
         .open .dropdown-menu {
-          right: 0;
+          right: 10px;
         }
 
         & > div {

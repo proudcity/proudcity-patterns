@@ -6,12 +6,13 @@
 .widget_proud_google_translate,
 .widget-proud-google-translate {
   ul.dropdown-menu {
-    min-width: 240px;
 
     li {
       padding: $nav-link-padding;
     }
   }
+
+  .gt_options{width:200px;}
 
   select {
     @include form-control();
