@@ -470,6 +470,12 @@ $button-height: $button-d;
   }
 }
 
+.flexbox .proudcity-san-rafael-theme{
+	.navbar-external .menu-box .open .dropdown-menu{
+		right:auto;
+	}
+}
+
 // Fixed to bottom
 // -------------------------
 @include respond($mq-nav-fixed-bottom) {
