@@ -6,6 +6,12 @@ $button-d: 45px;
 $button-width: 47px;
 $button-height: $button-d;
 
+.flexbox .proudcity-petaluma-ca-theme{
+	.navbar-topbar .menu-box .open .dropdown-menu{
+		right:auto;
+	}
+}
+
 .navbar-topbar {
   height: $nav-height-short;
   border-top: 0;
