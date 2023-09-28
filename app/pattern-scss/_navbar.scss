@@ -520,12 +520,6 @@ $button-height: $button-d;
     top: 0px;
     @include transition(padding 0.15s ease-out);
 
-    // Google translate active (only react for non admin menu)
-    .translated-ltr &,
-    .translated-rtl & {
-      top: 40px;
-    }
-
     // Logo area
     #logo-menu {
       display: block;
