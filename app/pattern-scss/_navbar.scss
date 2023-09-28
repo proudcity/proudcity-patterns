@@ -470,9 +470,11 @@ $button-height: $button-d;
   }
 }
 
-.flexbox .proudcity-san-rafael-theme{
-	.navbar-external .menu-box .open .dropdown-menu{
-		right:auto;
+@media screen and (min-width: 1200px) and (max-width: 3000px ){
+	.flexbox .proudcity-san-rafael-theme{
+		.navbar-external .menu-box .open .dropdown-menu{
+			right:auto;
+		}
 	}
 }
 
