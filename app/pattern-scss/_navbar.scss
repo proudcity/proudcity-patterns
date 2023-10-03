@@ -470,9 +470,11 @@ $button-height: $button-d;
   }
 }
 
-.flexbox .proudcity-san-rafael-theme{
-	.navbar-external .menu-box .open .dropdown-menu{
-		right:auto;
+@media screen and (min-width: 1200px) and (max-width: 3000px ){
+	.flexbox .proudcity-san-rafael-theme{
+		.navbar-external .menu-box .open .dropdown-menu{
+			right:auto;
+		}
 	}
 }
 
@@ -519,12 +521,6 @@ $button-height: $button-d;
     bottom: auto;
     top: 0px;
     @include transition(padding 0.15s ease-out);
-
-    // Google translate active (only react for non admin menu)
-    .translated-ltr &,
-    .translated-rtl & {
-      top: 40px;
-    }
 
     // Logo area
     #logo-menu {
