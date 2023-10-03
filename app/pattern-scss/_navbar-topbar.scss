@@ -12,6 +12,14 @@ $button-height: $button-d;
 	}
 }
 
+@media screen and (max-width:1200px) {
+  .flexbox .proudcity-petaluma-ca-theme{
+    .navbar-topbar .menu-box .open .dropdown-menu{
+      right:10px;
+    }
+  }
+} // media 1200
+
 .navbar-topbar {
   height: $nav-height-short;
   border-top: 0;
