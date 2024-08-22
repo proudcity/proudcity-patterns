@@ -1,7 +1,7 @@
 ul.title-list {
   > li {
     padding: 15px 0;
-    
+
     + li {
       border-top: 1px solid $gray-lighter;
     }
@@ -29,7 +29,7 @@ ul.list-inline-middot {
 @if variable-exists($fa-var-circle) {
   ul.icon-list {
     list-style: none;
-    
+
     li {
       display: block;
       position: relative;
@@ -55,7 +55,7 @@ ul.list-inline-middot {
     }
   }
 
-  .teaser + .teaser { 
+  .teaser + .teaser {
     border-top: 1px solid $gray-lighter;
 
     > .row {
@@ -66,5 +66,10 @@ ul.list-inline-middot {
   // Spacing done with divs
   .entry-title {
     margin-top: 0;
+  }
+
+  .type-meeting .entry-title,
+  .type-event .entry-title{
+    margin-left:10px;
   }
 }
