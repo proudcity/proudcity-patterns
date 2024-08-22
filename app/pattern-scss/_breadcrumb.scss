@@ -7,6 +7,15 @@
   padding-top: 0;
   margin-bottom: 0;
   margin-top: -3px;
+
+  .active a{
+    color:black;
+
+    &:hover{
+      text-decoration:none;
+      cursor:default;
+    }
+  }
 }
 
 .widget-proud-breadcrumb .breadcrumb {
@@ -38,13 +47,13 @@
     padding-right: 0.5em;
   }
 
-  a i {   
-    display: inline-block;   
+  a i {
+    display: inline-block;
   }
-  
+
   .active {
     color: $text-color;
-    
+
     a {
       @extend %normal-link;
     }
