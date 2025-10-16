@@ -16,9 +16,9 @@
         }
       }
     }
-    
+
   }
-  
+
 }
 
 // From https://github.com/twbs/bootstrap/blob/v4-dev/scss/_card.scss
@@ -53,6 +53,30 @@
 
 .card-text:last-child {
   margin-bottom: 0;
+}
+
+.main .text-card{
+
+  a{
+    text-decoration:underline;
+    &:hover{text-decoration:underline;}
+  }
+
+  .card{
+    background-color:#f8f8f7;
+    border:1px solid #58585a;
+    border-radius:5px;
+    box-shadow:none;
+
+    &:hover{
+      background-color:$link-color;
+      color:white;
+      box-shadow:0 5px 15px #58585a;
+      h2{color:white;}
+
+      a{color:white;}
+    }
+  }
 }
 
 // .card-actions {
@@ -181,15 +205,15 @@
 //
 .card-btn {
   padding-top: $card-spacer-x * 1.5;
-  padding-bottom: $card-spacer-x * 1.5; 
-  
+  padding-bottom: $card-spacer-x * 1.5;
+
   &:hover {
     text-decoration: none;
   }
 
   & > *, & > .card-block > * {
     margin-top: $card-spacer-x;
-    margin-bottom: 0; 
+    margin-bottom: 0;
   }
 
   & > *:first-child, & > .card-block > *:first-child {
@@ -373,7 +397,7 @@ $column-gap: 1.25rem;
 }
 
 @include respond($sm-up) {
-  
+
   // 4 column
   .card-columns-sm-2 {
     & > * {
@@ -387,7 +411,7 @@ $column-gap: 1.25rem;
       width: (100/3 * 1%);
     }
   }
-  
+
   // 4 column
   .card-columns-sm-4 {
     & > * {
@@ -427,9 +451,9 @@ $column-gap: 1.25rem;
 }
 
 
-// @TODO fix this approach to cards... currently 
+// @TODO fix this approach to cards... currently
 // css column do not allow for proper alignment
-// 
+//
 // //
 // // Card columns
 // //
@@ -456,12 +480,12 @@ $column-gap: 1.25rem;
 
 //   .card-columns-xs-2 {
 //     @include column-count(2);
-    
+
 //   }
 // }
 
 // @include respond($sm-up) {
-  
+
 //   // 4 column
 //   .card-columns-sm-2 {
 //     @include column-count(2);
@@ -476,7 +500,7 @@ $column-gap: 1.25rem;
 //     //   width: 100%; // Don't let them exceed the column width
 //     // }
 //   }
-  
+
 //   // 4 column
 //   .card-columns-sm-4 {
 //     @include column-count(4);
