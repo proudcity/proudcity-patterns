@@ -57,9 +57,28 @@
 
 .main .text-card{
 
+  h2{margin-top:0;}
+
   a{
-    text-decoration:underline;
-    &:hover{text-decoration:underline;}
+    h2{color:$link-color;}
+    p{
+      text-decoration:none;
+      color:$text-color;
+      font-size:16px;
+    }
+
+    &:hover .card{
+      background-color:$link-color;
+      color:white;
+      box-shadow:0 5px 15px #58585a;
+      h2{
+        color:white;
+        text-decoration:underline;
+      }
+
+      p{color:white;}
+
+    }
   }
 
   .card{
@@ -67,15 +86,6 @@
     border:1px solid #58585a;
     border-radius:5px;
     box-shadow:none;
-
-    &:hover{
-      background-color:$link-color;
-      color:white;
-      box-shadow:0 5px 15px #58585a;
-      h2{color:white;}
-
-      a{color:white;}
-    }
   }
 }
 
