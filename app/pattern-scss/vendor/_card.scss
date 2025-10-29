@@ -60,25 +60,30 @@
   h2{margin-top:0;}
 
   a{
-    h2{color:$link-color;}
+    h3{color:$link-color;}
     p{
       text-decoration:none;
       color:$text-color;
       font-size:16px;
     }
 
-    &:hover .card{
-      background-color:$link-color;
-      color:white;
-      box-shadow:0 5px 15px #58585a;
-      h2{
+    &:hover {
+      text-decoration:none;
+
+      .card{
+        text-decoration:none;
+        background-color:$link-color;
         color:white;
-        text-decoration:underline;
-      }
+        box-shadow:0 5px 15px #58585a;
+        h3{
+          color:white;
+          text-decoration:underline;
+        }
 
-      p{color:white;}
+        p{color:white; text-decoration:none;}
+      } // .card
 
-    }
+    } //&:hover
   }
 
   .card{
