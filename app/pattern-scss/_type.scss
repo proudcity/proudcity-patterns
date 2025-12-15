@@ -84,6 +84,7 @@ p,
 // @TODO adding underline to links... might not be ideal in some cases
 // https://github.com/proudcity/wp-proudcity/issues/1828
 p a,
+li a,
 .textwidget a,
 h1 a,
 h2 a,
@@ -93,6 +94,13 @@ h5 a,
 h6 a,
 footer a {
   text-decoration: underline;
+}
+
+// removing underline from menus
+#main-menu,
+.btn-toolbar,
+.nav{
+  li a{text-decoration:none;}
 }
 
 // Label overrides
