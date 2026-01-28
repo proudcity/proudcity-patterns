@@ -10,6 +10,49 @@
   }
 }
 
+
+.proud-filter-wrapper{
+  border:.1rem solid #e5e5e5;
+  margin:10px 0 10px 0;
+  border-radius:5px;
+
+  .widget-title{
+    padding:5px;
+    border-bottom:.1rem solid #e5e5e5;
+  }
+
+  .proud-filter{
+    padding:5px 10px;
+  }
+
+  .proud-filter-actions{
+    margin:15px 0 0 0;
+  }
+}
+.panel-grid-cell{
+  container-type:inline-size;
+}
+
+/* default: no columns */
+.proud-filter-group {
+  column-count: 1;
+}
+
+/* enable 2 cols only when THIS cell is wide enough */
+@container (min-width: 520px) {
+  .proud-filter-group {
+    column-count: 2;
+    column-gap: 1.5rem;
+  }
+}
+
+/* keep each label together */
+.proud-filter-group label {
+  display: block;
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+}
+
 label {
   font-weight: normal;
 }
