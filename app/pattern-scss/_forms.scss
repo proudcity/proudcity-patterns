@@ -46,11 +46,16 @@
   .proud-filter-actions {
     margin: 15px 0 0 0;
 
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
     button {
+      width: 100%;
       display: block;
-      margin-bottom: 1rem;
     }
   }
+
 }
 
 // make SiteOrigin cells queryable
@@ -69,8 +74,23 @@
 /* enable 2 cols only when THIS cell is wide enough */
 @container (min-width: 520px) {
   .proud-filter-group {
-    column-count: 2;
+    column-count: 3;
     column-gap: 1.5rem;
+  }
+
+  .proud-filter-wrapper {
+    .proud-filter-actions {
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: nowrap;
+
+      button {
+        width: auto;       // natural width
+        flex: 0 0 auto;    // do not grow/shrink
+        margin-bottom: 0;  // in case older rule exists
+        white-space: nowrap;
+      }
+    }
   }
 }
 
