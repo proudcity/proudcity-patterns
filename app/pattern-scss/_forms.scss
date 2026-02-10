@@ -74,7 +74,7 @@
 /* enable 2 cols only when THIS cell is wide enough */
 @container (min-width: 520px) {
   .proud-filter-group {
-    column-count: 3;
+    column-count: 2;
     column-gap: 1.5rem;
   }
 
