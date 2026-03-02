@@ -78,6 +78,10 @@ p,
   font-size: 0.8em;
 }
 
+p{
+  &.proud-subtitle{font-size:1.4em; font-weight:700;}
+}
+
 // Links
 // -------------------------------------
 
