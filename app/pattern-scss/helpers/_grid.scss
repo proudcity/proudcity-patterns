@@ -29,8 +29,8 @@ $extra-padding: 40px;
   }
 
   .col-md-offset-both-half {
-    margin-left: percentage(((1 / $grid-columns) / 2));
-    margin-right: percentage(((1 / $grid-columns) / 2));
+    margin-left: calc(50% / #{$grid-columns});
+    margin-right: calc(50% / #{$grid-columns});
   }
 }
 
@@ -44,7 +44,7 @@ $extra-padding: 40px;
   }
 
   .col-lg-offset-both-half {
-    margin-left: percentage(((1 / $grid-columns) / 2));
-    margin-right: percentage(((1 / $grid-columns) / 2));
+    margin-left: calc(50% / #{$grid-columns});
+    margin-right: calc(50% / #{$grid-columns});
   }
 }

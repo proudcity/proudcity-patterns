@@ -1,3 +1,6 @@
+@use 'pattern-scss/local-variables' as *;
+@use './font-awesome' as *;
+
 // Copied from bootstrap/_forms.scss
 @mixin form-control {
   display: block;

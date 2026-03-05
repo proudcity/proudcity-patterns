@@ -1,3 +1,5 @@
+@use 'loaders/load-local' as *;
+
 // So widget layout
 
 $widget-margin: 15px;
@@ -63,12 +65,12 @@ $widget-margin: 15px;
 
 // Force additional padding
 .panel-row-multiple {
-  margin-left: -$grid-gutter-width/2!important;
-  margin-right: -$grid-gutter-width/2!important;
+  margin-left: -$grid-gutter-width * 0.5!important;
+  margin-right: -$grid-gutter-width * 0.5!important;
 
   .panel-grid-cell {
-    padding-left: $grid-gutter-width/2!important;
-    padding-right: $grid-gutter-width/2!important;
+    padding-left: $grid-gutter-width * 0.5!important;
+    padding-right: $grid-gutter-width * 0.5!important;
 
     > .widget > .proud-widget-title {
       margin-top: 0;
@@ -116,8 +118,8 @@ $widget-margin: 15px;
     //}
 
     .panel-grid-cell:only-child {
-      padding-left: $grid-gutter-width/2 !important;
-      padding-right: $grid-gutter-width/2 !important;
+      padding-left: $grid-gutter-width * 0.5 !important;
+      padding-right: $grid-gutter-width * 0.5 !important;
     }
   }
 }
@@ -132,8 +134,8 @@ $widget-margin: 15px;
     .wr_fullwidth {
       padding-left: 0!important;
       padding-right: 0!important;
-      margin-left: -($grid-gutter-width/2)!important;
-      margin-right: -($grid-gutter-width/2)!important;
+      margin-left: -($grid-gutter-width * 0.5)!important;
+      margin-right: -($grid-gutter-width * 0.5)!important;
       width: auto!important;
       min-width: 100%;
     }
@@ -146,13 +148,13 @@ $widget-margin: 15px;
       // Container widths
       //
       @media (min-width: $screen-sm-min) {
-        width: $container-sm - ($grid-gutter-width/2);
+        width: $container-sm - ($grid-gutter-width * 0.5);
       }
       @media (min-width: $screen-md-min) {
-        width: $container-md - ($grid-gutter-width/2);
+        width: $container-md - ($grid-gutter-width * 0.5);
       }
       @media (min-width: $screen-lg-min) {
-        width: $container-lg - ($grid-gutter-width/2);
+        width: $container-lg - ($grid-gutter-width * 0.5);
       }
     }
 
@@ -178,8 +180,8 @@ body.siteorigin-panels-before-js .siteorigin-panels-stretch[data-stretch-type],
 @media screen and (min-width: 781px) {
   body.siteorigin-panels-before-js .siteorigin-panels-stretch[data-stretch-type],
   .siteorigin-panels-stretch[data-stretch-type] {
-    margin-left: $grid-gutter-width/2!important;
-    margin-right: $grid-gutter-width/2!important;
+    margin-left: $grid-gutter-width * 0.5!important;
+    margin-right: $grid-gutter-width * 0.5!important;
   }
 }
 

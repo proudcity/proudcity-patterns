@@ -1,3 +1,6 @@
+@use 'pattern-scss/local-variables' as *;
+@use 'loaders/bourbon-replacement' as *;
+
 // Copied from bootstrap/_navs.scss
 @mixin nav {
   margin-bottom: 0;

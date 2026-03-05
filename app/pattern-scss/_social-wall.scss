@@ -161,8 +161,8 @@ $header-dim-width: $header-dim-height - 10;
 
 [dynamic-layout] {
   position: relative;
-  margin-right: -($grid-gutter-width / 2);
-  margin-left: -($grid-gutter-width / 2);
+  margin-right: -($grid-gutter-width * 0.5);
+  margin-left: -($grid-gutter-width * 0.5);
 }
 
 // Animation
@@ -194,7 +194,7 @@ $header-dim-width: $header-dim-height - 10;
 }
 
 .dynamic-layout-item {
-  padding: 0 ($grid-gutter-width / 2) ($grid-gutter-width / 2);
+  padding: 0 ($grid-gutter-width * 0.5) ($grid-gutter-width * 0.5);
 }
 
 @include respond($xs-only) {

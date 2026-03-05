@@ -1,5 +1,8 @@
+@use 'pattern-scss/local-variables' as *;
+@use 'sass:list';
+
 @mixin respond($media, $modList: ()) {
-  @if(length($modList)) {
+  @if(list.length($modList)) {
     @each $mod in $modList {
       $media: "#{$media} and (#{$modList})"; 
     }

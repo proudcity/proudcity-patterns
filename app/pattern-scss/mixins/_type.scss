@@ -1,3 +1,5 @@
+@use 'pattern-scss/local-variables' as *;
+
 %normal-link-color {
   color: $link-color;
 

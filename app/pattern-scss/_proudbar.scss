@@ -65,10 +65,10 @@ $proudbar-logo-height: $proudbar-line-height - 6px!default;
   .proudbar-logo {
     float: left;
     background: url(//my.proudcity.com/images/FullLogoWhite.png) 0 0 no-repeat;
-    background-size: 114px/22px*$proudbar-logo-height $proudbar-logo-height;
-    width: 114px/22px*$proudbar-logo-height;
+    background-size: $proudbar-logo-height * 5.18182 $proudbar-logo-height;
+    width: $proudbar-logo-height * 5.18182;
     height: $proudbar-logo-height;
-    margin-top: ($proudbar-line-height - $proudbar-logo-height) / 2;
+    margin-top: ($proudbar-line-height - $proudbar-logo-height) * 0.5;
     margin-right: 0;
     text-indent: -1000em;
   }

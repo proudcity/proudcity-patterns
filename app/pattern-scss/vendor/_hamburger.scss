@@ -87,7 +87,7 @@ $b-trans-dur: 0.2s;     // The transition duration
   .hamburger-bars {
     display: block;
     position: absolute;
-    top: ($button-height / 2) - ($bar-thickness / 2) - 1;
+    top: ($button-height * 0.5) - ($bar-thickness * 0.5) - 1;
     left: $button-pad;
     right: $button-pad;
     height: $bar-thickness;
