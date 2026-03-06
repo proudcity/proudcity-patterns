@@ -2,10 +2,10 @@
 // --------------------------
 
 $fa-font-size-base: $font-size-base;
-$fa-font-path: "//use.fontawesome.com/releases/v5.13.0/webfonts";
+$fa-font-path: "//use.fontawesome.com/releases/v6.7.0/webfonts";
 
-@import "node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
-@import "node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
-@import "node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
-@import "node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
-@import "node_modules/@fortawesome/fontawesome-free/scss/shims.scss";
+@import "@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "@fortawesome/fontawesome-free/scss/solid.scss";
+@import "@fortawesome/fontawesome-free/scss/regular.scss";
+@import "@fortawesome/fontawesome-free/scss/brands.scss";
+@import "@fortawesome/fontawesome-free/scss/shims.scss";

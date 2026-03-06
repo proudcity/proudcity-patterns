@@ -44,8 +44,8 @@
     .ui-datepicker-prev,
     .ui-datepicker-next {
         cursor: default;
-        @extend %fa-icon;
-        @extend %fa-style-solid;
+        -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; display: inline-block; font-style: normal; font-variant: normal; font-weight: 900; line-height: 1;
+        font-family: "Font Awesome 6 Free";
         height: 20px;
         line-height: 1;
         margin-top: 2px;
