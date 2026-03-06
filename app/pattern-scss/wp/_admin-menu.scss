@@ -166,6 +166,9 @@ body.proud-navbar-active.admin-bar {
   display: none;
 }
 
+.menu-item-custom{
+  .field-description.hidden-field{display:block !important;}
+}
 
 // Responsive
 @media screen and (max-width: 782px) {
