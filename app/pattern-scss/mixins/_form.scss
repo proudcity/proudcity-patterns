@@ -1,5 +1,7 @@
 @use 'pattern-scss/local-variables' as *;
 @use './font-awesome' as *;
+@use 'loaders/bourbon-replacement' as *;
+@use 'loaders/bootstrap-mixins-bridge' as bs;
 
 // Copied from bootstrap/_forms.scss
 @mixin form-control {
@@ -18,10 +20,10 @@
   @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
 
   // Customize the `:focus` state to imitate native WebKit styles.
-  @include form-control-focus;
+  @include bs.form-control-focus;
 
   // Placeholder
-  @include placeholder;
+  @include bs.placeholder;
 
   // Disabled and read-only inputs
   //
@@ -45,7 +47,7 @@
 
 @mixin datepicker {
   content: fa-content($fa-var-calendar-alt);
-  @extend %fa-style-solid;
+  font-family: "Font Awesome 6 Free"; font-weight: 900;
   padding-right: $padding-small-horizontal;
 }
 

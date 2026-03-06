@@ -1,7 +1,6 @@
 @import "@fortawesome/fontawesome-free/scss/functions.scss";
 @import "@fortawesome/fontawesome-free/scss/variables.scss";
 @import "@fortawesome/fontawesome-free/scss/mixins.scss";
-@import "@fortawesome/fontawesome-free/scss/core.scss";
 
 $fa-regular-font-family: "Font Awesome 6 Free";
 $fa-regular-font-weight: 400;
@@ -45,13 +44,13 @@ $fa-brands-font-weight: normal;
     } @else {
       content: fa-content($icon);
     }
-    @extend %fa-icon;
+    @include fa-icon;
     @if ($style == "regular") {
-      @extend %fa-style-regular;
+      font-family: $fa-regular-font-family; font-weight: $fa-regular-font-weight;
     } @else if ($style == "brands") {
-      @extend %fa-style-brands;
+      font-family: $fa-brands-font-family; font-weight: $fa-brands-font-weight;
     } @else {
-      @extend %fa-style-solid;
+      font-family: $fa-solid-font-family; font-weight: $fa-solid-font-weight;
     }
     @content;
   }

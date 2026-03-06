@@ -8,13 +8,13 @@
   background-color: $white;
   min-width: 0;
   border: $card-border-width solid $card-border-color;
-  @include border-radius($card-border-radius);
-  @include transition(box-shadow 0.1s linear);
+  border-radius: $card-border-radius;
+  transition: box-shadow 0.1s linear;
   box-shadow: 0 0 10px $white inset;
 
 
   &.card-btn, .card-btn {
-    @include hover-focus {
+    &:hover, &:focus {
       box-shadow: 0 0 8px 4px darken($white, 3%) inset;
     }
   }
@@ -43,7 +43,7 @@
      }
 
      &.card-btn, .card-btn {
-        @include hover-focus {
+        &:hover, &:focus {
           box-shadow: 0 0 8px 4px lighten($color, 5%) inset;
         }
       }
@@ -52,7 +52,7 @@
     // box-shadow: 0 0 10px darken($color, 10%) inset;
 
     &.card-btn, .card-btn {
-      @include hover-focus {
+      &:hover, &:focus {
         box-shadow: 0 0 8px 4px darken($color, 5%) inset;
       }
     }
