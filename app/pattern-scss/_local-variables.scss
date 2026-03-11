@@ -49,7 +49,7 @@ $brand-secondary-lightest:    #f9dede!default;
 
 // Brand success (default green)
 $brand-success:               #26BF7D !default;
-$brand-success-dark:          #2e8540 !default; 
+$brand-success-dark:          #2e8540 !default;
 $brand-success-light:         #4aa564!default;
 $brand-success-lighter:       #94bfa2!default;
 $brand-success-lightest:      #e7f4e4!default;
@@ -169,16 +169,16 @@ $font-size-large:         math.ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-small:         math.ceil(($font-size-base * 0.85)) !default; // ~12px
 
 $font-size-h1:            50px!default;
-$font-size-h2:            30px!default; 
-$font-size-h3:            24px!default; 
-$font-size-h4:            20px!default; 
+$font-size-h2:            30px!default;
+$font-size-h3:            24px!default;
+$font-size-h4:            20px!default;
 $font-size-h5:            16px!default;
-$font-size-h6:            16px!default; 
+$font-size-h6:            16px!default;
 
-$font-color-h1:            $gray-base!default; 
-$font-color-h2:            $gray-base!default; 
-$font-color-h3:            $gray-base!default; 
-$font-color-h4:            $gray-base!default; 
+$font-color-h1:            $gray-base!default;
+$font-color-h2:            $gray-base!default;
+$font-color-h3:            $gray-base!default;
+$font-color-h4:            $gray-base!default;
 $font-color-h5:            $gray-base!default;
 $font-color-h6:            $gray-base!default;
 
@@ -192,7 +192,7 @@ $font-weight-h6:            300!default;
 $font-line-height-h1:            1.1!default;
 $font-line-height-h2:            1.2!default;
 $font-line-height-h3:            1.2!default;
-$font-line-height-h4:            1.5!default; 
+$font-line-height-h4:            1.5!default;
 $font-line-height-h5:            1.4!default;
 $font-line-height-h6:            1.4!default;
 
@@ -624,7 +624,7 @@ $pager-disabled-color:                 $pagination-disabled-color !default;
 
 $jumbotron-padding:              30px !default;
 $jumbotron-color:                $gray-base !default;
-$jumbotron-bg:                   rgba(255, 255, 255, 0.7) !default;
+$jumbotron-bg:                   #f5f5f5 !default;
 $jumbotron-heading-color:        $gray-base !default;
 $jumbotron-font-size:            math.ceil(($font-size-base * 1.5)) !default;
 
