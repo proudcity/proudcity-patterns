@@ -5,6 +5,8 @@ $type-mod: .75;
   position: relative;
 }
 
+.jumbotron-full .full-container{background-color:white;}
+
 .jumbotron {
   background-size: cover;
   background-position: center 30%;
@@ -27,6 +29,8 @@ $type-mod: .75;
 
   &.jumbotron-image {
     background-color: transparent;
+
+    .jumbotron-bg{background-color:#fff;}
   }
 
   // background-color
@@ -99,7 +103,7 @@ $type-mod: .75;
   }
 }
 
-  
+
 .full-container, .jumbo-padding {
   .jumbotron {
     margin-bottom: 0;
@@ -144,7 +148,7 @@ body.proud-navbar-transparent {
   // Carousel needs to be auto-height
   .carousel {
     .jumbo-image-container {
-      &, img { 
+      &, img {
         top: auto;
         left: auto;
         min-width: 0;
@@ -175,7 +179,7 @@ body.proud-navbar-transparent {
 @include respond($sm-up) {
 
   $type-mod: 0.9;
-  
+
   .jumbotron {
 
     h1,
@@ -184,7 +188,7 @@ body.proud-navbar-transparent {
     .h2 {
       font-size: $font-size-h1 * $type-mod;
     }
-    
+
     .jumbotron-bg {
       padding: 50px;
     }
@@ -206,8 +210,8 @@ body.proud-navbar-transparent {
   }
 
   .full-container, .jumbo-padding {
-    
-    .jumbotron { 
+
+    .jumbotron {
       padding-left:  ($jumbotron-padding * 2);
       padding-right: ($jumbotron-padding * 2);
 
