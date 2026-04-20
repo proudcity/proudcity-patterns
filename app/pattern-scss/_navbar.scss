@@ -232,6 +232,11 @@ $button-height: $button-d;
   }
 }
 
+// Close button: hidden everywhere by default; shown only at mobile when menu is open
+.menu-close-btn {
+  display: none;
+}
+
 // Hiding menu, fixed bottom
 // -------------------------
 @include respond($mq-nav-xs-mode) {
