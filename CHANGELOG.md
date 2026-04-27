@@ -1,3 +1,11 @@
+## 2026-04-27
+
+### Remove hover drop-shadow styles from navbar
+References: https://github.com/proudcity/wp-proudcity/issues/2811
+
+- `app/pattern-scss/_navbar-header.scss` — removed drop-shadow hover styles
+- `app/pattern-scss/_navbar.scss` — removed drop-shadow hover styles
+
 ## 2026-04-16
 
 ### Feature: Mobile menu moved to header region (issue #2757)
