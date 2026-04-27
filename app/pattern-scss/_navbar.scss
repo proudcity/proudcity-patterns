@@ -232,11 +232,6 @@ $button-height: $button-d;
   }
 }
 
-// Close button: hidden everywhere by default; shown only at mobile when menu is open
-.menu-close-btn {
-  display: none;
-}
-
 // Hiding menu, fixed bottom
 // -------------------------
 @include respond($mq-nav-xs-mode) {
@@ -244,11 +239,15 @@ $button-height: $button-d;
     position: static;
     min-height: 0;
 
-    #main-menu {
+    #main-menu,
+    .menu-box {
       height: $nav-height-short + $nav-height-mod;
       position: fixed;
       bottom: -$nav-height-mod;
       width: 100%;
+    }
+
+    #main-menu {
       @include transition(height 0.2s ease, margin-bottom 0.2s ease);
       overflow: hidden;
       z-index: $nav-user-overlay-z - 1;
@@ -257,34 +256,6 @@ $button-height: $button-d;
       margin-left: 0;
       margin-right: 0;
       padding-top: 5%;
-    }
-
-    // Menu box and hamburger move to .navbar-header-region on mobile
-    .menu-box,
-    .menu-button {
-      display: none;
-    }
-
-    // Close button: hidden until menu is open
-    .menu-close-btn {
-      display: none;
-      position: fixed;
-      top: 10px;
-      right: 15px;
-      z-index: $nav-user-overlay-z + 3;
-      background: none;
-      border: none;
-      color: $white;
-      font-size: 32px;
-      line-height: 1;
-      cursor: pointer;
-      padding: 0 8px;
-    }
-
-    .menu-nav-open & {
-      .menu-close-btn {
-        display: block;
-      }
     }
 
     .menu-nav-open & {

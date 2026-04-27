@@ -7,11 +7,6 @@
 .navbar-header-region {
   // text-align: center;
 
-  // Hidden by default; shown inside the $mq-nav-xs-mode block below
-  .header-region-menu-box {
-    display: none;
-  }
-
   h2, h3, .h2, .h3 {
     margin: 12px 0;
 
@@ -97,96 +92,6 @@
 
     .menu-button {
       display: none;
-    }
-  }
-}
-
-// Mobile: move menu box into header region beside logo
-// -------------------------
-@include respond($mq-nav-xs-mode) {
-  .navbar-header-region {
-    .navbar-header > .container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo-menu {
-      flex: 1 1 auto;
-      min-width: 0;
-    }
-
-    .header-region-menu-box {
-      display: flex;
-      align-items: center;
-      flex-shrink: 0;
-      position: relative;
-      z-index: 1;
-    }
-
-    // Override the $sm-up rule that hides .menu-button in this region
-    .header-menu-button {
-      display: flex !important;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: $nav-height-short;
-      padding: 4px 8px;
-
-      // Smaller hamburger to leave room for "Menu" label below it
-      .hamburger {
-        @include hamburger-icon-animate($navbar-default-link-color, false, $b-width, 28px);
-      }
-
-      .light-background-topnav & .hamburger {
-        @include hamburger-icon-color($light-back-topnav-color);
-      }
-
-      .extra-light-background-topnav & .hamburger {
-        @include hamburger-icon-color($extra-light-back-topnav-color);
-      }
-    }
-
-    .menu-nav-open & {
-      .header-menu-button .hamburger {
-        @include hamburger-icon-active();
-      }
-    }
-
-    .menu-button-label {
-      display: block;
-      font-size: 10px;
-      line-height: 1;
-      text-align: center;
-      color: $navbar-default-link-color;
-
-      .light-background-topnav & {
-        color: $light-back-topnav-color;
-      }
-
-      .extra-light-background-topnav & {
-        color: $extra-light-back-topnav-color;
-      }
-    }
-
-    .menu-box {
-      display: block;
-    }
-  }
-
-  // Phone: shrink the logo to share the row with the menu button
-  @media screen and (max-width: 480px) {
-    .navbar-header-region {
-      .nav-logo img.logo {
-        max-width: 80px;
-        max-height: 40px;
-      }
-
-      .nav-text {
-        font-size: 16px;
-        line-height: 1.2;
-        min-height: 0;
-      }
     }
   }
 }
