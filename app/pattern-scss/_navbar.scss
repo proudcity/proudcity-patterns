@@ -299,6 +299,18 @@ $button-height: $button-d;
       }
     }
   }
+
+  body.proud-navbar-active.proud-navbar-topbar-mobile-only-active {
+    padding-top: $nav-height-short;
+
+    &.admin-bar {
+      padding-top: $admin-bar-height + $nav-height-short;
+    }
+  }
+
+  .navbar-external .menu-box.desktop-only-toolbar {
+    display: none;
+  }
 }
 
 // Show menu

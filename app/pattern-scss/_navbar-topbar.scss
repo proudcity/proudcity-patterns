@@ -20,8 +20,16 @@ $button-height: $button-d;
   }
 } // media 1200
 
+.navbar-topbar.navbar-topbar-mobile-only {
+  display: none;
+}
+
+.navbar-topbar .menu-box.mobile-only-toolbar {
+  display: none;
+}
+
 .navbar-topbar {
-  height: $nav-height-short;
+  min-height: $nav-height-short;
   border-top: 0;
   // text-align: center;
 
@@ -168,7 +176,7 @@ $button-height: $button-d;
       bottom: auto;
       left: auto;
       right: 0;
-      top: $nav-height-short - 3;
+      top: 100%;
       z-index: $nav-user-overlay-z + 3;
     }
 
@@ -185,6 +193,23 @@ $button-height: $button-d;
 // Mobile menu view, hide
 // -------------------------
 @include respond($mq-nav-xs-mode) {
+  .navbar-topbar.navbar-topbar-mobile-only {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: $nav-user-overlay-z + 1;
+  }
+
+  .admin-bar .navbar-topbar.navbar-topbar-mobile-only {
+    top: $admin-bar-height;
+  }
+
+  .navbar-topbar .menu-box.mobile-only-toolbar {
+    display: block;
+  }
+
   .navbar-topbar .topbar-navigation {
     display: none;
   }

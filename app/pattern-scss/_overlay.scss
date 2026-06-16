@@ -121,6 +121,26 @@ body {
   }
 }
 
+.proud-navbar-topbar-mobile-only-active {
+  .close-search {
+    top: $search-top-mobile - 3 + $nav-height-short;
+  }
+
+  &.admin-bar .close-search {
+    top: $search-top-mobile - 3 + 50px + $nav-height-short;
+  }
+
+  &.search-active {
+    #wrapper-search {
+      top: $search-top-mobile + 5 + $nav-height-short;
+    }
+
+    &.admin-bar #wrapper-search {
+      top: $search-top-mobile + 50px + $nav-height-short;
+    }
+  }
+}
+
 @include respond($xs-only) {
 
 
