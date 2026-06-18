@@ -310,6 +310,10 @@ $button-height: $button-d;
         float: none !important;
         min-height: $nav-height-short;
 
+        &.mobile-only-toolbar {
+          display: none;
+        }
+
         .open .dropdown-menu {
           top: auto;
         }
