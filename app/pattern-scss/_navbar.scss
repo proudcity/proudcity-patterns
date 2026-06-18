@@ -224,6 +224,13 @@ $button-height: $button-d;
     }
   }
 
+  #menu-button .hamburger-bars,
+  #menu-button .hamburger-bars:before,
+  #menu-button .hamburger-bars:after {
+    background: $black;
+    background-color: $black;
+  }
+
   // open
   .menu-nav-open & {
     .navbar-btn.menu-button {
