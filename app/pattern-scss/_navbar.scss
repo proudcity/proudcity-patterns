@@ -208,6 +208,8 @@ $button-height: $button-d;
     left: $grid-gutter-width/2;
     position: fixed;
     z-index: $nav-user-overlay-z + 2;
+    background-color:white;
+    border:1px solid #CCC;
   }
 
   .hamburger {
@@ -260,14 +262,14 @@ $button-height: $button-d;
 
     .menu-nav-open & {
       #main-menu {
-        height: 101%;
+        height: 97%;
         margin-bottom: 0;
       }
     }
 
     .proud-toolbar-active & {
       #main-menu {
-        padding-top: 20%;
+        padding-top: 30%;
       }
 
       &.menu-nav-open {
