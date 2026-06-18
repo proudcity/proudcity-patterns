@@ -141,6 +141,12 @@ body {
       }
     }
   }
+
+  @include respond($mq-nav-fixed-top) {
+    .close-search {
+      top: 147px;
+    }
+  }
 }
 
 @include respond($xs-only) {
