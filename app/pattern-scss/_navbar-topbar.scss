@@ -370,6 +370,11 @@ $button-height: $button-d;
 // Top menu
 // -------------------------
 @include respond($mq-nav-fixed-top) {
+  .navbar-topbar.navbar-topbar-mobile-only,
+  .flexbox .navbar-topbar.navbar-topbar-mobile-only {
+    display: none;
+  }
+
   .navbar-topbar {
     position: absolute;
     top: 0;
