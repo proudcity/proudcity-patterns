@@ -231,6 +231,10 @@ $button-height: $button-d;
     background-color: $black;
   }
 
+  .menu-button-label {
+    display: none;
+  }
+
   // open
   .menu-nav-open & {
     .navbar-btn.menu-button {
@@ -298,6 +302,19 @@ $button-height: $button-d;
       }
     }
 
+    // Bootstrap floats .navbar-nav > li horizontally from $grid-float-breakpoint
+    // (911px) up, but the hamburger now spans the whole xs-mode range (to
+    // 1200px). Force the opened menu back to a vertical stacked list so
+    // iPad-landscape widths (e.g. 1133px) match the phone layout below 911px.
+    #main-menu {
+      float: none;
+
+      > li {
+        float: none;
+        display: block;
+      }
+    }
+
     // Proud menu with depth
     // ---------------------
     .navbar-depth {
@@ -319,6 +336,52 @@ $button-height: $button-d;
 
   .navbar-external .menu-box.desktop-only-toolbar {
     display: none;
+  }
+
+  // Reposition existing #menu-button beside the logo in the header region.
+  // Every site renders a top bar at mobile (mobile-only bar is fixed at top,
+  // $nav-height-short tall), so the button sits below it.
+  .navbar-external .menu-button {
+    top: $nav-height-short + 10px;
+    right: 15px;
+    bottom: auto;
+    left: auto;
+  }
+
+  body.logged-in.admin-bar .navbar-external .menu-button {
+    top: $nav-height-short + 55px;
+  }
+
+  // Topbar-enabled sites (proud_topbar_enable, e.g. Santa Ana) render the
+  // action toolbar inside the full topbar, whose height changes with viewport
+  // width — the official statement + action icons wrap to a second row on
+  // narrow screens. The fixed offset above was tuned for the single mobile-only
+  // bar, so on these sites the button landed on top of the action icons.
+  // proud-navbar.js measures the visible logo row and positions the button to
+  // match; this two-row value is only the no-JS fallback for the common narrow
+  // (wrapped) case.
+  body.proud-navbar-topbar-active .navbar-external .menu-button {
+    top: $nav-height-short * 2 + 10px;
+  }
+
+  body.proud-navbar-topbar-active.logged-in.admin-bar .navbar-external .menu-button {
+    top: $nav-height-short * 2 + 55px;
+  }
+
+  // Menu label: fixed dark colour — never inherits from color_topnav
+  .navbar-external #menu-button .menu-button-label {
+    display: block;
+    color: $black;
+    font-size: 11px;
+    line-height: 1;
+    text-align: center;
+    margin-top: 2px;
+  }
+
+  // Prevent light/extra-light topnav body classes from recolouring the label
+  .light-background-topnav .navbar-external #menu-button .menu-button-label,
+  .extra-light-background-topnav .navbar-external #menu-button .menu-button-label {
+    color: $black;
   }
 }
 

@@ -74,6 +74,24 @@
   // }
 }
 
+// Mobile: reserve space for the repositioned #menu-button (fixed, top-right)
+// -------------------------
+@include respond($mq-nav-xs-mode) {
+  .navbar-header-region .navbar-header {
+    // Prevent site name from overlapping the fixed hamburger button.
+    // Button is ~47px wide at right: 15px, so 70px clears it comfortably.
+    padding-right: 70px;
+  }
+
+  // Phone-size: shrink logo so long names still fit
+  @media (max-width: 420px) {
+    .navbar-header-region .nav-logo img.logo {
+      max-width: 100px;
+      max-height: 45px;
+    }
+  }
+}
+
 // Small up
 // -------------------------
 @include respond($sm-up) {

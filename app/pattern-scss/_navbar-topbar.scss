@@ -309,6 +309,12 @@ $button-height: $button-d;
         flex-shrink: 0;
         float: none !important;
         min-height: $nav-height-short;
+        // Bootstrap's .container-fluid sets margin-left/right: auto, which
+        // centres the menu-box when it is the only flex child (topbar enabled,
+        // no topbar menu or logo — e.g. Delaware). Pin it right instead. When a
+        // flex:1 topbar-navigation is present this is a no-op (no free space).
+        margin-left: auto;
+        margin-right: 0;
 
         &.mobile-only-toolbar {
           display: none;
