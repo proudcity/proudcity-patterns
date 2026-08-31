@@ -52,8 +52,41 @@ body {
   } 
 }
 
+// Releases an element from being the containing block / stacking context for a
+// position:fixed descendant. See the .search-active block below for why.
+@mixin proud-release-fixed-containing-block {
+  backdrop-filter: none!important;
+  filter: none!important;
+  perspective: none!important;
+  transform: none!important;
+  will-change: auto!important;
+  contain: none!important;
+  container-type: normal!important;
+}
+
 .search-active {
+  // On pages that render a Search Box widget inside the hero, wp-proud-search
+  // skips rendering a second one in the overlay (the $proud_search_box_rendered
+  // guard in SearchBox::printWidget), so #overlay-search comes out empty and the
+  // in-content #wrapper-search is lifted over the overlay with position:fixed +
+  // z-index below.
+  //
+  // A transform, filter, backdrop-filter, perspective, contain or container-type
+  // on any ANCESTOR of a fixed element makes that ancestor the containing block
+  // and a stacking context, so the search field stays pinned inside the hero and
+  // renders behind #overlay-search - the overlay opens with no visible input.
+  // Cities trigger this from per-site "Additional CSS" (issue #2897: San Rafael
+  // added backdrop-filter: blur(2px) to .jumbotron-bg), so neutralise the whole
+  // family here rather than chasing it one site at a time.
   .panel-banner, .wr-element-jumbotronheader, .widget-proud-jumbotron-header  {
+    // The .jumbo-image-container subtree is exempt: it is a sibling branch of the
+    // search box, never an ancestor of it, and it is the one part of the hero
+    // that legitimately needs transform (the -50% image centring in _jumbotron).
+    &,
+    *:not(.jumbo-image-container):not(.jumbo-image-container *) {
+      @include proud-release-fixed-containing-block;
+    }
+
     * {
       position: static!important;
     }
@@ -65,6 +98,14 @@ body {
     .jumbo-image-container {
       position: absolute!important;
     }
+  }
+
+  // Wrappers above the hero widget (SiteOrigin rows and stretch wrappers,
+  // subtheme containers) can trap it the same way. :has() is the only way to say
+  // "an actual ancestor of the search box"; browsers without it still get the
+  // jumbotron-scoped rule above, which covers every case seen in the wild.
+  *:has(#wrapper-search) {
+    @include proud-release-fixed-containing-block;
   }
 
   #wrapper-search {
