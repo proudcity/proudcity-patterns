@@ -138,6 +138,15 @@ body {
   }
 }
 
+// The mobile hamburger (.navbar-external .menu-button, z-index overlay + 2) now
+// sits fixed top-right, the same corner as the overlay close X, and covered it.
+// Drop it behind the overlay while one is open (#2948).
+.search-active, .active-311 {
+  .navbar-external .menu-button {
+    z-index: $nav-user-overlay-z - 1;
+  }
+}
+
 // Admin bar
 
 .admin-bar {
